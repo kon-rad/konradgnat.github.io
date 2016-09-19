@@ -1,0 +1,24 @@
+{
+  "name": "Portfolio",
+  "authors": [
+    "'Software'"
+  ],
+  "description": "This is my awesome Software Engineer Portfolio",
+  "main": "index.html",
+  "keywords": [
+    "'Portfolio'"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.6.3"
+  }
+}
