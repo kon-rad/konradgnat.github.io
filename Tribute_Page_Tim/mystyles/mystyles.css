@@ -1,0 +1,21 @@
+body {
+  background-color: #EBF5FB;
+  font-family: serif;
+
+}
+.container {
+  background-color: #FDEBD0;
+}
+.header {
+  font-size: 60px;
+    margin: 40px 0px 20px 0px;
+}
+#subtitle {
+  margin: 0px 0px 100px 0px;
+}
+li {
+  list-style-type: none;
+}
+.medium {
+  font-size: 35px;
+}
