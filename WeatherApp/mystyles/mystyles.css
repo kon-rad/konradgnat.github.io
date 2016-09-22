@@ -1,0 +1,21 @@
+div {
+  text-align: center;
+  border-radius: 8px;
+}
+.jumbotron {
+  margin-top: 40px;
+  height: 60vmin;
+}
+.well {
+
+  min-height: 140px;
+}
+h1 {
+  font-family: 'Candal', sans-serif;
+  margin-bottom: 50px;
+}
+body {
+ font-family: 'Quattrocento', serif;
+  padding-bottom: 300px;
+  background-image: url('http://res.cloudinary.com/dvozfehww/image/upload/v1474378008/weather_zp0gam.png');
+}

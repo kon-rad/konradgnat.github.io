@@ -1,0 +1,30 @@
+
+body {
+  margin-top: 50px;
+  text-align: center;
+  background-image: url('http://res.cloudinary.com/dvozfehww/image/upload/v1473871490/asanoha-400px_fazcz0.png');
+}
+h1 {
+font-family: 'Bungee Shade', cursive;
+}
+.controls {
+  bottom: 50px;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+#quote {
+   font-family: "Courier New", Courier, monospace;
+}
+#author {
+  font-family: "Courier New", Courier, monospace;
+}
+blockquote {
+  margin: 100px 0px 100px 0px;
+}
+.well {
+  min-height: 500px;
+  background-color: white;
+}
