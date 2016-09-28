@@ -46,35 +46,28 @@ Openweathermap.org
     <div class="row">
     <div id="infoDisplay" class="col-xs-12 col-sm-6 col-sm-offset-3">
       <div class="row">
-        <div class="well col-xs-3">
-          <h4>Location</h4>
+        <div class="well col-xs-6 col-xs-offset-3">
+          <h4>Location:</h4>
           <span id="location"></span>
-        </div>
-        <div class="well col-xs-3">
+
           <h4>Temperature:</h4>
           <span id="temp"></span>
-        </div>
-        <div class="well col-xs-3">
+
           <h4>Humidity:</h4>
           <span id="humidity"></span>
-        </div>
-        <div class="well col-xs-3">
+
           <h4>Conditions:</h4>
           <span id="description"></span>
         </div>
         <div class="row">
           <div class="col-xs-12" id="controls">
             <input type="text" id="city" placeholder="Enter City Name">
-    <button type="submit" id="cityButton" class="btn btn-xs btn-primary">Get Weather</button>
-
-   <div class="btn-group btn-group-xs" data-toggle="buttons">
-     <label class="btn btn-info active">
-       <input type="radio" name="imperial" id="imperial"
-        autocomplete="off" checked>℉</label>
-     <label class="btn btn-info">
-       <input type="radio" name="metric" id="metric"
-        autocomplete="off">℃</label>
-   </div>
+    <button type="submit" id="cityButton" class="btn btn-xs btn-primary">
+      Get Weather</button>
+    <div class="btn-group" role="group" aria-label="...">
+      <button id="imperial"type="button" class="btn btn-info btn-xs">℉</button>
+      <button id="metric"type="button" class="btn btn-info btn-xs">℃</button>
+    </div>
           </div>
         </div>
       </div>

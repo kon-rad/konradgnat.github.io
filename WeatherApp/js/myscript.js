@@ -1,6 +1,10 @@
 $(document).ready(function() {
+  getLocation();
+
 
   var latlon;
+  var lat;
+  var long;
   var getLocation;
   var getWeatherByCity;
   var units = "imperial";
@@ -11,10 +15,12 @@ $(document).ready(function() {
   var tempSymbol = "℉";
   var symbolHum = "%";
 
+
   /* SWITCH BACK TO CELSIUS */
-  $("#metric").on("click", function() {
-     units = "metric";
+  $("#metric").click(function() {
+    units = "metric";
         tempSymbol = "℃";
+
     getLocation();
       });
 
@@ -25,6 +31,7 @@ $(document).ready(function() {
     getLocation()
       });
 
+
   /* SEARCH CITY NAME FUNCTION*/
   $("#cityButton").click(function() {
    cityName = $("#city").val();
@@ -34,29 +41,38 @@ $(document).ready(function() {
   /* GET USER LOCATION FUNCTION */
 
 function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-       var x = "Geolocation is not supported by this browser.";
-       alert('x');
-    }
+    $.get("http://ip-api.com/json", function(loc) {
+      lat = loc.lat;
+      lon = loc.lon;
+      var city = loc.city
+
+
+      $("#location").html(loc.city + ",\n " + loc.country);
+     showPosition(lat,lon);
+
+    });
 }
 
 getLocation();
 
+
+
+
   /* GET WEATHER BY USER LOCATION */
 
-function showPosition(position) {
+function showPosition(lat, lon) {
 
-    latlon = position.coords.latitude + "&lon=" + position.coords.longitude;
+  //  latlon = position.coords.latitude + "&lon=" + position.coords.longitude;
 
     var weatherAPI = "https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?lat=" +
-      latlon + "&units=" + units + "&APPID=00e2913c08352690d9e8cbca016ab19f";
+      lat + "&lon=" + lon + "&units=" + units + "&type=accurate&APPID=00e2913c08352690d9e8cbca016ab19f";
 
 
+   //    api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}
+//'http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&units=imperial' + '&type=accurate' + '&APPID=8eaa6764765a63f871a557c8228667bd'
 
   $.getJSON(weatherAPI, function(json) {
-  $("#location").html(json.name + " " + json.sys.country);
+
       $("#humidity").html(json.main.humidity + symbolHum);
       $("#description").html(json.weather[0].description);
       $("#temp").html(json.main.temp + tempSymbol);
@@ -107,8 +123,6 @@ function showPosition(position) {
     });
 
 }
-
-
 
   /* GET WEATHER BY CITY NAME FUNCTION*/
 
@@ -173,6 +187,4 @@ function showPosition(position) {
 
 }
 
-
-});
- 
+ });

@@ -7,7 +7,7 @@ div {
   height: 60vmin;
 }
 .well {
-
+  font-size: 2vmin;
   min-height: 140px;
 }
 h1 {
@@ -18,4 +18,7 @@ body {
  font-family: 'Quattrocento', serif;
   padding-bottom: 300px;
   background-image: url('http://res.cloudinary.com/dvozfehww/image/upload/v1474378008/weather_zp0gam.png');
+}
+h4 {
+  font-size: 3vmin;
 }
