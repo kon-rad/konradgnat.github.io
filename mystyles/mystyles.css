@@ -1,7 +1,6 @@
 .navbar-default{
   background-color: #698cbd;
 }
-
 .navbar-default .navbar-header .navbar-brand {
   color: black;
 }
@@ -12,6 +11,7 @@ body {
   margin-top: 60px;
  background-color:  #d5feff;
   font-family: 'Lato', sans-serif;
+  padding-bottom: 100px;
 }
 .gallery {
   display: flex;
@@ -21,9 +21,12 @@ body {
 .row {
   display:flex; flex-wrap: wrap;
 }
-.well {
-   background-color: 	 #698cbd;
+.displayBox{
+  background-color: 	 #698cbd;
   border-radius: 10px;
+  text-align: center;
+  padding: 30px;
+  display:flex; flex-wrap: wrap;
 }
 .jumbotron {
   background-color:	#698cbd;
@@ -34,7 +37,6 @@ body {
 }
 .projectImg{
   border-radius: 10px;
-/*  width: 200px;*/
   height: 120px !important;
 }
 hr.style-two {
@@ -42,12 +44,16 @@ hr.style-two {
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
-.logo {
+.socialMedia {
+  background-color:   #698cbd;
   border-radius: 10px;
 }
 .small-image{
   margin-bottom: 20px;
   border-radius: 10px;
+}
+a {
+      margin: 0 auto;
 }
 .titles {
   margin-top: 100px;
