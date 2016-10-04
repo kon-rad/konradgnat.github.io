@@ -3,35 +3,24 @@
 <head>
   <title>Matching Game</title>
 
-  <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
 
-  <script type="text/javascript"  src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/myscript.js"></script>
+  <script type="text/javascript"  src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="script/script.js"></script>
 
-  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
-  <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="../../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style/main.css">
 
-  <style>
-  img {
-    position: absolute;
-  }
-  .window {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-  }
-  #rightSide {
-    left: 500px;
-    border-left: 1px solid black;
-  }
-  </style>
   <script>
 
   var numberOfFaces = 5;
 
-  function generateFaces()
-  {
+
+
+
+  function generateFaces() {
     var i = 0;
     while( i < numberOfFaces)
     {
@@ -61,8 +50,7 @@
 
     var theBody = document.getElementsByTagName("body")[0];
     var theLeftSide  = document.getElementById("leftSide");
-    theLeftSide.lastChild.onclick=function nextLevel(event)
-    {
+    theLeftSide.lastChild.onclick = function nextLevel(event) {
       event.stopPropagation();
       numberOfFaces += 5;
 
@@ -82,17 +70,29 @@
     };
 
     /*
+    Display Level function
+    */
+
+
+    var level = numberOfFaces / 5;
+    var gameLevel = document.getElementById('currentLevel');
+    if (gameLevel.firstChild)
+    gameLevel.removeChild(gameLevel.firstChild);
+    document.getElementById("currentLevel").innerHTML += level;
+
+    /*
     Game Over function
     */
 
     theBody.onclick = function gameOver()
     {
-      alert("Game Over!");
+      alert("Game Over!\n\nYou have reached level " + level);
       theBody.onclick = null;
       theLeftSide.lastChild.onclick = null;
     };
+  } // end generateFaces function
 
-  }
+
   </script>
 </head>
 
@@ -100,20 +100,24 @@
 <div class="jumbotron">
   <div clas="container">
   <h1>
-    Color Matching Game
+    Matching Game
   </h1>
-  <div class="col-xs-8 col-sm-6">
   <p>
-    There is one extra smily face on the left. Can you find it? Click on it
-    in order to advance to the next level. Caution! If you click in the wrong
-     place you lose!
+    There is one extra smily face on the left. Click on it
+    in order to advance to the next level. Caution! Click in the wrong
+     place and game over!
   </p>
- </div>
+  <h4 id="levelDisplay">Level: <span id="currentLevel"></span></h4>
+  <form>
+<input type="button" onClick="history.go(0)" value="Restart Game">
+</form>
 </div>
-</div> 
-
+</div>
+<div class="container">
+  <div class="row">
   <div class="col-xs-12 col-md-6 window" id="leftSide"></div>
-  <div class="col-xs-12 col-md-6 window" id="rightSide"></div>
-
+  <div id="rightSide"></div>
+</div>
+</div>
 </body>
 </html>

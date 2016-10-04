@@ -1,9 +1,12 @@
 'use strict';
 
+
   var numberOfFaces = 5;
 
-  function generateFaces()
-  {
+
+
+
+  function generateFaces() {
     var i = 0;
     while( i < numberOfFaces)
     {
@@ -11,7 +14,7 @@
       var pLeft = Math.floor(Math.random() * 401).toFixed();
       var smile = document.createElement("img");
       var theLeftSide  = document.getElementById("leftSide");
-      smile.src = "../images/smile.png";
+      smile.src = "images/smile.png";
       smile.style.top = pTop + "px";
       smile.style.left = pLeft + "px";
       theLeftSide.appendChild(smile);
@@ -33,8 +36,7 @@
 
     var theBody = document.getElementsByTagName("body")[0];
     var theLeftSide  = document.getElementById("leftSide");
-    theLeftSide.lastChild.onclick=function nextLevel(event)
-    {
+    theLeftSide.lastChild.onclick = function nextLevel(event) {
       event.stopPropagation();
       numberOfFaces += 5;
 
@@ -54,14 +56,24 @@
     };
 
     /*
+    Display Level function
+    */
+
+
+    var level = numberOfFaces / 5;
+    var gameLevel = document.getElementById('currentLevel');
+    if (gameLevel.firstChild)
+    gameLevel.removeChild(gameLevel.firstChild);
+    document.getElementById("currentLevel").innerHTML += level;
+
+    /*
     Game Over function
     */
 
     theBody.onclick = function gameOver()
     {
-      alert("Game Over!");
+      alert("Game Over!\n\nYou have reached level " + level);
       theBody.onclick = null;
       theLeftSide.lastChild.onclick = null;
     };
-
-  }
+  } // end generateFaces function
