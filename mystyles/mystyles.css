@@ -1,3 +1,5 @@
+
+
 .navbar-default{
   background-color: #698cbd;
 }
@@ -7,11 +9,21 @@
 .navbar-default .navbar-nav li> a{
   color: black;
 }
+/**{
+  border: solid red 1px;
+}*/
 body {
   margin-top: 60px;
  background-color:  #d5feff;
   font-family: 'Lato', sans-serif;
   padding-bottom: 100px;
+  /*html {
+    background: url(../images/chipComputer.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;*/
+
 }
 .gallery {
   display: flex;
@@ -29,7 +41,16 @@ body {
   display:flex; flex-wrap: wrap;
 }
 .jumbotron {
+  margin-top: 100px;
   background-color:	#698cbd;
+  height: 400px;
+  color: black;
+  /*background: url(../images/codeImage.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+  /*background-image: url(../images/chipComputer.jpg);*/
 }
 .thumbnail{
   background-color:   #698cbd;
@@ -45,8 +66,9 @@ hr.style-two {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 .socialMedia {
-  background-color:   #698cbd;
-  border-radius: 10px;
+  /*background-color: #698cbd;
+  border-radius: 10px;*/
+  margin-bottom: 100px;
 }
 .small-image{
   margin-bottom: 20px;
@@ -55,7 +77,12 @@ hr.style-two {
 a {
       margin: 0 auto;
 }
-.titles {
+.titles h3 {
+  font-size: 3em;
   margin-top: 100px;
   text-align: center;
+  text-shadow: 2px 2px white;
+}
+.textContent {
+  font-size: 1.4em;
 }

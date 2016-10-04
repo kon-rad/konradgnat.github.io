@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Matching Game</title>
+
+  <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+
+  <script type="text/javascript"  src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/myscript.js"></script>
+
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+  <style>
+  img {
+    position: absolute;
+  }
+  .window {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+  }
+  #rightSide {
+    left: 500px;
+    border-left: 1px solid black;
+  }
+  </style>
+  <script>
+
+  var numberOfFaces = 5;
+
+  function generateFaces()
+  {
+    var i = 0;
+    while( i < numberOfFaces)
+    {
+      var pTop = Math.floor(Math.random() * 401).toFixed();
+      var pLeft = Math.floor(Math.random() * 401).toFixed();
+      var smile = document.createElement("img");
+      var theLeftSide  = document.getElementById("leftSide");
+      smile.src = "images/smile.png";
+      smile.style.top = pTop + "px";
+      smile.style.left = pLeft + "px";
+      theLeftSide.appendChild(smile);
+      i++;
+    }
+
+    /*
+    Cloning to the Right Side
+    */
+
+    var theRightSide = document.getElementById("rightSide");
+    leftSideImages = theLeftSide.cloneNode(true);
+    leftSideImages.removeChild(leftSideImages.lastChild);
+    rightSide.appendChild(leftSideImages);
+
+    /*
+    Event hander functions
+    */
+
+    var theBody = document.getElementsByTagName("body")[0];
+    var theLeftSide  = document.getElementById("leftSide");
+    theLeftSide.lastChild.onclick=function nextLevel(event)
+    {
+      event.stopPropagation();
+      numberOfFaces += 5;
+
+      /*
+      Clear both sides before generating new set of faces
+      */
+
+      while(theLeftSide.firstChild)
+      {
+        theLeftSide.removeChild(theLeftSide.firstChild);
+      };
+      while(theRightSide.firstChild)
+      {
+        theRightSide.removeChild(theRightSide.firstChild);
+      };
+      generateFaces();
+    };
+
+    /*
+    Game Over function
+    */
+
+    theBody.onclick = function gameOver()
+    {
+      alert("Game Over!");
+      theBody.onclick = null;
+      theLeftSide.lastChild.onclick = null;
+    };
+
+  }
+  </script>
+</head>
+
+<body onload="generateFaces()">
+<div class="jumbotron">
+  <div clas="container">
+  <h1>
+    Color Matching Game
+  </h1>
+  <div class="col-xs-8 col-sm-6">
+  <p>
+    There is one extra smily face on the left. Can you find it? Click on it
+    in order to advance to the next level. Caution! If you click in the wrong
+     place you lose!
+  </p>
+ </div>
+</div>
+</div> 
+
+  <div class="col-xs-12 col-md-6 window" id="leftSide"></div>
+  <div class="col-xs-12 col-md-6 window" id="rightSide"></div>
+
+</body>
+</html>
