@@ -107,3 +107,9 @@ body {
    padding-top: 90px;
    padding-bottom: 90px;
 }
+.media {
+  margin: 100px 0px 0px 0px;
+}
+.titles {
+  margin: 20px 0px 60px 0px;
+}

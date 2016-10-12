@@ -6,7 +6,7 @@ $(document).ready(function(){
    $(this).parent().addClass("active");
 });
 
-  $("#mycarousel").carousel( { interval: 500 } );
+  $("#mycarousel").carousel( { interval: 1000 } );
 
   $("#carouselPause").click(function(){
     $("#mycarousel").carousel('pause');
