@@ -8,15 +8,13 @@
 
   <title>Portfolio Page</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Varela+Round" rel="stylesheet">
   <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-<!-- causes navbar and some about well to be gray color, because theme overrides
-the custom css, to fix, do background by rgb
-  <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
--->
   <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
   <link href="mystyles/mystyles.css" rel="stylesheet">
+  <script type="text/javascript" src="scripts/main.js"></script>
 </head>
 
 <body>
@@ -34,7 +32,7 @@ the custom css, to fix, do background by rgb
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#about">Fernando Borges</a>
+        <a class="navbar-brand" href="#home"><i class="fa fa-code" aria-hidden="true"></i></a>
       </div>
       <div  id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
@@ -48,221 +46,201 @@ the custom css, to fix, do background by rgb
    </div>
 </nav>
 
-<!-- Heading -->
-<div class="jumbotron">
-  <div class="container">
-  <h1>Fernando Borges</h1>
-  <p> Full Stack Web Developer | Computer Enthusiast | Reader
-  </div>
-</div>
+<!-- First Screen -->
 
-<div class="container-fluid body">
+<div class="cont section-1" id="home">
 
+  <h1>Konrad Gnat</h1>
+  <h2>Full Stack Web Developer</h2>
 
+</div> 
 
-
-  <!-- About -->
-
-
-  <div class="row" id="about">
-    <div class="col-xs-12 titles">
-     <h3> About </h3>
-   </div>
-       <hr>
-  </div>
-  <div class="row">
-   <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 displayBox">
-     <div class="row">
-       <div class="col-xs-12 col-sm-6 col-md-6">
-    <img src="http://www.insureyourcompany.com/wp-content/uploads/2015/05/img-programmers.jpg"
-    alt="Professional Programmer Image" class="img-responsive small-image">
-  </div>
-   <div class="col-xs-12 col-sm-6 col-md-4">
-      <p class="textContent">I love building things with technology! Currently I am using my
-        computer programming skills taking part in Free Code Camp, Coursera Web Developer
-         Specialization and other online platforms. I take pride in my code
-        and always deliver beyond expectations.</p>
-    </div>
-  </div>
-  </div>
-</div>
-
+<div class="container-fluid">
   <!-- Projects -->
 
-
+ <section>
   <div class="row titles"  id="projects">
     <div class="col-xs-12">
-      <h3>Projects</h3>
-       <hr>
+      <h2>Projects</h2>
     </div>
    </div>
 
    <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+    <div class="col-sm-10 col-sm-offset-1 ">
       <div class="row">
 
   <!-- Project #1 -->
 
 
-    <div class="col-xs-6 col-sm-3">
-        <div class="thumbnail">
-      <img src="http://res.cloudinary.com/dvozfehww/image/upload/v1471707174/Tribute-Page_cfn7zs.png" class="img-responsive projectImg">
-        <div class="caption">
-          <h5> Tribute Page #1</h5>
-          <p><a href="../Tribute_Page_Tim/index.html" class="btn btn-primary">Visit Page</a></p>
+    <div class="col-xs-12 col-sm-4">
+      <div class="imgWrap">
+      <img src="http://res.cloudinary.com/dvozfehww/image/upload/v1471707174/Tribute-Page_cfn7zs.png"
+        class="img-responsive">
+        <div class="imgDescription">
+          <h4> Tribute Page #1</h4></br>
+          <p> HTML, CSS, Responsive Design and Bootstrap</p> </br>
+          <p><a href="../Tribute_Page_Tim/index.html" class="btn btn-default">Visit Page</a></p>
         </div>
       </div>
-    </div>
+      </div>
 
     <!-- Project #2 -->
 
-    <div class="col-xs-6 col-sm-3">
-      <div class="thumbnail">
+    <div class="col-xs-12 col-sm-4 ">
+      <div class="imgWrap">
         <img src="http://res.cloudinary.com/dvozfehww/image/upload/v1472079650/Tesla-page_cr0ugq.png"
-        alt="image of Tesla tribute page" class="img-responsive  projectImg">
-          <div class="caption">
-            <h5>Tribute Page #2</h5>
-            <p><a href="NikolaTeslaTribute/index.html" class="btn btn-primary">Visit Page</a></p>
+        alt="image of Tesla tribute page" class="img-responsive">
+          <div class="imgDescription">
+            <h4>Tribute Page #2</h4></br>
+            <p> HTML, CSS, Responsive Design and Bootstrap</p> </br>
+            <p><a href="NikolaTeslaTribute/index.html" class="btn btn-default">Visit Page</a></p>
           </div>
+        </div>
       </div>
-    </div>
+
 
     <!-- Project #3 -->
 
-    <div class="col-xs-6 col-sm-3">
-      <div class="thumbnail">
-      <img src="Tribute_Page_Linus/images/LinusPageImage.png" class="img-responsive  projectImg">
-        <div class="caption">
-          <h5> Tribute Page #3</h5>
-          <p><a href="Tribute_Page_Linus/index.html" class="btn btn-primary">Visit Page</a></p>
+    <div class="col-xs-12 col-sm-4">
+      <div class="imgWrap">
+      <img src="Tribute_Page_Linus/images/LinusPageImage.png" class="img-responsive">
+        <div class="imgDescription">
+          <h4> Tribute Page #3</h4></br>
+          <p>HTML, CSS, JavaScript, Responsive Design and Bootstrap</p> </br>
+          <p><a href="Tribute_Page_Linus/index.html" class="btn btn-default">Visit Page</a></p>
         </div>
       </div>
     </div>
 
     <!-- Project #4 -->
 
-    <div class="col-xs-6 col-sm-3">
-      <div class="thumbnail">
-      <img src="JokeGenerator/images/JokesGenerator.png" class="img-responsive projectImg">
-        <div class="caption">
-          <h5>Jokes Generator</h5>
-          <p><a href="JokeGenerator/index.html" class="btn btn-primary">Visit Page</a></p>
+    <div class="col-xs-12 col-sm-4">
+      <div class="imgWrap">
+      <img src="JokeGenerator/images/JokesGenerator.png" class="img-responsive">
+        <div class="imgDescription">
+          <h4>Jokes Generator</h4></br>
+          <p>Built with icndb.com and twitter.com API's, HTML, CSS, JavaScript, Bootstrap, Responsive Design and jQuery</p> </br>
+          <p><a href="JokeGenerator/index.html" class
+            ="btn btn-default">Visit Page</a></p>
         </div>
       </div>
     </div>
 
     <!-- Project #5 -->
 
-    <div class="col-xs-6 col-sm-3">
-      <div class="thumbnail">
-      <img src="images/QuoteMachineImage.png" class="img-responsive projectImg">
-        <div class="caption">
-          <h5>Quote Machine</h5>
-          <p><a href="QuoteMachine/index.html" class="btn btn-primary">Visit Page</a></p>
+    <div class="col-xs-12 col-sm-4">
+      <div class="imgWrap">
+      <img src="images/QuoteMachineImage.png" class="img-responsive">
+        <div class="imgDescription">
+          <h4>Quote Machine</h4></br>
+          <p>Built with forismatic.com API, HTML, CSS, JavaScript, Bootstrap, Responsive Design and jQuery</p> </br>
+          <p><a href="QuoteMachine/index.html" class
+            ="btn btn-default">Visit Page</a></p>
         </div>
       </div>
     </div>
 
       <!-- Project #6 -->
 
-    <div class="col-xs-6 col-sm-3">
-      <div class="thumbnail">
-      <img src="images/WeatherAppImage.png" class="img-responsive projectImg">
-        <div class="caption">
-          <h5>Weather App</h5>
-          <p><a href="WeatherApp/index.html" class="btn btn-primary">Visit Page</a></p>
+    <div class="col-xs-12 col-sm-4">
+      <div class="imgWrap">
+      <img src="images/WeatherAppImage.png" class="img-responsive">
+        <div class="imgDescription">
+          <h4>Weather App</h4></br>
+          <p>Built with geolocation and openweathermap.org API, HTML, CSS, JavaScript, Bootstrap, Responsive Design and jQuery</p> </br>
+          <p><a href="WeatherApp/index.html" class
+            ="btn btn-default">Visit Page</a></p>
         </div>
       </div>
     </div>
 
   <!-- Project #7 -->
 
-    <div class="col-xs-6 col-sm-3">
-      <div class="thumbnail">
-      <img src="images/Wikipedia_Viewer.png" class="img-responsive projectImg">
-        <div class="caption">
-          <h5>Wikipedia App</h5>
-          <p><a href="Wikipedia_Viewer/index.html" class="btn btn-primary">Visit Page</a></p>
+    <div class="col-xs-12 col-sm-4">
+      <div class="imgWrap">
+      <img src="images/Wikipedia_Viewer.png" class="img-responsive">
+        <div class="imgDescription">
+          <h4>Wikipedia App</h4></br>
+          <p>Built with wikipedia API, HTML, CSS, JavaScript, Bootstrap, Responsive Design and jQuery</p> </br>
+          <p><a href="Wikipedia_Viewer/index.html"
+            class="btn btn-default">Visit Page</a></p>
         </div>
       </div>
     </div>
 
   <!-- Project #8 -->
 
-    <div class="col-xs-6 col-sm-3">
-      <div class="thumbnail">
-      <img src="images/matching_game_image.png" class="img-responsive projectImg">
-        <div class="caption">
-          <h5>Matching Game</h5>
-          <p><a href="Projects/MatchingGame/index.html" class="btn btn-primary">Visit Page</a></p>
+    <div class="col-xs-12 col-sm-4">
+      <div class="imgWrap">
+      <img src="images/matching_game_image.png" class="img-responsive">
+        <div class="imgDescription">
+          <h4>Matching Game</h4></br>
+          <p>HTML, CSS,JavaScript, Bootstrap, Responsive Design and jQuery</p> </br>
+          <p><a href="Projects/MatchingGame/index.html"
+            class="btn btn-default">Visit Page</a></p>
         </div>
       </div>
     </div>
 
 <!-- Project #9 -->
 
-<div class="col-xs-6 col-sm-3">
-  <div class="thumbnail">
-  <img src="images/abcConstructionImg.png" class="img-responsive projectImg">
-    <div class="caption">
-      <h5>Sample Website</h5>
-      <p><a href="Projects/ConstructionCompanyPage/index.html" class="btn btn-primary">Visit Page</a></p>
+<div class="col-xs-12 col-sm-4">
+  <div class="imgWrap">
+  <img src="images/abcConstructionImg.png" class="img-responsive">
+    <div class="imgDescription">
+      <h4>Sample Website</h4></br>
+      <p>HTML, CSS, JavaScript, Bootstrap, Responsive Design and JQuery</p> </br>
+      <p><a href="Projects/ConstructionCompanyPage/index.html"
+        class="btn btn-default">Visit Page</a></p>
     </div>
   </div>
 </div>
 
-  <!-- Project #10 -->
 
-<div class="col-xs-6 col-sm-3">
-  <div class="thumbnail">
-  <img src="images/Comingsoon.png" class="img-responsive projectImg">
-    <div class="caption">
-      <h5>Coming Soon</h5>
-      <p><a href="WeatherApp/index.html" class="btn btn-primary">Visit Page</a></p>
-    </div>
-  </div>
 </div>
-
-<!-- Project #11 -->
-
-<div class="col-xs-6 col-sm-3">
-  <div class="thumbnail">
-  <img src="images/Comingsoon.png" class="img-responsive projectImg">
-    <div class="caption">
-      <h5>Coming Soon</h5>
-      <p><a href="Wikipedia_Viewer/index.html" class="btn btn-primary">Visit Page</a></p>
-    </div>
-  </div>
 </div>
+</div>
+</section>
+</div>
+<!-- About -->
 
-<!-- Project #12 -->
-
-<div class="col-xs-6 col-sm-3">
-  <div class="thumbnail">
-  <img src="images/Comingsoon.png" class="img-responsive projectImg">
-    <div class="caption">
-      <h5>Coming Soon</h5>
-      <p><a href="Projects/MatchingGame/index.html" class="btn btn-primary">Visit Page</a></p>
-    </div>
+<section>
+<div class="row cont section-2" id="about">
+  <div class="col-xs-12 titles">
+   <h2> About </h2>
+ </div>
+ <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 displayBox">
+   <div class="row">
+ <div class="col-xs-12 col-sm-6 col-sm-offset-3 textBox">
+    <span class="textContent"><p>Hi, I'm a solutions oriented fullstack web
+      developer with proficiencies in a number of technologies including HTML,
+       CSS, JavaScript/jQuery, Bootstrap, responsive design, Java and Gulp.
+     </br></br>
+       I love tackling new projects, problem solving and working within a
+      collaborative team environment.
+     </br></br>
+      When I'm not working on my next coding
+     project I can be found running, reading fiction or exploring the great
+    outdoors. </p></span>
   </div>
 </div>
 </div>
 </div>
-</div>
-
+</section>
 
   <!-- Contact Section -->
 
-<div class="container-fluid">
-  <div class="row  titles"  id="projects">
-    <div class="col-xs-12">
-      <h3>Contact</h3>
-    <hr>
-  </div>
-    </div>
-
+<section>
+  <div class="cont section-3">
 
   <div class="row" id="contact">
+    <div class="col-xs-12 titles">
+      <h2>Contact</h2>
+    </div>
+  </div>
+
+
+  <div class="row" >
     <div class="col-md-8 col-md-offset-2 col-sm-12">
       <form class=" displayBox form-horizontal" method="post">
         <fieldset>
@@ -316,13 +294,15 @@ the custom css, to fix, do background by rgb
       </form>
     </div>
   </div>
+</div>
+</section>
 
   <!-- Social Media -->
 
+<section id="social-media">
    <div class="row  titles">
       <div class="col-xs-12 titles">
-      <h3>Social Media</h3>
-    <hr>
+      <h2>Around the Web</h2>
   </div>
     </div>
 
@@ -339,15 +319,8 @@ the custom css, to fix, do background by rgb
   </div>
 
 </div>
+</section>
 </div>
-<!--  <script>
-   $('.dropdown-toggle').dropdown('toggle');
-$('.dropdown-toggle').dropdown('toggle');
-  </script>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
 
  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>

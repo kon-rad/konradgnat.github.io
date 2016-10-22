@@ -1,7 +1,7 @@
 
-
 .navbar-default{
-  background-color: #698cbd;
+  background-color: rgba(241,90,34,0.5);
+  height: 50px;
 }
 .navbar-default .navbar-header .navbar-brand {
   color: black;
@@ -9,80 +9,136 @@
 .navbar-default .navbar-nav li> a{
   color: black;
 }
-/**{
-  border: solid red 1px;
-}*/
 body {
-  margin-top: 60px;
- background-color:  #d5feff;
-  font-family: 'Lato', sans-serif;
-  padding-bottom: 100px;
-  /*html {
-    background: url(../images/chipComputer.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;*/
-
-}
-.gallery {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  font-family: 'Alfa Slab One', cursive;
+  background-color:  	#fbb03b;
 }
 .row {
   display:flex; flex-wrap: wrap;
 }
 .displayBox{
-  background-color: 	 #698cbd;
+  background-color: rgb(187, 187, 187);
   border-radius: 10px;
   text-align: center;
   padding: 30px;
   display:flex; flex-wrap: wrap;
+  font-family: Verdana, Geneva, sans-serif;
 }
-.jumbotron {
+.titles h2 {
+  font-size: 50px;
   margin-top: 100px;
-  background-color:	#698cbd;
-  height: 400px;
-  color: black;
-  /*background: url(../images/codeImage.jpg) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;*/
-  /*background-image: url(../images/chipComputer.jpg);*/
+  margin-bottom: 100px;
+  text-align: center;
 }
-.thumbnail{
-  background-color:   #698cbd;
-  border-radius: 10px;
+.cont{
+    padding:100px 20px 100px 20px;
+    text-align:center;
+    color:#000;
+    font-weight:bold;
 }
-.projectImg{
-  border-radius: 10px;
-  height: 120px !important;
+.cont h1 {
+  font-size: 80px;
 }
-hr.style-two {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+.section-1{
+  !important;height: 1000px;
+    background-image:url(../images/sunMountain.jpeg);
+    background-repeat: no-repeat;
+    -moz-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+	background-size: cover;
+	position: relative;
+	background-position: 50% 50%;
+}
+.section-2 {
+    margin-top: 100px
+  !important;height: 1000px;
+    background-image:url(../images/bwWebDev.jpeg);
+    background-repeat: no-repeat;
+    -moz-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+	background-size: cover;
+	position: relative;
+	background-position: 50% 50%;
+}
+.section-3 {
+  !important;height: 1000px;
+    background-image:url(../images/nepalMountains.jpeg);
+    background-repeat: no-repeat;
+    -moz-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+	background-size: cover;
+	position: relative;
+	background-position: 50% 50%;
+}
+.imgWrap {
+  position: relative;
+  height: 300px;
+  width: 357px;
+  overflow: auto;
+}
+.imgWrap img {
+   height: 100%;
+   width: auto;
+}
+.imgDescription {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(170,170,170,0.72);
+  color: #000;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  font-family: 'Varela Round', sans-serif;
+  -webkit-transition: visibility opacity 0.8s;
+}
+.imgWrap:hover .imgDescription {
+  visibility: visible;
+  opacity: 1;
 }
 .socialMedia {
-  /*background-color: #698cbd;
-  border-radius: 10px;*/
-  margin-bottom: 100px;
+  margin-bottom: 600px;
 }
-.small-image{
-  margin-bottom: 20px;
-  border-radius: 10px;
-}
+
 a {
-      margin: 0 auto;
+  margin: 0 auto;
 }
-.titles h3 {
-  font-size: 3em;
-  margin-top: 100px;
+#about .displayBox {
+  display: table;
   text-align: center;
-  text-shadow: 2px 2px white;
 }
-.textContent {
-  font-size: 1.4em;
+ .textBox {
+  font-size: 20px;
+  display: table-cell;
+  vertical-align: middle;
+    font-family: 'Varela Round', sans-serif;
+}
+#about .titles h2{
+  margin-top: 200px;
+  color: #f15a22
+}
+#contact .titles h2{
+  color: #f15a22
+}
+
+  /* Media Quaries */
+
+@media only screen and ( max-width: 568px ) {
+  .cont h1 {
+      font-size: 46px;
+    }
+    .cont h2 {
+      font-size: 30px;
+    }
+  .titles h2 {
+      font-size: 34px;
+  }
+  .textContent {
+    font-size: 16px;
+  }
 }
