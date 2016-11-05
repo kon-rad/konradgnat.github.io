@@ -96,6 +96,7 @@ body {
   opacity: 0;
   font-family: 'Varela Round', sans-serif;
   -webkit-transition: visibility opacity 0.8s;
+  padding: 4px 8px;
 }
 .imgWrap:hover .imgDescription {
   visibility: visible;
