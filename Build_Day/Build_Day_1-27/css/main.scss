@@ -1,0 +1,315 @@
+$bright-green: #00ab6b;
+$light-gray: rgba(0,0,0,.44);
+$dark-gray: rgba(0,0,0,.8);
+body {
+  height: 3000px;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #fff;
+  color: $light-gray;
+  font-size: 14;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  text-decoration: none;
+}
+html {
+    overflow: auto;
+    overflow-x: auto;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+.header {
+  height: 80px;
+  padding-top: 15px;
+  img {
+  }
+  p, i {
+    padding-top: 7px;
+  }
+  p:nth-child(2) {
+  color: $dark-gray;
+  font-size: 18px;
+  line-height: 1.4;
+  float: left;
+  width: 95px;
+  height: 45px;
+}
+  p:nth-child(4) {
+    float: right;
+    margin-right: 26px;
+    color: $bright-green;
+  }
+  p:nth-child(5) {
+    float: right;
+    margin-right: 30px;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  i {
+    float: right;
+    margin-top: 2px;
+    margin-right: -4px;
+    font-size: 18px;
+  }
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+nav.primary{
+  display: table;
+  margin: 0px auto;
+  height: 20px;
+  background-color: #fff;
+  width: 100%;
+}
+
+nav.primary ul, nav.primary ul li {
+  margin: 0px;
+  white-space:nowrap;
+  overflow-x: auto;
+  padding: 0;
+  list-style-type: none;
+}
+nav.primary select {
+  display: none;
+  width:  100%;
+  height: 28px;
+  margin: 21px 0;
+}
+nav.primary ul li {
+  display: inline-block;
+}
+nav.primary ul li a {
+  display: inline-block;
+  padding:  15px 7px;
+  color: $light-gray;
+  background-color: #fff;
+  font-size: 14;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  text-decoration: none;
+}
+nav.primary ul li a:hover {
+  cursor: pointer;
+}
+.header {
+  text-align: center;
+}
+.header img {
+  float:left;
+}
+.image-main {
+}
+.image-main img {
+  max-width: 100%;
+}
+.blog-object {
+  border-radius: 0;
+  margin-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  max-width: 660px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,.04);
+  border: 1px solid rgba(0,0,0,.09);
+}
+.blog-heading > * {
+  float: left;
+}
+.blog-heading .text {
+  display: table-cell;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-style: normal;
+  verticle-align: middle;
+  line-height: 1.4;
+  text-rendering: auto;
+}
+.blog-heading h3 {
+  padding-top: 5px;
+  margin-bottom: 0px;
+  color: $bright-green;
+  background-color: transparent;
+  font-size: 14px;
+  font-family: -apple-system,BlinkMacSystemFont,
+      "Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,
+      "Open Sans","Helvetica Neue",sans-serif;
+  margin-top: 0px;
+  letter-spacing: 0;
+}
+.blog-heading p, .gray{
+  clear: left;
+  margin-top: 0px;
+  font-size: 12px;
+  line-height: 1.4;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,
+      Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  color:  $light-gray;
+}
+.blog-text p {
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 1.58;
+  letter-spacing: -0.004em;
+  font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman",
+      Times, serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgba(0,0,0,.8);
+}
+.blog-text h3 {
+  margin-top: 0;
+  font-size: 29px;
+  margin-left: -1.81px;
+  line-height: 1.04;
+  letter-spacing: -0.028em;
+  font-family: medium-content-sans-serif-font, "Lucida Grande",
+      "Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: rgba(0,0,0,0.8);
+  margin: 0;
+  display: block;
+}
+.blog-text .post-text a {
+  padding: 0;
+  vertical-align: baseline;
+  white-space: normal;
+  text-align: left;
+  display: inline-block;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-style: normal;
+  color: rgba(0,0,0,.6);
+  font-size: 12px;
+  line-height: 1.4;
+}
+.blog-image img{
+  float:right;
+}
+.blog-footer {
+  padding-top: 10px;
+}
+.blog-footer .right {
+  float: right;
+  i {
+    color: $light-gray;
+    line-height: 25px;
+    font-size: 18px;
+    white-space: normal;
+    text-align: left;
+  }
+  p {
+    margin-right: 8px;
+    display: inline-block;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-style: normal;
+    color:  $light-gray;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+.blog-footer .left {
+  float: left;
+  i {
+    margin-top: 2px;
+    margin-right: 4px;
+    color: $bright-green;
+    float: left;
+    font-size: 18px;
+  }
+  p {
+    display: inline-block;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-style: normal;
+    color: $light-gray;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+.articles-display {
+  padding: 35px 0 0 0;
+}
+.sidebar {
+  padding: 35px 0 0 0;
+  background-color: #fff;
+}
+.catalogPreview-header {
+  margin: 0 30px 0 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(0,0,0,0.0785);
+  display: block;
+  .catalogPreview-discription {
+    color: $dark-gray;
+  }
+}
+.catalogPreview-items ul {
+    padding-left:0;
+}
+.catalogPreview-items ul li {
+  list-style-type: none;
+  a {
+  color: inherit;
+  display: list-item;
+  text-decoration: none;
+  }
+  a:nth-child(1) {
+    color: $dark-gray;
+    text-decoration: none;
+  }
+}
+.catalogPreview-items img {
+  float: left;
+}
+
+.item {
+  display: list-item;
+  padding: 10px;
+  margin: 5px 5px 0px 20px;
+}
+.link {
+  color: $dark-gray;
+  float: left;
+  display: inline-block;
+}
+.link-name {
+  clear: left;
+}
+.item-text {
+  margin-left: 10px;
+  max-width: 260px;
+  float: left;
+  display: inline-block;
+}
+.sidebar-footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.sidebar-footer ul li {
+  list-style-type: none;
+  float: left;
+  a {
+    color: $light-gray;
+    text-decoration: none;
+    display: block;
+    font-size: 11px;
+    margin-right: 10px;
+    line-height: 1.4;
+  }
+}
+.sticky-sb {
+  position: fixed;
+  top: 54px;
+  z-index: 100;
+}
