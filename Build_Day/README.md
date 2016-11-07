@@ -26,6 +26,6 @@ Day 6: 10/29/2016
 Day 7: 10/31/2016
     Facebook log in page. Bootstrap. fully responsive.    
 
-Day 7: 10/31/2016
+Day 8: 10/31/2016
     Netflix welcome page. Bootstrap, fully responsive, font-awesome, JavaScript.
     Active features.     
