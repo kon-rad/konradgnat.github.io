@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>John Smith | Web Developer</title>
+
+  <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+
+  <meta name="description" content="this is a copy created as an exercise in
+  front-end web development">
+  <meta name="keywords" content="coding exercise">
+  <meta name="author" content="">
+
+  <meta name="robots" content="index, follow">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+  <link rel="stylesheet" href
+  ="../bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href
+  ="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="navbar transparent navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed"
+        data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+      </ul>
+      <a class="navbar-brand" href="#"><img src="img/brand.png"></a>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<section id="home">
+  <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel" data-slide-to="1"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item item01 active">
+        <!-- <img class="carousel-img" src="img/mountain-view.jpeg" alt="image of sparkler"> -->
+        <div class="carousel-caption">
+          <div class="caption-inner">
+            <h1>My Name is John Smith</h1>
+          </div>
+          <div class="sub">
+            <h4>a talented freelancer located on our lovely earth</h4>
+          </div>
+        </div>
+      </div>
+      <div class="item item02">
+        <!-- <img class="carousel-img" src="img/webDev.jpeg" alt="working at computer"> -->
+        <div class="carousel-caption">
+          <div class="caption-inner">
+            <h1>I am a Front-End Web Developer</h1>
+          </div>
+          <div class="sub">
+            <h4>a talented freelancer located on our lovely earth</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- end carousel div -->
+</section>
+
+<section id="about" class="bgGrey">
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-4">
+        <div class="intro">
+          <h1>A Bit About Me</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+            do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+      </div>
+
+
+      <div class="col-xs-12 col-sm-4 profile">
+        <div class="innerProfile tCenter">
+          <h1 class="prfTitle">My name is john smith</h1>
+          <span>I am a front-end web developer</span>
+          <img class="imgProfile" src="img/avatar.png" alt="avatar">
+          <div class="doubleBtn profileBtn">
+            <a class="doubleLeft" href="#portfolio">Portfolio</a>
+            <span class="choose">
+              <i>or</i>
+            </span>
+            <a class="doubleRight" href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-xs-12 col-sm-4">
+        <div class="intro">
+          <h1>Personal Info</h1>
+          <ul>
+            <li><span>Birthdate :</span>09/04/1982</li>
+            <li><span>Phone :</span>support@mutationmedia.net</li>
+            <li><span>Email :</span>09/04/1982</li>
+            <li><span>Website :</span>www.mutationmedia.com</li>
+            <li><span>Adresse :</span>Street Road, City Name, IN 567 890.</li>
+          </ul>
+          <div class="info-social">
+            <ul>
+              <li>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-flickr" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div> <!-- close info social -->
+        </div>
+      </div>
+
+    </div>
+  </div> <!-- close body container -->
+</section>
+
+<section id="portfolio" class="tCenter">
+  <div class="container">
+    <h1 class="title prfTitle">my portfolio</h1>
+  </div>
+  <div class="works">
+    <ul>
+
+      <li class="item">
+        <div class="itemDesc">
+          <div class="itemDescInner">
+            <h3>Cheat day<span>Web Design</span>
+            </h3>
+            <div class="doubleBtn itemBtn">
+              <a href="#" class="doubleLeft">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="doubleRight">
+                <i class="fa fa-link" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <img src="img/portfolio01.png" alt="image of portfolio item">
+      </li>
+
+      <li class="item">
+        <div class="itemDesc">
+          <div class="itemDescInner">
+            <h3>Great Restaurant<span>Motion Graphic Web Design</span>
+            </h3>
+            <div class="doubleBtn itemBtn">
+              <a href="#" class="doubleLeft">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="doubleRight">
+                <i class="fa fa-link" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <img src="img/portfolio02.png" alt="image of portfolio item">
+      </li>
+
+      <li class="item">
+        <div class="itemDesc">
+          <div class="itemDescInner">
+            <h3>Night Light<span>Graphic Design </span>
+            </h3>
+            <div class="doubleBtn itemBtn">
+              <a href="#" class="doubleLeft">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+              </a>
+              <a href="#"  class="doubleRight">
+                <i class="fa fa-link" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <img src="img/portfolio03.png" alt="image of portfolio item">
+      </li>
+
+      <li class="item">
+        <div class="itemDesc">
+          <div class="itemDescInner">
+            <h3>Runing Road<span>Motion Graphic Web Design </span>
+            </h3>
+            <div class="doubleBtn itemBtn">
+              <a href="#" class="doubleLeft">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="doubleRight">
+                <i class="fa fa-link" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <img src="img/portfolio04.png" alt="image of portfolio item">
+      </li>
+
+      <li class="item">
+        <div class="itemDesc">
+          <div class="itemDescInner">
+            <h3>Skyscraper<span>Graphic Design </span>
+            </h3>
+            <div class="doubleBtn itemBtn">
+              <a href="#" class="doubleLeft">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="doubleRight">
+                <i class="fa fa-link" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <img src="img/portfolio05.png" alt="image of portfolio item">
+      </li>
+
+      <li class="item">
+        <div class="itemDesc">
+          <div class="itemDescInner">
+            <h3>Speed Road<span>Graphic Design</span>
+            </h3>
+            <div class="doubleBtn itemBtn">
+              <a href="#" class="doubleLeft">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="doubleRight">
+                <i class="fa fa-link" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <img src="img/portfolio06.png" alt="image of portfolio item">
+      </li>
+
+      <li class="item">
+        <div class="itemDesc">
+          <div class="itemDescInner">
+            <h3>Summer Time<span>Motion Graphic</span>
+            </h3>
+            <div class="doubleBtn itemBtn">
+              <a href="#" class="doubleLeft">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="doubleRight">
+                <i class="fa fa-link" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <img src="img/portfolio07.png" alt="image of portfolio item">
+      </li>
+
+      <li class="item">
+        <div class="itemDesc">
+          <div class="itemDescInner">
+            <h3>Summer Time<span>Graphic Design </span>
+            </h3>
+            <div class="doubleBtn itemBtn">
+              <a href="#" class="doubleLeft">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="doubleRight">
+                <i class="fa fa-link" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <img src="img/portfolio08.png" alt="image of portfolio item">
+      </li>
+
+      <li class="item">
+        <div class="itemDesc">
+          <div class="itemDescInner">
+            <h3>Testy Raspberry<span>Motion Graphic Web Design</span>
+            </h3>
+            <div class="doubleBtn itemBtn">
+              <a href="#" class="doubleLeft">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="doubleRight">
+                <i class="fa fa-link" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <img src="img/portfolio09.png" alt="image of portfolio item">
+      </li>
+
+    </ul>
+
+  </div>
+</section>
+
+<section id="contact" class="tCenter bgGrey">
+
+  <div class="titleHolder">
+    <h1 class="prfTitle">
+      Contact Me
+    </h1>
+    <p class="introShort">
+      Feel Free To Send An Email Or Simply  Say Hello To Us
+    </p>
+  </div>
+  <div class="contactHolder">
+    <div class="contactForm">
+      <form name="contact-form" method="post">
+        <div class="column1">
+          <input type="text" name="your-name" class="half-length" id="name"
+          aria-required="true" aria-invalid="false" placeholder="Name *">
+        </div>
+        <div class="column1">
+          <input type="text" name="email" class="half-length" id="email"
+          aria-required="true" aria-invalid="false" placeholder="Email *">
+        </div>
+        <div class="column1">
+          <input type="text" name="website" class="half-length" id="website"
+          aria-required="true" aria-invalid="false" placeholder="WebSite">
+        </div>
+        <div class="column1">
+          <input type="text" name="subject" class="half-length" id="subject"
+          aria-required="true" aria-invalid="false" placeholder="Subject">
+        </div>
+        <textarea name="your-message" cols="45" rows="10" class="textarea"
+        id="message" aria-required="true" aria-invalid="false"
+        placeholder="Message"></textarea>
+      </br>
+      <input type="submit" value="Send Message" id="submit">
+
+    </form>
+  </div>
+</div>
+
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        © 2016 Borges Productions All Rights Reserved.
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <ul>
+          <li>
+            <a href="#">
+              FaceBook
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Twitter
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Pinterest
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+
+
+</footer>
+
+
+<script>
+$('.carousel').carousel({
+  interval: 3000
+});
+</script>
+</body>
+</html>
