@@ -1,0 +1,117 @@
+body {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+.footer {
+  background-color: #000;
+  color: #fff;
+  height: 300px;
+  width: 100%;
+  padding-top: 140px;
+}
+.footer .social-media {
+margin: 0 auto;
+
+}
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+.footer ul li {
+  display: inline;
+  padding: 20px;
+}
+.footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer span {
+  float: right;
+  margin-top: 80px;
+  margin-right: 6px;
+  font-size: 12px;
+}
+h1 {
+  margin: 25px 200px 48px 200px;
+  border-bottom: solid 1px 	#74ea03;
+}
+.header-image {
+  background-image: url("../img/soulonastring.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 100%;
+  position: relative;
+}
+.item-body {
+  margin-bottom: 300px;
+}
+.item-inner h3 {
+  text-transform: uppercase;
+  color: 	#74ea03;
+}
+.item-inner p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  padding: 12px;
+  margin-bottom: 0px;
+  text-align: left;
+}
+.item-inner a {
+  text-decoration: none;
+  color: 	#74ea03;
+}
+.item-inner img {
+  width: 100%;
+  height: auto;
+}
+li.item {
+  border: 1px solid rgba(0, 0, 0, 0.44);
+  margin: 0 20px 160px 20px;
+  padding: 10px;
+  text-align: left;
+}
+.next-prev {
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+.next-prev a {
+  color: 	#74ea03;
+  padding: 6px;
+  border: 1px solid 	#74ea03;
+  border-radius: 4px;
+}
+.next-prev a:hover, .next-prev a:visited, .next-prev a:active,
+.next-prev a:link{
+ text-decoration: none;
+}
+.navbar-default {
+  background-color: rgba(255,255,255,.07)!important;
+  background: -moz-linear-gradient(top,rgba(255,255,255,1) 0%,rgba(255,255,255,.97) 49%,rgba(255,255,255,.8) 100%);
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(255,255,255,1)),color-stop(49%,rgba(255,255,255,.97)),color-stop(100%,rgba(255,255,255,.8)));
+  background: -webkit-linear-gradient(top,rgba(255,255,255,1) 0%,rgba(255,255,255,.97) 49%,rgba(255,255,255,.8) 100%);
+  background: -o-linear-gradient(top,rgba(255,255,255,1) 0%,rgba(255,255,255,.97) 49%,rgba(255,255,255,.8) 100%);
+  background: -ms-linear-gradient(top,rgba(255,255,255,1) 0%,rgba(255,255,255,.97) 49%,rgba(255,255,255,.8) 100%);
+  background: linear-gradient(to bottom,rgba(255,255,255,1) 0%,rgba(255,255,255,.97) 49%,rgba(255,255,255,.8) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ccffffff',GradientType=0 );
+}
+#navbar-collapse-1 {
+  max-width: 960px;
+  margin: 0 auto;
+}
+ul.blog-items {
+  list-style: none;
+  padding-left: 0px;
+}
+
+
+@media (max-width: 770px) {
+  #navbar-collapse-1 a.navbar-brand {
+    display: none;
+  }
+  h1 {
+    margin: 25px 18px 48px 18px;
+    border-bottom: solid 1px 	#74ea03;
+  }
+}
