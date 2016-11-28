@@ -78,7 +78,21 @@
     <li  class="portfolio-item">
       <div class="imgWrap">
         <div class="imgDescription">
-          <h4> Tribute Page #1</h4>
+          <h4>Construction Business Website</h4>
+          <p>Custom wordpress theme made from scratch for a client</P><br>
+            <p>HTML, CSS, Responsive Design, PHP, Wordpress, SASS, Gulp and Bootstrap</p> </br>
+          <p><a href="http://www.primusbuildersinc.com" class="button">Visit Page</a></p>
+        </div>
+      </div>
+      <img src="images/primus.png" alt="image of website" class="img-responsive">
+    </li>
+
+    <!-- Project #2 -->
+
+    <li  class="portfolio-item">
+      <div class="imgWrap">
+        <div class="imgDescription">
+          <h4>Simple Web Page</h4>
           <p> HTML, CSS, Responsive Design and Bootstrap</p> </br>
           <p><a href="../Tribute_Page_Tim/index.html" class="button">Visit Page</a></p>
         </div>
@@ -86,27 +100,13 @@
       <img src="images/tim-site.png" alt="image of website" class="img-responsive">
     </li>
 
-    <!-- Project #2 -->
-
-    <li class="portfolio-item">
-      <div class="imgWrap">
-          <div class="imgDescription">
-            <h4>Tribute Page #2</h4>
-            <p> HTML, CSS, Responsive Design and Bootstrap</p> </br>
-            <p><a href="NikolaTeslaTribute/index.html" class="button">Visit Page</a></p>
-          </div>
-        </div>
-          <img src="images/tesla-site.png"
-          alt="image of Tesla tribute page" class="img-responsive">
-      </li>
-
 
     <!-- Project #3 -->
 
     <li class="portfolio-item">
       <div class="imgWrap">
         <div class="imgDescription">
-          <h4> Tribute Page #3</h4>
+          <h4>Simple Web Page</h4>
           <p>HTML, CSS, JavaScript, Responsive Design and Bootstrap</p> </br>
           <p><a href="Tribute_Page_Linus/index.html" class="button">Visit Page</a></p>
         </div>
@@ -205,6 +205,7 @@
 <!-- About -->
 
 <section>
+  <div class="container-fluid">
 <div class="row cont section-2 " id="about">
   <div class="col-xs-12 titles">
    <h2> About </h2>
@@ -212,7 +213,7 @@
  <d iv class="col-xs-12 col-md-8 col-md-offset-2 displayBox">
    <div class="row">
      <div class="col-xs-12 col-sm-6">
-       <img class="avatar" src="images/avatar.png" alt="image of author">
+       <img class="avatar" src="images/avatar002.png" alt="image of author">
      </div>
  <div class="col-xs-12 col-sm-6 textBox">
     <span class="textContent"><p>Hi, I'm a solutions oriented front-end web
@@ -234,6 +235,7 @@
   <!-- Contact Section -->
 
 <section>
+  <div class="container-fluid">
   <div class="cont section-3">
 
   <div class="row" id="contact">
@@ -245,16 +247,18 @@
 
   <div class="row" >
     <div class="col-md-8 col-md-offset-2 col-sm-12">
-      <form class=" displayBox form-horizontal" method="post">
+      <form class=" displayBox form-horizontal"
+      action="https://formspree.io/kgnat77@gmail.com"
+      method="POST">
         <fieldset>
 <!-- Name -->
 
           <div class="form-group">
-            <label class="col-xs-4 col-md-4 control-label">Name</label>
+            <label for="message_name" class="col-xs-4 col-md-4 control-label">Name</label>
             <div class="col-xs-8 col-md-4 inputGroupContainer">
               <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                <input name="name" placeholder="Name" class="form-control" type="text">
+                <input name="message_name" placeholder="Name" class="form-control" type="text">
               </div>
             </div>
            </div>
@@ -262,11 +266,12 @@
           <!-- Email -->
 
           <div class="form-group">
-            <label class="col-xs-4 col-md-4 control-label">Email</label>
+            <label for="message_email" class="col-xs-4 col-md-4 control-label">Email</label>
             <div class="col-xs-8 col-md-4 inputGroupContainer">
               <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                <input name="email" placeholder="E-Mail Address" class="form-control" type="text">
+                <input name="message_email" placeholder="E-Mail Address" class="form-control" type="text">
+
               </div>
             </div>
            </div>
@@ -274,11 +279,12 @@
           <!-- Message -->
 
           <div class="form-group">
-            <label class="col-xs-4 col-md-4 control-label">Message</label>
+            <label for="message_content" class="col-xs-4 col-md-4 control-label">Message</label>
             <div class="col-xs-8 col-md-4 inputGroupContainer">
               <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                <textarea name="message" cols="10" rows="6" placeholder="Message" class="form-control" type="text"></textarea>
+                <textarea name="message_content" cols="10" rows="6" placeholder="Message" class="form-control" type="text"></textarea>
+
               </div>
             </div>
            </div>
@@ -288,7 +294,7 @@
           <div class="form-group">
             <label class="col-md-4 control-label"></label>
             <div class="col-md-4">
-              <button type="submit" class="btn btn-warning">Send<span class="glyphicon glyphicon-send"></span></button>
+              <input type="submit" value="send" class="btn btn-warning">
             </div>
           </div>
 
@@ -298,11 +304,13 @@
     </div>
   </div>
 </div>
+</div>
 </section>
 
   <!-- Social Media -->
 
 <section id="social-media">
+  <div class="container-fluid">
    <div class="row  titles">
       <div class="col-xs-12 titles">
       <h2>Around the Web</h2>
@@ -313,16 +321,19 @@
   <div class="row">
   <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 displayBox
   socialMedia">
-     <a href="#"> <i class="fa fa-google-plus fa-5x"></i> </a>
-     <a href="#"><i class="fa fa-linkedin fa-5x"></i> </a>
-     <a href="#" ><i class="fa fa-twitter fa-5x"></i> </a>
+     <a href="https://github.com/Fernando1Borges"> <i class="fa fa-github fa-5x"></i> </a>
+     <a href="https://www.instagram.com/konrad_gnat/?hl=en"><i class="fa fa-instagram fa-5x"></i> </a>
+     <a href="https://twitter.com/konrad_gnat" ><i class="fa fa-twitter fa-5x"></i> </a>
      <a href="http://codepen.io/FernandoBorges/">
        <i class="fa fa-codepen fa-5x" aria-hidden="true"></i>
      </a>
   </div>
 
 </div>
+</div>
 </section>
+
+
 </div>
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
 
