@@ -4,10 +4,8 @@ img.avatar {
   padding: 2px;
   margin: 20px;
 }
-.imgDescription {
-}
 .imgDescription h4{
-  margin-top: 12%;
+  margin-top: 0px;
 }
 #about {
   padding-top: 0px;
@@ -35,7 +33,9 @@ body {
   text-align: center;
   padding: 30px;
   display:flex; flex-wrap: wrap;
-  font-family: Verdana, Geneva, sans-serif;
+  /*font-family: Verdana, Geneva, sans-serif;*/
+
+    font-family: 'Josefin Sans', sans-serif;
 }
 .titles h2 {
   font-size: 50px;
@@ -77,7 +77,7 @@ body {
 }
 .section-3 {
   !important;height: 1000px;
-    background-image:url(../images/nepalMountains.jpeg);
+    /*background-image:url(../images/nepalMountains.jpeg);*/
     background-repeat: no-repeat;
     -moz-background-size: cover;
 	-o-background-size: cover;
@@ -102,14 +102,16 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(170,170,170,0.72);
-  color: #000;
+  background: rgba(0, 0, 0, 0.82);
+  color: #fff;
   text-align: center;
   visibility: hidden;
   opacity: 0;
-  font-family: 'Varela Round', sans-serif;
-  -webkit-transition: visibility opacity 0.8s;
-  padding: 24px 18px;
+  /*font-family: 'Varela Round', sans-serif;*/
+
+  font-family: 'Josefin Sans', sans-serif;
+  -webkit-transition: visibility opacity 0.2s;
+  padding: 14px 18px;
 }
 .imgWrap:hover .imgDescription {
   visibility: visible;
@@ -132,7 +134,8 @@ a {
   font-size: 20px;
   display: table-cell;
   vertical-align: middle;
-    font-family: 'Varela Round', sans-serif;
+    /*font-family: 'Varela Round', sans-serif;*/
+  font-family: 'Josefin Sans', sans-serif;
 }
 #about .titles h2{
   margin-top: 120px;
@@ -146,9 +149,9 @@ a {
   width: 100%;
 }
 .portfolio-wrapper .button, .portfolio-wrapper .button:hover {
-  background-color: #555555;
-  color: #fff;
-  padding: 4px;
+  background-color: rgba(0, 0, 0, 0.82);
+    color: #fff;
+    padding: 3px 8px;
   text-decoration: none;
   border: 1px solid #fff;
   border-radius: 3px;
