@@ -1,0 +1,18 @@
+{
+  "name": "clone_portfolio_theme",
+  "version": "1.0.0",
+  "description": "An exercise in front end web development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo /\"Error: no test specified/\" && exit 1"
+  },
+  "author": "Konrad Gnat",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.9.1"
+  }
+}

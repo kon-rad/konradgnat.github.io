@@ -1,0 +1,10 @@
+/* Main SCSS File */
+
+// Base
+@import "base/variables";
+@import "base/scaffolding";
+
+// Componentss
+@import "components/navigation";
+@import "components/sections";
+@import "components/footer";
