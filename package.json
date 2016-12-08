@@ -1,0 +1,31 @@
+{
+  "name": "konrad_gnat_portfolio",
+  "version": "1.0.0",
+  "description": "Front-End Web Developer Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/konradgnat/konradgnat.github.io.git"
+  },
+  "keywords": [
+    "portfolio",
+    "web",
+    "developer"
+  ],
+  "author": "Konrad Gnat",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/konradgnat/konradgnat.github.io/issues"
+  },
+  "homepage": "https://github.com/konradgnat/konradgnat.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.9.1"
+  }
+}
