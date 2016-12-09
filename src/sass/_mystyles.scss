@@ -95,8 +95,8 @@ body {
   overflow: auto;
 }
 .imgWrap img {
-   height: 100%;
-   width: auto;
+   height: auto;
+   width: 100%;
 }
 .imgDescription {
   position: absolute;
@@ -110,9 +110,8 @@ body {
   visibility: hidden;
   opacity: 0;
   /*font-family: 'Varela Round', sans-serif;*/
-
   font-family: 'Josefin Sans', sans-serif;
-  -webkit-transition: visibility opacity 0.2s;
+  -webkit-transition: visibility, opacity 0.2s;
   padding: 14px 18px;
 }
 .imgWrap:hover .imgDescription {
@@ -163,8 +162,10 @@ a {
   padding-left: 0px;
 }
 .portfolio-wrapper  ul li.portfolio-item {
-  width: 33.33%;
-  display: inline;
+  margin-left: 25%;
+  margin-bottom: 20px;
+  width: 50%;
+  display: block;
   position: relative;
   float: left;
 }
@@ -208,6 +209,15 @@ a {
     font-size: 16px;
   }
   .portfolio-wrapper  ul li.portfolio-item {
-    width: 100%;
+    width: 75%;
+    margin-left: 12.5%
+  }
+}
+@media only screen and (min-width: 992px) {
+  .portfolio-item {
+    max-width: 500px;
+    margin: 0 auto 20px auto !important;
+    clear: both;
+    float: none!important;
   }
 }
