@@ -6,9 +6,6 @@ img.avatar {
   padding: 2px;
   margin: 20px;
 }
-.imgDescription h4{
-  margin-top: 0px;
-}
 #about {
   padding-top: 0px;
 }
@@ -117,6 +114,9 @@ body {
   -webkit-transition: visibility, opacity 0.2s;
   padding: 14px 18px;
 }
+.imgDescription h4{
+  margin-top: 0px;
+}
 .imgWrap:hover .imgDescription {
   visibility: visible;
   opacity: 1;
@@ -201,12 +201,14 @@ a {
 .portfolio-wrapper  ul li.portfolio-item:hover  .imgWrap{
   visibility: visible;
   opacity: 1;
-  padding-top:18%;
+  //  padding-top:18%;
 }
 #projects-title {
   margin-bottom: 40px;
   color: $secondary-color;
 }
+
+// Navigation Hamburger Icon
 .container-button {
     display: inline-block;
     cursor: pointer;

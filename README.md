@@ -1,2 +1,2 @@
-# Fernando1Borges.github.io
+# konradgnat.github.io
 Personal Website
