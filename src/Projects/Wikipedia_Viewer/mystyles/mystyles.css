@@ -1,8 +1,7 @@
 body {
-  margin-top: 300px;
+  margin-top: 130px;
   text-align:center;
-
-  background-image: url('../../images/diagonales_decalees.png');
+  background-image: url('../../../images/diagonales_decalees.png');
   /*http://res.cloudinary.com/dvozfehww/image/upload/v1475181103/diagonales_decalees_kke8fx.png*/
 }
 .main {
