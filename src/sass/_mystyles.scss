@@ -12,6 +12,11 @@ img.avatar {
 #about {
   padding-top: 0px;
 }
+#footer {
+  background-color: #000;
+  height:300px;
+  padding-top: 140px;
+}
 .navbar-default{
   background-color: #fff;
   height: 50px;
@@ -35,18 +40,16 @@ body {
   text-align: center;
   padding: 30px;
   display:flex; flex-wrap: wrap;
-  /*font-family: Verdana, Geneva, sans-serif;*/
-
-    font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
 .titles h2 {
   font-size: 50px;
   margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 0px;
   text-align: center;
 }
 .cont{
-    padding:300px 20px 100px 20px;
+    padding:200px 20px 100px 20px;
     text-align:center;
     color:#000;
     font-weight:bold;
@@ -66,8 +69,8 @@ body {
 	background-position: 50% 50%;
 }
 .section-2 {
-    margin-top: 100px
-  !important;height: 1000px;
+  // !important;height: 1000px;
+  height: auto;
     background-image:url(../../src/images/bwWebDev.jpeg);
     background-repeat: no-repeat;
     -moz-background-size: cover;
@@ -119,10 +122,23 @@ body {
   opacity: 1;
 }
 .socialMedia {
-  margin-bottom: 200px;
+  margin: 0 auto;
+
+  ul {
+  margin: 0 auto;
+    list-style-type: none;
+    padding-left: 0px;
+    li {
+      display: inline-block;
+      padding-right: 24px;
+    }
+  }
 }
 .socialMedia a {
-  color: $secondary-color;//#f15a22
+  color: #fff;//#f15a22
+}
+.socialMedia a:hover {
+  color: $secondary-color;
 }
 a {
   margin: 0 auto;
@@ -131,7 +147,7 @@ a {
   display: table;
   text-align: center;
 }
- .textBox {
+.textBox {
   font-size: 20px;
   display: table-cell;
   vertical-align: middle;
@@ -187,6 +203,37 @@ a {
   opacity: 1;
   padding-top:18%;
 }
+#projects-title {
+  margin-bottom: 40px;
+  color: $secondary-color;
+}
+.container-button {
+    display: inline-block;
+    cursor: pointer;
+    float: right;
+    margin-top: 4px;
+    margin-right: 20px;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #000;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
 
   /* Media Quaries */
 
@@ -211,6 +258,11 @@ a {
   .portfolio-wrapper  ul li.portfolio-item {
     width: 75%;
     margin-left: 12.5%
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container-button {
+    display: none;
   }
 }
 @media only screen and (min-width: 992px) {
