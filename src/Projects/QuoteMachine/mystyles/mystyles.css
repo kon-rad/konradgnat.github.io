@@ -8,12 +8,12 @@ h1 {
 font-family: 'Bungee Shade', cursive;
 }
 .controls {
-  bottom: 50px;
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%)
+  margin-bottom: 50px;
+  margin: 0 auto;
+  /*position: absolute;*/
+  /*left: 50%;*/
+  /*margin-right: -50%;*/
+  /*transform: translate(-50%, -50%)*/
 }
 #quote {
    font-family: "Courier New", Courier, monospace;
@@ -27,4 +27,20 @@ blockquote {
 .well {
   min-height: 500px;
   background-color: white;
+}
+a {
+  color: inherit;
+  /*background-color: */
+  text-decoration: none;
+  border: 1px solid #000;
+  padding: 10px 14px;
+  margin-right: 20px;
+}
+a:hover {
+  text-decoration: none;
+  color: #db2c2b;
+  /*background-color: #f4f5f6;*/
+}
+a.btn-tweet:hover {
+  color: #1da1f2;
 }
