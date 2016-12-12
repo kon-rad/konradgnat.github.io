@@ -1,5 +1,6 @@
 function myFunction(x) {
     x.classList.toggle("change");
+    $(".collapse").toggle();
 }
 
 var top_header = '';

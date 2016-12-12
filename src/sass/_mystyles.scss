@@ -44,7 +44,7 @@ body {
   margin-top: 100px;
   margin-bottom: 0px;
   text-align: center;
-  color: $secondary-color;
+  color: #000;//$secondary-color;
 }
 .cont{
     padding:200px 20px 100px 20px;
@@ -153,7 +153,7 @@ input.submit-button {
   color: #fff;
 }
 .socialMedia a:hover {
-  color: $secondary-color;
+  color: #000;//$secondary-color;
 }
 a {
   margin: 0 auto;
@@ -171,10 +171,11 @@ a {
 }
 #about .titles h2{
   margin-top: 120px;
-  color: $secondary-color;//#f15a22
+  color: #000;//$secondary-color;//#f15a22
 }
 #contact .titles h2{
-  color: $secondary-color;//#f15a22
+  color: #000;//$secondary-color;//#f15a22
+  margin-bottom: 100px;
 }
 .portfolio-wrapper {
   overflow: hidden;
@@ -220,7 +221,7 @@ a {
 }
 #projects-title {
   margin-bottom: 40px;
-  color: $secondary-color;
+  color: #000;//$secondary-color;
 }
 
 // Navigation Hamburger Icon
