@@ -9,18 +9,29 @@
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
-  <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+  <!-- <script src="../../bower_components/jquery/dist/jquery.min.js"></script> -->
 
   <!-- Include all compiled plugins (below), or include individual files as needed -->
 
-  <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <link href="../../bower_components/bootstrap-social/bootstrap-social.css" rel="stylesheet">
   <link href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="../../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
-  <link href="../../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet"> -->
 
-  <script type="text/javascript" src="scripts/myscripts.js"></script>
-  <link rel="stylesheet" href="css/mystyles.css">
+      <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+      <script type="text/javascript"  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+      <!-- <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet"> -->
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+      <script type="text/javascript" src="scripts/myscripts.js"></script>
+      <link rel="stylesheet" href="css/mystyles.css">
+
 
 </head>
 
@@ -209,9 +220,10 @@
                         <div class="col-sm-10">
                         <input type="text" class="form-control" id="firstname"
                         name="firstname" placeholder="Enter First Name"
-                        ng-model="feedback.firstName" required> <span
+                        ng-model="feedback.firstName" required>
+                        <!-- <span
   ng-show="feedbackForm.firstname.$error.required && !feedbackForm.firstname.$pristine"
-  class="help-block">Your First name is required.</span>
+  class="help-block">Your First name is required.</span> -->
                         </div>
                     </div>
 
@@ -222,7 +234,7 @@
                             <input type="text" class="form-control" id="lastname"
                             name="lastname" placeholder="Enter Last Name"
                             ng-model="feedback.lastName" required>
-                            <span ng-show="feedbackForm.lastname.$error.required && !feedbackForm.lastname.$pristine" class="help-block">Your Last name is required.</span>
+                            <!-- <span ng-show="feedbackForm.lastname.$error.required && !feedbackForm.lastname.$pristine" class="help-block">Your Last name is required.</span> -->
                         </div>
                     </div>
 
@@ -252,10 +264,10 @@
                             <span ng-show="feedbackForm.emailid.$invalid && !feedbackForm.emailid.$pristine"
                             class="glyphicon glyphicon-remove form-control-feedback"
                             aria-hidden="true"></span>
-                        <span ng-show="(feedbackForm.emailid.$invalid ||
+                        <!-- <span ng-show="(feedbackForm.emailid.$invalid ||
                                         feedbackForm.emailid.$error.required) &&
                                         !feedbackForm.emailid.$pristine"
-                             class="help-block">Enter a valid email address.</span>
+                             class="help-block">Enter a valid email address.</span> -->
                         </div>
                     </div>
                     <!-- SELECT OPTION -->
@@ -274,8 +286,8 @@
                                ng-options="channel.value as channel.label for channel in channels">
                                 <option value="">Tel. or Email?</option>
                             </select>
-                            <span ng-show="invalidChannelSelection"
-                            class="help-block">Select an option.</span>
+                            <!-- <span ng-show="invalidChannelSelection"
+                            class="help-block">Select an option.</span> -->
                         </div>
                     </div>
 
@@ -359,8 +371,8 @@
 
 
 <!-- build:js scripts/main.js -->
-    <script src="../bower_components/angular/angular.min.js"></script>
-    <script src="scripts/app.js"></script>
+    <!-- <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="scripts/app.js"></script> -->
 <!-- endbuild -->
 
 </body>
