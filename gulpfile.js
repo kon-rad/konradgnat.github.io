@@ -1,10 +1,10 @@
 'use strict';
 
-var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    cssnano = require('gulp-cssnano'),
-    sourcemaps = require('gulp-sourcemaps'),
-    autoprefixer = require('gulp-autoprefixer');
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var cssnano = require('gulp-cssnano');
+var sourcemaps = require('gulp-sourcemaps');
+var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('workflow', function () {
   gulp.src('./src/sass/**/*.scss')
@@ -12,12 +12,11 @@ gulp.task('workflow', function () {
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
-      cascade: false
+      cascade: false,
     }))
     .pipe(cssnano())
     .pipe(sourcemaps.write('./'))
-  
-  .pipe(gulp.dest('./dist/css/'))
+    .pipe(gulp.dest('./dist/css/'));
 });
 
 gulp.task('default', function () {
