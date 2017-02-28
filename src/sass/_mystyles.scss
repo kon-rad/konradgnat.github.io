@@ -1,5 +1,6 @@
 //Portfolio Styles
 
+
 img.avatar {
   border: 1px solid #fff;
   border-radius: 50%;
@@ -229,6 +230,12 @@ a {
   min-height: 670px;
   width: auto;
 }
+.textContent {
+  text-align: left;
+}
+u {
+    text-decoration: underline;
+}
 
 // Navigation Hamburger Icon
 .container-button {
@@ -258,6 +265,7 @@ a {
     -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
     transform: rotate(45deg) translate(-8px, -8px) ;
 }
+
 
   /* Media Quaries */
 
