@@ -272,15 +272,21 @@ u {
 @media only screen and ( max-width: 568px ) {
   .cont h1 {
       font-size: 46px;
-    }
-    .cont h2 {
-      font-size: 30px;
-    }
-    .portfolio-item {
-      width: 100%;
-      height: auto;
-      float: left;
-    }
+  }
+  .cont h2 {
+    font-size: 30px;
+  }
+  .imgDescription h2 {
+    font-size: 18px;
+  }
+  .imgDescription p {
+    font-size: 11px;
+  }
+  .portfolio-item {
+    width: 100%;
+    height: auto;
+    float: left;
+  }
   .titles h2 {
       font-size: 34px;
   }
