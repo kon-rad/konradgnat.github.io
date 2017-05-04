@@ -1,5 +1,24 @@
 //Portfolio Styles
-
+a:hover, a:visited, a:active, a:link {
+  text-decoration:none;
+  color:#000;
+}
+.resume_button {
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid #000;
+  padding: 6px 18px;
+  color: #000;
+  text-decoration: none;
+  border: 1px solid #000;
+  border-radius: 3px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.center {
+  margin: 0 auto;
+  width: 114px;
+  margin-bottom: 120px;
+}
 
 img.avatar {
   border: 1px solid #fff;
