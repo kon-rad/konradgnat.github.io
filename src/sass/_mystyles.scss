@@ -79,17 +79,19 @@ body {
 }
 .cont h1 {
   font-size: 80px;
-}
+  }
+  .cont h2 {
+    font-family: 'Josefin Sans', sans-serif;
+  }
 .section-1 {
   height: 1000px!important;
-  background-image:url(../../src/images/sunMountain.jpeg);
+  background-image:url(../../src/images/coyote_hills.JPG);
   background-repeat: no-repeat;
   -moz-background-size: cover;
 	-o-background-size: cover;
 	-webkit-background-size: cover;
 	background-size: cover;
 	position: relative;
-	background-position: 50% 50%;
 }
 .section-2 {
   // !important;height: 1000px;
