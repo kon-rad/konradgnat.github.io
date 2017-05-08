@@ -67,7 +67,7 @@ body {
 .row {
   display:flex; flex-wrap: wrap;
 }
-.displayBox{
+.displayBox {
   background-color: rgb(187, 187, 187);
   border-radius: 10px;
   text-align: center;
@@ -82,7 +82,7 @@ body {
   text-align: center;
   color: #000;//$secondary-color;
 }
-.cont{
+.cont {
     padding:200px 20px 100px 20px;
     text-align:center;
     color:#000;
@@ -90,10 +90,11 @@ body {
 }
 .cont h1 {
   font-size: 80px;
-  }
-  .cont h2 {
+    margin-top: -54px;
+}
+.cont h2 {
     font-family: 'Josefin Sans', sans-serif;
-  }
+}
 .section-1 {
   height: 1000px!important;
   background-image:url(../../src/images/coyote_hills.JPG);
@@ -102,6 +103,7 @@ body {
 	-o-background-size: cover;
 	-webkit-background-size: cover;
 	background-size: cover;
+  background-position: center;
 	position: relative;
 }
 .section-2 {
@@ -118,9 +120,8 @@ body {
 }
 .section-3 {
   height: 1000px!important;
-    /*background-image:url(../images/nepalMountains.jpeg);*/
-    background-repeat: no-repeat;
-    -moz-background-size: cover;
+  background-repeat: no-repeat;
+  -moz-background-size: cover;
 	-o-background-size: cover;
 	-webkit-background-size: cover;
 	background-size: cover;
@@ -298,15 +299,15 @@ u {
     transform: rotate(45deg) translate(-8px, -8px) ;
 }
 
-
   /* Media Quaries */
 
 @media only screen and ( max-width: 568px ) {
   .cont h1 {
-      font-size: 46px;
+    font-size: 32px;
+    margin-top: -64px;
   }
   .cont h2 {
-    font-size: 30px;
+    font-size: 20px;
   }
   .imgDescription h2 {
     font-size: 18px;
@@ -331,6 +332,9 @@ u {
   }
   .input-group {
     width: 100%;
+  }
+  .section-1 {
+    max-height: 700px;
   }
 }
 @media only screen and (min-width: 768px) {
