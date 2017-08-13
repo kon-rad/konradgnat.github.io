@@ -1,10 +1,14 @@
 'use strict';
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var cssnano = require('gulp-cssnano');
-var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
+var gulp            = require('gulp'),
+    sass            = require('gulp-sass'),
+    cssnano         = require('gulp-cssnano'),
+    sourcemaps      = require('gulp-sourcemaps'),
+    autoprefixer    = require('gulp-autoprefixer'),
+    imagemin        = require('gulp-imagemin'),
+    pngquant        = require('imagemin-pngquant'),
+    mozjpeg         = require('imagemin-mozjpeg'),
+    webp            = require('gulp-webp');
 
 gulp.task('workflow', function () {
   gulp.src('./src/sass/**/*.scss')
@@ -18,6 +22,31 @@ gulp.task('workflow', function () {
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist/css/'));
 });
+
+gulp.task('imagemin', function() {
+  gulp.src(['./src/images/*'])
+    .pipe(imagemin([
+      pngquant({
+        speed: 1,
+        quality: 98
+      }),
+      // imagemin.jpegtran({
+      //   progressive: true
+      // })
+      // Needs brew install libpng for mozjpeg to work!
+      mozjpeg({
+        quality: 90
+      })
+    ]))
+    .pipe(gulp.dest('dist/images/'))
+});
+
+gulp.task('webp-convert', function() {
+  gulp.src(['.src/images/*.{png, jpeg}'])
+    .pipe(webp())
+    .pipe(gulp.dest('dist/images/webp/'))
+});
+
 
 gulp.task('default', function () {
   gulp.watch('./src/sass/**/*.scss', ['workflow']);
