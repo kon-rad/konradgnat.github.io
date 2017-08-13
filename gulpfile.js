@@ -42,7 +42,7 @@ gulp.task('imagemin', function() {
 });
 
 gulp.task('webp-convert', function() {
-  gulp.src(['.src/images/*.{png, jpeg}'])
+  gulp.src(['./src/images/*'])
     .pipe(webp())
     .pipe(gulp.dest('dist/images/webp/'))
 });

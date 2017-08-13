@@ -98,7 +98,6 @@ body {
 }
 .section-1 {
   height: 1000px!important;
-  background-image:url(../../dist/images/coyote_hills.JPG);
   background-repeat: no-repeat;
   -moz-background-size: cover;
 	-o-background-size: cover;
@@ -107,17 +106,35 @@ body {
   background-position: center;
 	position: relative;
 }
+.no-webp .section-1 {
+  background-image:url(../../dist/images/coyote_hills.JPG);
+}
+.webp .section-1 {
+  background-image:url(../../dist/images/webp/coyote_hills.webp);
+}
+.no-js .section-1 {
+  background-image:url(../../dist/images/coyote_hills.JPG);
+}
 .section-2 {
   // !important;height: 1000px;
   height: auto;
-    background-image:url(../../dist/images/bwWebDev.jpeg);
-    background-repeat: no-repeat;
-    -moz-background-size: cover;
+  background-repeat: no-repeat;
+  -moz-background-size: cover;
 	-o-background-size: cover;
 	-webkit-background-size: cover;
 	background-size: cover;
 	position: relative;
 	background-position: 50% 50%;
+}
+.no-webp .section-2 {
+  background-image:url(../../dist/images/bwWebDev.jpeg);
+}
+.webp .section-2 {
+  background-image:url(../../dist/images/webp/bwWebDev.webp);
+}
+.no-js .section-1 {
+  background-image:url(../../dist/images/bwWebDev.jpeg);
+
 }
 .section-3 {
   height: 1000px!important;
