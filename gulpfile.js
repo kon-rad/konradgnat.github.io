@@ -8,12 +8,20 @@ var gulp            = require('gulp'),
     imagemin        = require('gulp-imagemin'),
     pngquant        = require('imagemin-pngquant'),
     mozjpeg         = require('imagemin-mozjpeg'),
-    webp            = require('gulp-webp');
+    webp            = require('gulp-webp'),
+    uncss           = require('gulp-uncss'),
+    concat          = require('gulp-concat'),
+    gutil           = require('gulp-util'),
+    critical        = require('critical').stream;
 
 gulp.task('workflow', function () {
   gulp.src('./src/sass/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
+    // .pipe(concat('main.css'))
+    // .pipe(uncss({
+    //   html: 'index.html'
+    // }))
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false,
@@ -30,18 +38,25 @@ gulp.task('imagemin', function() {
         speed: 1,
         quality: 98
       }),
-      // imagemin.jpegtran({
-      //   progressive: true
-      // })
-      // Needs brew install libpng for mozjpeg to work!
       mozjpeg({
         quality: 90
       })
     ]))
     .pipe(gulp.dest('dist/images/'))
 });
+ 
+gulp.task('critical', function() {
+    return gulp.src('index.html')
+        .pipe(critical({base: 'dist/',
+                        inline: true,
+                        css: [
+                        './dist/css/main.css'
+                        ]}))
+        .on('error', function(err) {gutil.log(gutil.colors.red(err.message)); })
+        .pipe(gulp.dest('./'));
+});
 
-gulp.task('webp-convert', function() {
+gulp.task('webp', function() {
   gulp.src(['./src/images/*'])
     .pipe(webp())
     .pipe(gulp.dest('dist/images/webp/'))
