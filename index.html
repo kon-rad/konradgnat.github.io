@@ -2,6 +2,7 @@
 <html class="no-js" lang="en">
 
 <head>
+  <script>console.time("start_to_end");</script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +10,8 @@
   <title>Konrad Gnat | Portfolio</title>
 
   <link rel="shortcut icon" href="src/images/favicon.png" type="image/png">
-  <script src="src/scripts/modernizr-custom.js"></script>
+  <script src="dist/js/modernizr-custom.js"></script>
+  <script src="node_modules/intersection-observer/intersection-observer.js"></script>
   <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -108,11 +110,7 @@
               class="button">Live Site</a>
             </div>
           </div>
-            <picture>
-              <source srcset="dist/images/webp/gifnotes.webp" type="image/webp">
-              <source srcset="dist/images/gifnotes.png" type="image/png">
-          <img src="dist/images/gifnotes.png" alt="image of website" class="project-img img-responsive">
-            </picture>
+              <img data-webp="dist/images/webp/gifnotes.webp" data-src="dist/images/gifnotes.png" alt="image of website" class="project-img img-responsive lazyload">
         </li>
 
         <li  class="portfolio-item">
@@ -124,11 +122,7 @@
                 <p><a href="http://firemixtapemd.com/lifeSoundtrack.html" class="button">Visit Page</a></p>
               </div>
             </div>
-              <picture>
-                <source srcset="dist/images/webp/firemixtapemd.webp" type="image/webp">
-                <source srcset="dist/images/firemixtapemd.png" type="image/png">
-            <img src="dist/images/firemixtapemd.png" alt="image of website" class="project-img img-responsive">
-              </picture>
+            <img data-webp="dist/images/webp/firemixtapemd.webp" data-src="dist/images/firemixtapemd.png" alt="image of website" class="project-img img-responsive lazyload">
           </li>
           <li  class="portfolio-item">
             <div class="imgWrap">
@@ -139,11 +133,7 @@
                   <p><a href="https://books-read.herokuapp.com/books" class="button">Visit Page</a></p>
                 </div>
               </div>
-              <picture>
-                <source srcset="dist/images/webp/read-books.webp" type="image/webp">
-                <source srcset="dist/images/read-books.png" type="image/png">
-                <img src="dist/images/read-books.png" alt="image of website" class="img-responsive">
-              </picture>
+                <img data-webp="dist/images/webp/read-books.webp" data-src="dist/images/read-books.png" alt="image of website" class="img-responsive lazyload">
             </li>
           </ul>
 
@@ -380,7 +370,7 @@
   </footer>
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="src/scripts/main.js"></script>
+  <script type="text/javascript" src="dist/js/main.js"></script>
 
 </body>
 </html>

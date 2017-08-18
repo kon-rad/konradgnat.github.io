@@ -12,7 +12,16 @@ var gulp            = require('gulp'),
     uncss           = require('gulp-uncss'),
     concat          = require('gulp-concat'),
     gutil           = require('gulp-util'),
-    critical        = require('critical').stream;
+    critical        = require('critical').stream,
+    babel           = require('gulp-babel');
+ 
+gulp.task('babel', () =>
+    gulp.src('src/scripts/main.js')
+        .pipe(babel({
+            presets: ['env']
+        }))
+        .pipe(gulp.dest('dist/js/'))
+);
 
 gulp.task('workflow', function () {
   gulp.src('./src/sass/**/*.scss')
@@ -64,5 +73,5 @@ gulp.task('webp', function() {
 
 
 gulp.task('default', function () {
-  gulp.watch('./src/sass/**/*.scss', ['workflow']);
+  gulp.watch(['./src/sass/**/*.scss', './src/scripts/*.js'], ['workflow', 'babel']);
 });

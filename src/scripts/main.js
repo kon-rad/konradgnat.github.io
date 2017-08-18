@@ -3,12 +3,62 @@ function myFunction(x) {
     $(".collapse").toggle();
 }
 
-// var top_header = '';
-// $(document).ready(function(){
-//   top_header = $('.parallax-scroll');
-// });
 
-// $(window).scroll(function () {
-//   var st = $(window).scrollTop();
-//   top_header.css({'background-position':'50%' + (st*.3)+"px"});
-// });
+if ('IntersectionObserver' in window &&
+  'IntersectionObserverEntry' in window &&
+  'intersectionRatio' in window.IntersectionObserverEntry.prototype &&
+  !('isIntersecting' in IntersectionObserverEntry.prototype)) {
+
+  Object.defineProperty(window.IntersectionObserverEntry.prototype, 'isIntersecting', {
+    get: function () {
+      return this.intersectionRatio > 0
+    }
+  })
+}
+
+let webp = false;
+
+if($('html').hasClass('webp')) webp = true;
+
+console.log(webp);
+
+const imgElements = [ ...document.querySelectorAll( '.lazyload' ) ];
+
+let observer = new IntersectionObserver( onChange, {
+  threshold: [ 0.0 ],
+});
+
+function onChange( changes ) {
+
+  changes.forEach( change => {
+
+    if ( change.isIntersecting ) {
+
+      change.target.classList.add( 'visible' );
+      if(!webp)
+      	change.target.src = change.target.dataset.src;
+      else
+      	change.target.src = change.target.dataset.webp;
+
+      observer.unobserve( change.target );
+    }
+  });
+}
+
+
+const createObserver = function () {
+
+  imgElements.forEach( img => {
+
+    observer.observe( img );
+  });
+};
+
+
+window.addEventListener("load", () => {
+    createObserver();
+}, false);
+
+
+
+console.timeEnd("start_to_end");
