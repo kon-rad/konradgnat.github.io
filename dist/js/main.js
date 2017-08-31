@@ -25,7 +25,7 @@ console.log(webp);
 var imgElements = [].concat(_toConsumableArray(document.querySelectorAll('.lazyload')));
 
 var observer = new IntersectionObserver(onChange, {
-  threshold: [.15]
+  threshold: [0.0]
 });
 
 function onChange(changes) {
