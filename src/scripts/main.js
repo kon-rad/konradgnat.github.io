@@ -1,3 +1,8 @@
+    function myFunction(x) {
+      x.classList.toggle("change");
+      $(".collapse").toggle();
+    }
+
 requirejs([
   'jquery-3.2.1.min',
   'swiper.jquery.min',
@@ -15,10 +20,7 @@ requirejs([
       slidesPerView: 1
     });
 
-    function myFunction(x) {
-      x.classList.toggle("change");
-      $(".collapse").toggle();
-    }
+
 
 
     if ('IntersectionObserver' in window &&
@@ -75,6 +77,7 @@ requirejs([
   window.addEventListener("load", () => {
     createObserver();
   }, false);
+    createObserver();
 
 
 
