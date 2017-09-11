@@ -73,5 +73,5 @@ gulp.task('webp', function() {
 
 
 gulp.task('default', function () {
-  gulp.watch(['./src/sass/**/*.scss', './src/scripts/*.js'], ['workflow', 'babel']);
+  gulp.watch(['./src/sass/*.scss', './src/scripts/*.js'], ['workflow', 'babel']);
 });
