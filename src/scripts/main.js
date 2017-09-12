@@ -1,7 +1,6 @@
 'use strict';
 
 require.config({
-  // baseUrl: 'file:///Users/konradgnat/Documents/sites/konradgnat.github.io/src/scripts/modules',
   paths: {
     'async': 'vendors/async',
     'jquery': 'vendors/jquery-3.2.1.min',
