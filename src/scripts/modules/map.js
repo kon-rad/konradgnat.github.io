@@ -1,13 +1,13 @@
-'use strict';
+
 
 define(['async!https://maps.googleapis.com/maps/api/js?key=AIzaSyA8UtfbT1GSWWG1kmpmwZZ_9xtCnw9zXXg&callback=initMap'], function() {
-
+'use strict';
   function initMap() {
 
     var sanFran = {
       info: '<strong>San Francisco</strong><br>\
-            Vistied on three occasions in winter/spring 2017<br>\
-            Participated in DevWeek & GifHack hackathons and 42 April piscine',
+            Winter/Spring 2017<br>\
+            Developer Week & GifHack hackathons, 42 April piscine',
       lat: 37.774929,
       long: -122.419416
     }
@@ -97,6 +97,7 @@ define(['async!https://maps.googleapis.com/maps/api/js?key=AIzaSyA8UtfbT1GSWWG1k
     }
 
   }
+  console.timeEnd("start_to_end");
 
   return {
     initMap: initMap

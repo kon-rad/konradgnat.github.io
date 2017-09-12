@@ -1,8 +1,10 @@
 /* Main SCSS File  */
-
+ 
 // Base
-@import "variables";
+@import "util/variables";
 // Components
-@import "mystyles";
+@import "sections/mystyles";
 // google map
-@import "map";
+@import "sections/map";
+// hero section
+@import "sections/hero";

@@ -1,12 +1,17 @@
 'use strict';
 
-define('script', ['jquery'], function($) {
+define(['jquery'], function($) {
+	console.log('heres scriptssss');
 
-	function myFunction(x) {
-	  x.classList.toggle("change");
-	  $(".collapse").toggle();
+	function _registerEvents() {
+		$('#menuToggle').on('click', function() {
+		  $(".collapse").toggle();
+		})
 	}
+
 	return {
-		myFunction: myFunction
+		init: function() {
+			_registerEvents();
+		}
 	}
 })

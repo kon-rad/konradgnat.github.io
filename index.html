@@ -51,7 +51,7 @@
   <nav class="nav navbar-default navbar-fixed-top" role="navigation">
    <div class="container">
     <div class="navbar-header">
-      <div class="container-button" onclick="myFunction(this)" type="button"
+      <div id="menuToggle" class="container-button" type="button"
       class="navbar-toggle collapsed" data-toggle="collapse"
       data-target="#navbar" aria-expanded="false" aria-controls="navbar">
       <div class="bar1"></div>
@@ -80,7 +80,7 @@
 
   <h1>Konrad Gnat</h1>
   <h2>Software Engineer | Front End Web Developer</h2>
-
+  <h5>currently @ WebToMed</h5>
 </div>
 <!-- Projects -->
 <section id="projects">
@@ -401,14 +401,14 @@
       </div>
     </div>
   </footer>
-<!--   <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
-
-  <!-- 
-  <script type="text/javascript" src="dist/js/main.js"></script> -->
-
 
   <!-- require js -->
-  <script type="text/javascript" data-main="dist/js/main-optimized.min.js" src="dist/js/require.js"></script>
+
+  <!-- PRODUCTION ? LOAD THIS -->
+<!--   <script type="text/javascript" data-main="dist/js/main-optimized.min.js" src="dist/js/require.js"></script> -->
+
+  <!-- DEVELOPMENT ? LOAD THIS -->
+  <script type="text/javascript" data-main="src/scripts/main.js" src="dist/js/require.js"></script>
 
 
 </body>
