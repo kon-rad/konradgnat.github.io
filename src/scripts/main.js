@@ -21,9 +21,21 @@ require.config({
 require(['app', 'modules/script'], function(app, script) {
   app.init();
   script.init();
-  console.log('heres main');
 })
 
+require(['swiper', 'swiperUmd', 'swiperJquery'], function(Swiper) {
+  // Main Swiper
+  var mainSwiper = new Swiper('#mainSlider', {
+      spaceBetween: 30,
+      pagination: '.swiper-pagination',
+      paginationClickable: true,
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      autoplay: 1000
+  });
+  console.log('swiper herexxx');
+
+})
 
 
 

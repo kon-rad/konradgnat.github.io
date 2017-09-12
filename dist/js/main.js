@@ -1,7 +1,6 @@
 'use strict';
 
 require.config({
-  // baseUrl: 'file:///Users/konradgnat/Documents/sites/konradgnat.github.io/src/scripts/modules',
   paths: {
     'async': 'vendors/async',
     'jquery': 'vendors/jquery-3.2.1.min',
@@ -22,7 +21,19 @@ require.config({
 require(['app', 'modules/script'], function (app, script) {
   app.init();
   script.init();
-  console.log('heres main');
+});
+
+require(['swiper', 'swiperUmd', 'swiperJquery'], function (Swiper) {
+  // Main Swiper
+  var mainSwiper = new Swiper('#mainSlider', {
+    spaceBetween: 0,
+    pagination: '.swiper-pagination',
+    paginationClickable: true,
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    autoplay: 1000
+  });
+  console.log('swiper herexxx');
 });
 
 // command to run r.js and optimzie js code

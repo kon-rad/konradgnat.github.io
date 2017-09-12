@@ -48,7 +48,7 @@
 
   <!-- Navigation bar -->
 
-  <nav class="nav navbar-default navbar-fixed-top" role="navigation">
+  <nav  id="home" class="nav navbar-default navbar-fixed-top" role="navigation">
    <div class="container">
     <div class="navbar-header">
       <div id="menuToggle" class="container-button" type="button"
@@ -76,12 +76,50 @@
 
 <!-- First Screen -->
 
-<div class="cont section-1 parallax-scroll" id="home">
+<!-- <div class="cont section-1 parallax-scroll" id="home">
 
   <h1>Konrad Gnat</h1>
   <h2>Software Engineer | Front End Web Developer</h2>
   <h5>currently @ WebToMed</h5>
+</div> -->
+
+
+    !-- First Screen -->
+<!-- Main Swiper -->
+<div class="swiper-container swiper-container--main section-1" id="mainSlider">
+  <div class="swiper-wrapper swiper-wrapper--main">
+    <div class="swiper-slide swiper-slide--main"><div class="cont">
+      <h1>Konrad Gnat</h1>
+      <h2>Software Engineer | Front End Web Developer</h2>
+      <h5>currently @ WebToMed</h5>
+    </div></div>
+    <div class="swiper-slide swiper-slide--main"><div class="cont">
+      <h2>I am a 28 year old web developer<br> from Chicago</h2>
+    </div></div>
+    <div class="swiper-slide swiper-slide--main"><div class="cont">
+      <h2>Currently I am cranking out<br> awesome code at WebToMed</h2>
+    </div></div>
+    <div class="swiper-slide swiper-slide--main"><div class="cont">
+      <h2>I love to code</h2>
+    </div></div>
+    <div class="swiper-slide swiper-slide--main"><div class="cont">
+      <h2>My coding tools of choice are <br>Javascript, NodeJS, Angular and PHP</h2>
+    </div></div>
+    <div class="swiper-slide swiper-slide--main"><div class="cont">
+      <h2>See some of my passion projects <a href="#projects">here</a></h2>
+    </div></div>
+    <div class="swiper-slide swiper-slide--main"><div class="cont">
+      <h2>My github can be found <a target="_blank" href="https://github.com/konradgnat">here</a></h2>
+    </div></div>
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination "></div>    
+  <!-- Add Arrows -->
+  <div class="swiper-button-next swiper-button-next--main"></div>
+  <div class="swiper-button-prev swiper-button-prev--main"></div>
 </div>
+
+
 <!-- Projects -->
 <section id="projects">
   <div class="container-fluid">
@@ -405,10 +443,10 @@
   <!-- require js -->
 
   <!-- PRODUCTION ? LOAD THIS -->
-  <script type="text/javascript" data-main="dist/js/main-optimized.min.js" src="dist/js/require.js"></script>
+<!--   <script type="text/javascript" data-main="dist/js/main-optimized.min.js" src="dist/js/require.js"></script> -->
 
   <!-- DEVELOPMENT ? LOAD THIS -->
-<!--   <script type="text/javascript" data-main="src/scripts/main.js" src="dist/js/require.js"></script> -->
+  <script type="text/javascript" data-main="src/scripts/main.js" src="dist/js/require.js"></script>
 
 
 </body>

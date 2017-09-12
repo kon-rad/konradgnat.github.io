@@ -9,7 +9,7 @@
 .cont h2 {
     font-family: 'Josefin Sans', sans-serif;
 }
-.cont.section-1 h5 {
+.section-1 .cont h5 {
     font-family: 'Josefin Sans', sans-serif;
 }
 .section-1 {
@@ -22,12 +22,12 @@
   background-position: center;
 	position: relative;
 }
-.no-webp .section-1 {
-  background-image:url(../../dist/images/coyote_hills.JPG);
-}
-.webp .section-1 {
-  background-image:url(../../dist/images/webp/coyote_hills.webp);
-}
-.no-js .section-1 {
-  background-image:url(../../dist/images/coyote_hills.JPG);
-}
+// .no-webp .section-1 {
+//   background-image:url(../../dist/images/coyote_hills.JPG);
+// }
+// .webp .section-1 {
+//   background-image:url(../../dist/images/webp/coyote_hills.webp);
+// }
+// .no-js .section-1 {
+//   background-image:url(../../dist/images/coyote_hills.JPG);
+// }
