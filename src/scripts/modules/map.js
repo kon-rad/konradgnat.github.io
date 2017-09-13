@@ -87,13 +87,14 @@ define(['async!https://maps.googleapis.com/maps/api/js?key=AIzaSyA8UtfbT1GSWWG1k
     }
 
     function carouselMap(map, travels, i) {
-      if (i == travels.length-1)
-        i = 0;
+      if (i == travels.length-1) {
+        i = -1;
+      }
       i++;
       setTimeout(function() {
         map.setCenter({lat:travels[i][1], lng:travels[i][2]});
         carouselMap(map, travels, i);
-      }, 2000);
+      }, 7000);
     }
 
   }

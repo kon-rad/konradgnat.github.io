@@ -1,5 +1,6 @@
 /* Main SCSS File  */
  
+
 // Base
 @import "util/variables";
 // Components
@@ -10,3 +11,5 @@
 @import "sections/hero";
 // main slider section
 @import "sections/mainSlider";
+// about section
+@import "sections/about";
