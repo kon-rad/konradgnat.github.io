@@ -6,13 +6,22 @@
     font-size: 80px;
     margin-top: 14vh;
     color: black;
+    @media (max-width: 800px) {
+        font-size:30px;
+    }
 } 
 
 .mainSlider__inner_wrapper h2 {
     font-family: 'Josefin Sans', sans-serif;
+    @media (max-width: 800px) {
+        font-size: 20px;
+    }
 }
 .mainSlider__inner_wrapper h5 {
     font-family: 'Josefin Sans', sans-serif;
+    @media (max-width: 800px) {
+        font-size: 12px;
+    }
 }
 .section-1 {
   height: 100vh!important;
@@ -82,7 +91,7 @@ html, body {
     &:hover {   
         color: rgb(226, 226, 226);
     } 
-    
+
 }
 .swiper-slide--main:nth-child(1) {
     background: url(../images/mainSlider1.JPG) center center no-repeat;
@@ -90,6 +99,13 @@ html, body {
     .mainSlider__inner_wrapper {
         text-align: center;
         margin: 0 auto;
+        @media (max-width: 800px) {
+            margin: 0px 30px 0px;
+            h2 {
+                font-size: 20px;
+                margin-top: 0px;
+            }
+        }
     }
 }
 .swiper-slide--main:nth-child(2) {
@@ -99,6 +115,9 @@ html, body {
         text-align: center;
         margin: 0 auto;
         margin-top: 200px;
+        @media (max-width: 800px) {
+            margin: 100px 30px 0;
+        }
     }
 }
 .swiper-slide--main:nth-child(3) {
@@ -109,6 +128,9 @@ html, body {
         text-align: center;
         margin: 0 auto;
         margin-top: 200px;
+        @media (max-width: 800px) {
+            margin: 100px 30px 0;
+        }
     }
 }
 
