@@ -4,7 +4,8 @@ define(['jquery', 'swiper', 'swiperJquery', 'swiperUmd', 'modules/lazyLoad', 'mo
 
 	return {
 		init: function () {
-			map.initMap();
+			if(document.getElementById('map')) 
+				map.initMap();
 		}
 	}
 })

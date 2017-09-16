@@ -36,7 +36,9 @@
         autoplay: 7000,
         autoplayDisableOnInteraction: true
     });
-  })
+  });
+
+  require(['modules/quotes']);
 })()
 
 
