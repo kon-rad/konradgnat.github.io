@@ -10,7 +10,8 @@
       'swiperUmd':'vendors/swiper.jquery.umd.min',
       'bootstrap': '../../bower_components/bootstrap/dist/js/bootstrap.min.js',
       'intersectionObserver': 'vendors/intersection-observer',
-      'modernizr': 'vendors/modernizr-custom' 
+      'modernizr': 'vendors/modernizr-custom',
+      'mainSlider': 'modules/mainSlider' 
     },
     shim: {
       bootstrap: {
@@ -24,19 +25,7 @@
     script.init();
   })
 
-  require(['swiper', 'swiperUmd', 'swiperJquery'], function(Swiper) {
 
-    // Main Swiper
-    var mainSwiper = new Swiper('#mainSlider', {
-        spaceBetween: 0,
-        pagination: '.swiper-pagination',
-        paginationClickable: true,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        autoplay: 7000,
-        autoplayDisableOnInteraction: true
-    });
-  });
 
   require(['modules/quotes']);
 })()
