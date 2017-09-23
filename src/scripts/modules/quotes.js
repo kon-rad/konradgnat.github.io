@@ -35,7 +35,9 @@ define(['jquery', 'mainSlider'], function($, mainSlider) {
 	span.onclick = function() {
 	    modal.style.display = "none";
 	    mainSlider.startAutoplay(); 
+	    document.getElementById('website_wrapper').style.visibility = 'visible';
 	}
+
 
 	getNewQuote.onclick = function() {
 	    newQuote();
@@ -45,6 +47,8 @@ define(['jquery', 'mainSlider'], function($, mainSlider) {
 	    if (event.target == modal) {
 	        modal.style.display = "none";
 		    mainSlider.startAutoplay(); 
+		    document.getElementById('website_wrapper').style.visibility = 'visible';
+
 	    }
 	}
 
