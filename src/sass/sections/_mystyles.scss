@@ -266,11 +266,11 @@ a {
   transition: visibility, opacity 1s;
   -webkit-transition: visibility, opacity 1s;
 }
-.portfolio-item:hover, .portfolio-item:focus {
+.portfolio-item:hover, .portfolio-item:focus,  .portfolio-item:active {
   .imgWrap {
     visibility: visible;
     opacity: 1;
-    
+
   }
 }
 #projects-title {
