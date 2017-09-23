@@ -245,7 +245,7 @@ a {
   list-style: none;
   padding-left: 0px;
 }
-.portfolio-wrapper  ul li.portfolio-item {
+.portfolio-item {
   margin-left: 25%;
   margin-bottom: 20px;
   width: 50%;
@@ -253,7 +253,7 @@ a {
   position: relative;
   float: left;
 }
-.portfolio-wrapper  ul li.portfolio-item .imgWrap {
+.portfolio-item .imgWrap {
   position: absolute;
   background: rgba(54,54,54,.4);
   width: 100%;
@@ -266,15 +266,12 @@ a {
   transition: visibility, opacity 1s;
   -webkit-transition: visibility, opacity 1s;
 }
-.portfolio-wrapper  ul li.portfolio-item:hover  .imgWrap{
-  visibility: visible;
-  opacity: 1;
-  //  padding-top:18%;
-}
-.portfolio-wrapper  ul li.portfolio-item:focus  .imgWrap{
-  visibility: visible;
-  opacity: 1;
-  //  padding-top:18%;
+.portfolio-item:hover, .portfolio-item:focus {
+  .imgWrap {
+    visibility: visible;
+    opacity: 1;
+    
+  }
 }
 #projects-title {
   margin-bottom: 40px;
