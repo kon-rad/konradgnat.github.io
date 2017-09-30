@@ -45,10 +45,31 @@ gulp.task('imagemin', function() {
       }),
       mozjpeg({
         quality: 90
-      })
+      }, {verbose: true})
     ]))
     .pipe(gulp.dest('dist/images/'))
 });
+
+
+// gulp.task('imagemin', function() {
+//     return gulp.src([paths.srcPath + '/images/**/*.*'])
+//         .pipe(imagemin([
+//             pngquant({
+//                 speed: 1,
+//                 quality: '50'
+//             }),
+//             imageminMozjpeg({
+//                 quality: 90
+//             })
+//         ], {verbose: true}))
+//         .pipe(gulp.dest(paths.publicPath + '/assets/images'));
+// });
+
+// gulp.task('webp', function() {
+//     return gulp.src([paths.srcPath + '/images/**/*.*'])
+//         .pipe(webp())
+//         .pipe(gulp.dest(paths.publicPath + '/assets/images/webp'));
+// });
 
 gulp.task('webp', function() {
   gulp.src(['./src/images/*'])
