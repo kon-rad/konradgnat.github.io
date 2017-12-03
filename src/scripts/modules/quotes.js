@@ -38,7 +38,6 @@ define(['jquery', 'mainSlider'], function($, mainSlider) {
 	    document.getElementById('website_wrapper').style.visibility = 'visible';
 	}
 
-
 	getNewQuote.onclick = function() {
 	    newQuote();
 	}
@@ -48,8 +47,6 @@ define(['jquery', 'mainSlider'], function($, mainSlider) {
 	        modal.style.display = "none";
 		    mainSlider.startAutoplay(); 
 		    document.getElementById('website_wrapper').style.visibility = 'visible';
-
 	    }
 	}
-
 });

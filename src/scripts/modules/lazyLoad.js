@@ -18,8 +18,6 @@ define(['jquery', 'intersectionObserver', 'modernizr'], function($) {
 
 	if($('html').hasClass('webp')) webp = true;
 
-	console.log(webp);
-
 	const imgElements = [ ...document.querySelectorAll( '.lazyload' ) ];
 
 	var observer = new IntersectionObserver( onChange, {

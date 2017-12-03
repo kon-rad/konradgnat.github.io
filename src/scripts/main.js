@@ -25,14 +25,9 @@
     script.init();
   })
 
-
-
-  require(['modules/quotes']);
 })()
 
 
 
 // command to run r.js and optimzie js code
 // $ node build/r.js -o build/build.config.js
-
-

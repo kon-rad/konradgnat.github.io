@@ -24,8 +24,6 @@
     app.init();
     script.init();
   });
-
-  require(['modules/quotes']);
 })();
 
 // command to run r.js and optimzie js code

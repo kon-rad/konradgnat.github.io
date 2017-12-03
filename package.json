@@ -43,6 +43,7 @@
     "webpack": "^2.7.0"
   },
   "dependencies": {
+    "font-awesome": "FortAwesome/Font-Awesome",
     "intersection-observer": "^0.4.0"
   }
 }
