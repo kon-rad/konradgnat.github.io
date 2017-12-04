@@ -127,7 +127,7 @@ body {
 
 }
 .section-3 {
-  height: 1000px!important;
+  // height: 1000px!important;
   background-repeat: no-repeat;
   -moz-background-size: cover;
 	-o-background-size: cover;
@@ -221,6 +221,12 @@ a {
   color: #000;//$secondary-color;//#f15a22
   margin-bottom: 100px;
 }
+#resume .titles h2 {
+  color: #000;
+  margin-bottom: 100px;
+  margin-top: 0px;
+}
+
 .portfolio-wrapper {
   overflow: hidden;
   width: 100%;
