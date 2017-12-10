@@ -18,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css?family=Abel|Catamaran|Josefin+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400" rel="stylesheet"> 
 
-  <link href="dist/css/main.css" rel="stylesheet">
+  <link href="../dist/css/main.css" rel="stylesheet">
 
 </head>
 
@@ -35,15 +35,15 @@
       <div class="bar3"></div>
     </div>
     <!-- </button> -->
-    <a class="navbar-brand" href="./index.html#home"><i class="fa fa-code" aria-hidden="true"></i></a>
+    <a class="navbar-brand" href="../index.html#home"><i class="fa fa-code" aria-hidden="true"></i></a>
   </div>
   <div  id="navbar" class="navbar-collapse collapse">
     <ul class="nav navbar-nav">
-      <li><a  href="./index.html#about">About</a></li>
-      <li><a href="./index.html#projects">Projects</a></li>
-      <li><a href="./index.html#contact">Contact</a></li>
+      <li><a  href="../index.html#about">About</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
       <li><a href="./blog.html">Blog</a></li>
-      <li><a target="_blank" href="./resume.pdf">Resume</a></li>
+      <li><a target="_blank" href="../resume.pdf">Resume</a></li>
     </ul>
   </div>
 </div>
@@ -52,41 +52,57 @@
   <!-- Content Section -->
 
   <section class="blog">
-    <div class="jumbotron_image__redux-saga">
-      <img class="img-responsive" src="dist/images/redux-saga.png" alt="redux-saga" />
-
+    <div class="jumbotron_image__logo">
+      <img class="img-responsive" src="../dist/images/jest.png" alt="jest" />
     </div>
     <div class="container-fluid">
       <div class="row">
         <div class="col-xs-12 col-sm-8 col-sm-offset-2">
           <div class="page-header">
-            <h1>What is Redux-Saga?</h1>
+            <h1>How to test a react app with Jest</h1>
           </div>
           <div class="blog_text">
-            <p>Redux saga is a redux middleware library that is designed to simplify, make more efficient and easier to test the handling of side effects and network requests in your redux app.</p>
+            <p>Jest is a testing framework maintained by Facebook to test React apps.  </p>
 
-            <p>Redux-Saga is a middleware which means that it can be started, paused and cancelled from the main application with normal redux actions. It can dispatch redux actions and has access to the full redux application state.</p>
+            <h3>Install and Configure</h3>
+            <code>$ yarn add —dev jest</code>
 
-            <p>It uses a new ES6 feature called ‘Generators’ that allows us to write asynchronous code that looks synchronous and is easy to test. </p>
+            <p>If you started your app with create-react-app boilerplate a lot of the configuration will already exist. To start testing all you need to do is run npm test.</p>
+            <p>The file that you are testing should reside in a file that has the same name with .test.js ending. 
+            This file should reside in mirror directory structure vis a vi it’s counterpart. </p>
+            <p>Import the file at the top of the page. Typically you would create a wrapper 'describe' function for the main piece of code being tested with nested 'describe' statements for each smaller sub feature. 
+            Each feature is tested with a 'it' function, the first parameter is a string describing this feature and giving it a title. The next parameter is a function holding the main test logic. 
+            Each assertion is tested with expect(some code here).toEqual(what it should equal)</p>
+            <p>Here's an example.</p>
+            <pre>
+              <code>
+                describe('Name of what's being tested, () => {
 
-            <p>This seems to be the currently preferred library to what was commonly used before: redux-thunk. As it states in the docs; with redux-saga ‘you don’t end up in callback hell, you can test your asynchronous flows easily and your actions stay pure.’</p>
+                      describe('name of function tested', () => {
 
-            <p>With react-thunk it was required to return a function and deal with a promise chain. Instead with redux-saga we write a simple try/catch block to catch any errors involved with request and use ‘put’ to dispatch an action to notify our reducers.</p>
+                          it('description of path being tested', () => {
 
-            <p>Install:</p>
-            <code>$ yarn add redux-saga</code>
+                              /* code logic here */
+
+                              expect(
+                                  /* some function input */
+                              ).toEqual(
+                                  /* expected function output */
+                              )
+                          });
+                      });
+                  });
+              </code>
+            </pre>
+
+            <p>Learn more at the official Jest tutorial, link below.</p>
 
             <section class="blog_links">
               <h3>Links</h3>
               <div class="well well-lg">
               <p>
-              <a href="https://github.com/redux-saga/redux-saga">Github</a>
+              <a href="https://facebook.github.io/jest/docs/en/tutorial-react.html">Official tutorial</a>
               </p>
-              <p>
-              <a href="https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html">Official Documentation and Tutorial</a>
-              </p><p>
-              <a href="https://redux-saga.js.org/docs/ExternalResources.html">Info on Generators</a>
-                </p>
               </div>
             </section>
 
@@ -161,7 +177,7 @@
       <div class="col-xs-12 titles">
         <h2>Resume</h2>
         <div class="center">
-          <a target="_blank" href="./resume.pdf"
+          <a target="_blank" href="../resume.pdf"
           class="resume_button">View Resume</a>
         </div>
       </div>
@@ -201,9 +217,9 @@
         <li>
           <a href="http://devpost.com/Konrad_Gnat">
             <picture>
-              <source srcset="dist/images/webp/devpost.webp" type="image/webp">
-                <source srcset="dist/images/devpost.png" type="image/png">
-                  <img class="devpost-img" src="dist/images/devpost.png" alt="devpost logo">
+              <source srcset="../dist/images/webp/devpost.webp" type="image/webp">
+                <source srcset="../dist/images/devpost.png" type="image/png">
+                  <img class="devpost-img" src="../dist/images/devpost.png" alt="devpost logo">
                 </picture>
               </a>
             </li>
@@ -221,7 +237,7 @@
   <!-- <script type="text/javascript" data-main="dist/js/main-optimized.min.js" src="dist/js/require.js"></script> -->
 
   <!-- DEVELOPMENT ? LOAD THIS -->
-  <script type="text/javascript" data-main="src/scripts/main.js" src="dist/js/require.js"></script>
+  <script type="text/javascript" data-main="../src/scripts/main.js" src="../dist/js/require.js"></script>
 
 </body>
 </html>
