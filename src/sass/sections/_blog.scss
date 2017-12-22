@@ -42,7 +42,6 @@
   	height: auto;
   }
 }
-
 .jumbotron_image__logo {
   height: 372px;
   width: 100%;
@@ -56,4 +55,21 @@
 }
 .float_right {
     float: right;
+}
+.plain_link {
+	color: #337ab7!important;
+	cursor: pointer;
+}
+
+.plain_link:hover {
+	text-decoration: underline;
+}
+
+.center-image {
+	margin: 20px auto;
+}
+.caption-center {
+	text-align: center;
+	margin-top: -16px;
+	font-size: 14px;
 }
