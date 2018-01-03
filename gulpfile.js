@@ -37,7 +37,7 @@ gulp.task('workflow', function () {
 });
 
 gulp.task('imagemin', function() {
-  gulp.src(['./src/images/*'])
+  gulp.src(['./src/images/**/*'])
     .pipe(imagemin([
       pngquant({
         speed: 1,

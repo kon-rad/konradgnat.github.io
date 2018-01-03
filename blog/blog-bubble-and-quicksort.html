@@ -52,40 +52,80 @@
   <!-- Content Section -->
 
   <section class="blog">
-    <div class="jumbotron_image__blog-header">
-      <!-- <img class="img-responsive" src="dist/images/blog_header.JPEG" alt="blog" /> -->
-    </div>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
           <div class="page-header">
-            <h1>Articles</h1>
+            <div class="horizontal-space-md"></div>  
+            <h1>Bubble Sort and Quicksort Algorithms in Python3</h1>
+            <div class="horizontal-space-md"></div>  
           </div>
           <div class="blog_text">
-            <section class="blog_links">
-              <div class="well well-lg">
-                <p>
-                  <a href="./blog-redux-saga.html">What is Redux-Saga <span class="float_right">December 3rd, 2017</span></a>
-                </p>
-                <p>
-                  <a href="./blog-jest.html">How to test a react app with Jest<span class="float_right">December 10th, 2017</span></a>
-                </p>
-                <p>
-                  <a href="./blog-heaps.html">Min and max heaps in Python3<span class="float_right">December 17th, 2017</span></a>
-                </p>
-                <p>
-                  <a href="./blog-trie.html">The Trie Data Structure in Python3<span class="float_right">December 25th, 2017</span></a>
-                </p>
-                <p>
-                  <a href="./blog-bubble-and-quicksort.html">Bubble Sort and Quicksort Algorithms in Python3<span class="float_right">January 2nd, 2018</span></a>
-                </p>
-              </div>
-            </section>
+            <p>Bubble sort is a not very efficient algorithm and generally not used in real world applications. It is the simplest sorting algorithm It works by iterating over the array of values and swapping them if they are in the wrong order. Hence they ‘bubble up’ to their proper positions.</p>
+
+            <p>The simplest version will always run in O(n^2) time, even if the array is already sorted. An optimized version will stop once the inner loop didn’t swap once.</p>
+            <img class="img-responsive center-image" src="../dist/images/blog/bubble_sort.gif" />
+            <p class="caption-center">A bubble sort algorithm</p>
+            <p>Time Complexity:</p>
+            <ul>
+                <li>Best Case: O(n)</li>
+                <li>Worst Case: O(n^2)</li>
+                <li>Average: O(n^2)</li>
+            </ul>
+            <pre>
+              <code>
+    n = 7
+    a = [4,3,8,6,1,2,6]
+    
+    swaps = 0
+    for x in range(n):
+        currentSwaps = 0
+        for z in range(0, n-1):
+        if a[z] > a[z+1]:
+            a[z], a[z + 1] = a[z + 1], a[z]
+            swaps += 1
+            currentSwaps += 1
+        if currentSwaps = 0
+        break
+              </code>
+            </pre>
+          <div class="horizontal-space-md"></div>    
+            <h3>Quicksort</h3>
+            <p>This is a very efficient sorting algorithm. It was developed by a British Computer Scientist Tony Hoare in 1959 and published in 1961. </p>
+            <p>It is a “Divide and Congquer” algorithm like Merge Sort. It picks an element as a pivot and partitions the array around it. It puts on one side all elements lower and on the other side all those that are higher.</p>
+            <p>There are different versions of the algorithm that pick the first pivot in different ways. Either as the first, last, random or median element in the array. </p>
+            <p>Time Complexity:</p>
+            <ul>
+                <li>Best Case: O(n log n)</li>
+                <li>Worst Case: O(n^2)</li>
+                <li>Average: O(n log n)</li>
+            </ul>
+            <img class="img-responsive center-image" src="../dist/images/blog/quicksort.gif" />
+            <p class="caption-center">A quicksort algorithm</p>
+            <pre>
+                <code>
+    def partition(arr,low,high):
+        i = ( low-1 )         # index of smaller element
+        pivot = arr[high]     # pivot
+
+        for j in range(low , high):
+            if   arr[j] <= pivot:
+                i = i+1
+                arr[i],arr[j] = arr[j],arr[i]
+        arr[i+1],arr[high] = arr[high],arr[i+1]
+        return ( i+1 )
+
+    def quicksort(arr,low,high):
+        if low < high:
+            pi = partition(arr,low,high)
+            quicksort(arr, low, pi-1)
+            quicksort(arr, pi+1, high)
+                </code>
+            </pre>
         </div>
       </div>
     </div>
   </section>
-
   <!-- Contact Section -->
 
   <section>
