@@ -108,12 +108,12 @@
         n--;
         current--;
         result.unshift(x[m]);
-      } else if (lcs[m][n-1] === lcs[m][n] && lcs[m-1][n] === lcs[m][n]) {
+      } else if (lcs[m][n-1] === lcs[m][n] && lcs[m-1][n] === lcs[m][n] && lcs[m-1][n-1] === lcs[m][n]) {
         m--;
         n--;
       } else if (lcs[m-1][n] === lcs[m][n]-1 && lcs[m][n-1] === lcs[m][n]) {
         n--;
-      } else if (lcs[m][n-1] === lcs[m][n]-1 && lcs[m-1][n] === lcs[m][n]) {
+      } else {
         m--;
       }
     }
