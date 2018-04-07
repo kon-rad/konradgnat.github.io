@@ -4,6 +4,14 @@ a:hover, a:visited, a:active, a:link {
   color:#000;
 }
 
+.link--blue {
+  color: #3b35fa!important;
+}
+
+.link--blue:hover {
+  text-decoration: underline !important;
+}
+
 // swiper
 .swiper-container {
     width: 100%;
@@ -240,9 +248,9 @@ a {
   border-radius: 3px;
 }
 .portfolio-wrapper .button, .portfolio-wrapper .button:focus {
-  background-color: rgba(0, 0, 0, 0.82);
-    color: #fff;
-    padding: 3px 8px;
+  background-color: white;
+  color: black;
+  padding: 3px 8px;
   text-decoration: none;
   border: 1px solid #fff;
   border-radius: 3px;
