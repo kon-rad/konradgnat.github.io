@@ -4,12 +4,36 @@ a:hover, a:visited, a:active, a:link {
   color:#000;
 }
 
+// blue link hover
 .link--blue {
   color: #3b35fa!important;
 }
 
 .link--blue:hover {
   text-decoration: underline !important;
+}
+
+// send and resume links
+.submit-button:hover {
+  color: #fff;
+  background: #000;
+}
+.resume_button:hover {
+  color: #fff;
+  background: #000;
+}
+
+// navbar links
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+  background-color: black;
+  i {
+    color: #fff;
+  }
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+  color: white;
+  background-color: black;
 }
 
 // swiper
