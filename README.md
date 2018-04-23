@@ -1,2 +1,2 @@
 # konradgnat.github.io
-Personal Website
+Fullstack Web Developer Portfolio
