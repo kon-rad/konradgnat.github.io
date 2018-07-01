@@ -9,10 +9,6 @@ var gulp            = require('gulp'),
     pngquant        = require('imagemin-pngquant'),
     mozjpeg         = require('imagemin-mozjpeg'),
     webp            = require('gulp-webp'),
-    uncss           = require('gulp-uncss'),
-    concat          = require('gulp-concat'),
-    gutil           = require('gulp-util'),
-    critical        = require('critical').stream,
     babel           = require('gulp-babel');
  
 gulp.task('babel', () =>
@@ -48,8 +44,11 @@ gulp.task('imagemin', function() {
       }, {verbose: true})
     ]))
     .pipe(gulp.dest('dist/images/'))
-});
 
+  gulp.src(['./src/images/*'])
+    .pipe(webp())
+    .pipe(gulp.dest('dist/images/webp/'))
+});
 
 // gulp.task('imagemin', function() {
 //     return gulp.src([paths.srcPath + '/images/**/*.*'])
@@ -70,13 +69,6 @@ gulp.task('imagemin', function() {
 //         .pipe(webp())
 //         .pipe(gulp.dest(paths.publicPath + '/assets/images/webp'));
 // });
-
-gulp.task('webp', function() {
-  gulp.src(['./src/images/*'])
-    .pipe(webp())
-    .pipe(gulp.dest('dist/images/webp/'))
-});
-
 
 gulp.task('default', function () {
   gulp.watch('src/sass/**/*.scss', ['workflow']);
