@@ -146,6 +146,11 @@ html, body {
     padding: 30px 20px;
     background-color: $gray-bg;
     overflow: scroll;
+    height: 300px;
+
+    h3 {
+      font-size: 18px;
+    }
 
     ul li {
       text-align: left;
