@@ -33,10 +33,10 @@ define(['jquery', 'mainSlider'], function ($, mainSlider) {
     newQuote();
   };
 
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      mainSlider.startAutoplay();
-      document.getElementById('website_wrapper').style.visibility = 'visible';
-    }
-  }
+  // window.onclick = function (event) {
+  //   if (event.target === modal) {
+  //     mainSlider.startAutoplay();
+  //     document.getElementById('website_wrapper').style.visibility = 'visible';
+  //   }
+  // }
 });

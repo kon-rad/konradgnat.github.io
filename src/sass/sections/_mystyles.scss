@@ -23,7 +23,8 @@ a:hover, a:visited, a:active, a:link {
   background: #000;
 }
 
-// navbar links
+
+  // navbar links
 .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
   background-color: black;
   i {
@@ -99,7 +100,7 @@ a:hover, a:visited, a:active, a:link {
   margin-top: -10px;
 }
 .navbar-default{
-  background-color: #fff;
+  background-color: $gray-bg;
   height: 50px;
 }
 .navbar-default .navbar-header .navbar-brand {
@@ -108,9 +109,12 @@ a:hover, a:visited, a:active, a:link {
 .navbar-default .navbar-nav li> a {
   color: black;
 }
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  background-color: $gray-bg;
+}
 body {
   font-family: 'Alfa Slab One', cursive;
-  background-color: $primary-color;//#fbb03b;
+  background-color: $gray-bg;//#fbb03b;
 }
 .row {
   display:flex; flex-wrap: wrap;
@@ -314,6 +318,9 @@ a {
 #projects-title {
   margin-bottom: 40px;
   color: #000;//$secondary-color;
+}
+#projects {
+  background-color: $gray-bg;
 }
 .project-img {
   width: auto;
