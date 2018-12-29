@@ -147,6 +147,8 @@ html, body {
     background-color: $gray-bg;
     overflow: scroll;
     height: 300px;
+    margin: 20px auto 0;
+    display: block;
 
     h3 {
       font-size: 18px;

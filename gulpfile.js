@@ -70,7 +70,7 @@ gulp.task('imagemin', function() {
 //         .pipe(gulp.dest(paths.publicPath + '/assets/images/webp'));
 // });
 
-gulp.task('default', function () {
+gulp.task('default', ['workflow', 'babel', 'imagemin'], function () {
   gulp.watch('src/sass/**/*.scss', ['workflow']);
   gulp.watch('./src/scripts/**/*.js', ['babel']);
 });
