@@ -43,32 +43,12 @@ gulp.task('imagemin', function() {
         quality: 90
       }, {verbose: true})
     ]))
-    .pipe(gulp.dest('dist/images/'))
+    .pipe(gulp.dest('dist/images/'));
 
   gulp.src(['./src/images/*'])
     .pipe(webp())
     .pipe(gulp.dest('dist/images/webp/'))
 });
-
-// gulp.task('imagemin', function() {
-//     return gulp.src([paths.srcPath + '/images/**/*.*'])
-//         .pipe(imagemin([
-//             pngquant({
-//                 speed: 1,
-//                 quality: '50'
-//             }),
-//             imageminMozjpeg({
-//                 quality: 90
-//             })
-//         ], {verbose: true}))
-//         .pipe(gulp.dest(paths.publicPath + '/assets/images'));
-// });
-
-// gulp.task('webp', function() {
-//     return gulp.src([paths.srcPath + '/images/**/*.*'])
-//         .pipe(webp())
-//         .pipe(gulp.dest(paths.publicPath + '/assets/images/webp'));
-// });
 
 gulp.task('default', ['workflow', 'babel', 'imagemin'], function () {
   gulp.watch('src/sass/**/*.scss', ['workflow']);
