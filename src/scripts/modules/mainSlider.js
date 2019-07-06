@@ -1,9 +1,10 @@
 'use strict';
 
 define(['swiper', 'swiperUmd', 'swiperJquery'], function(Swiper) {
-
   // Main Swiper
-  var mainSwiper = new Swiper('#mainSlider', {
+  var mainSwiper = new Swiper(
+    '#mainSlider',
+    {
       spaceBetween: 0,
       pagination: '.swiper-pagination',
       paginationClickable: true,
@@ -11,10 +12,9 @@ define(['swiper', 'swiperUmd', 'swiperJquery'], function(Swiper) {
       prevButton: '.swiper-button-prev',
       autoplay: 7000,
       autoplayDisableOnInteraction: true
-  });
+    }
+  );
   mainSwiper.stopAutoplay();
 
   return mainSwiper;
-
-
 });

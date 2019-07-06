@@ -1,7 +1,5 @@
 
 define(['jquery', 'intersectionObserver', 'modernizr'], function($) {
-	
-
 	if ('IntersectionObserver' in window &&
 			'IntersectionObserverEntry' in window &&
 			'intersectionRatio' in window.IntersectionObserverEntry.prototype &&
@@ -27,29 +25,20 @@ define(['jquery', 'intersectionObserver', 'modernizr'], function($) {
 	function onChange( changes ) {
 
 		changes.forEach( change => {
-
-			if ( change.isIntersecting ) {
-
+			if (change.isIntersecting) {
 				change.target.classList.add( 'visible' );
-				if(!webp)
+				if (!webp)
 					change.target.src = change.target.dataset.src;
 				else
 					change.target.src = change.target.dataset.webp;
-
 				observer.unobserve( change.target );
 			}
 		});
 	}
 
-
 	const createObserver = function () {
-
-		imgElements.forEach( img => {
-
-			observer.observe( img );
-		});
+		imgElements.forEach(img => observer.observe(img));
 	};
-
 
 	window.addEventListener("load", () => {
 		createObserver();

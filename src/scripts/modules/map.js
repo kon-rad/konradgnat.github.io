@@ -47,8 +47,6 @@ define(['async!https://maps.googleapis.com/maps/api/js?key=AIzaSyA8UtfbT1GSWWG1k
       long: 19.944980  
     }
 
-
-
     // Data for the markers consisting of a name, a LatLng and a zIndex for the
     // order in which these markers should display on top of each other.
     var travels = [
