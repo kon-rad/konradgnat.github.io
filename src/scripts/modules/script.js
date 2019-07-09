@@ -1,7 +1,6 @@
 'use strict';
 
 define(['jquery'], function($) {
-
 	function _registerEvents() {
 		$('#menuToggle').on('click', function() {
 		  $(".collapse").toggle();
@@ -13,4 +12,4 @@ define(['jquery'], function($) {
 			_registerEvents();
 		}
 	}
-})
+});

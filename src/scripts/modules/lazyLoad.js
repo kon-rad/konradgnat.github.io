@@ -1,3 +1,4 @@
+'use strict';
 
 define(['jquery', 'intersectionObserver', 'modernizr'], function($) {
 	if ('IntersectionObserver' in window &&
@@ -14,24 +15,24 @@ define(['jquery', 'intersectionObserver', 'modernizr'], function($) {
 
 	var webp = false;
 
-	if($('html').hasClass('webp')) webp = true;
+	if ($('html').hasClass('webp')) {
+		webp = true;
+	}
 
-	const imgElements = [ ...document.querySelectorAll( '.lazyload' ) ];
+	const imgElements = [ ...document.querySelectorAll('.lazyload') ];
 
-	var observer = new IntersectionObserver( onChange, {
-		threshold: [ 0.0 ],
-	});
+	var observer = new IntersectionObserver(onChange, { threshold: [0.0] });
 
-	function onChange( changes ) {
+	function onChange(changes) {
 
-		changes.forEach( change => {
+		changes.forEach(change => {
 			if (change.isIntersecting) {
-				change.target.classList.add( 'visible' );
+				change.target.classList.add('visible');
 				if (!webp)
 					change.target.src = change.target.dataset.src;
 				else
 					change.target.src = change.target.dataset.webp;
-				observer.unobserve( change.target );
+				observer.unobserve(change.target);
 			}
 		});
 	}
@@ -48,4 +49,4 @@ define(['jquery', 'intersectionObserver', 'modernizr'], function($) {
 			createObserver();
 		}
 	}
-})
+});

@@ -1,7 +1,6 @@
-
+'use strict';
 
 define(['async!https://maps.googleapis.com/maps/api/js?key=AIzaSyA8UtfbT1GSWWG1kmpmwZZ_9xtCnw9zXXg&callback=initMap'], function() {
-'use strict';
   function initMap() {
 
     var sanFran = {
@@ -97,12 +96,7 @@ define(['async!https://maps.googleapis.com/maps/api/js?key=AIzaSyA8UtfbT1GSWWG1k
 
   }
   console.timeEnd("start_to_end");
-
   return {
     initMap: initMap
-
   }
-
-})
-
-    
+});
