@@ -40,7 +40,8 @@
     "gulp-webp": "^2.3.0",
     "imagemin-mozjpeg": "^6.0.0",
     "imagemin-pngquant": "^5.1.0",
-    "webpack": "^2.7.0"
+    "webpack": "^2.7.0",
+    "webpack-cli": "^3.3.5"
   },
   "dependencies": {
     "font-awesome": "FortAwesome/Font-Awesome",
