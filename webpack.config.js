@@ -20,6 +20,10 @@ module.exports = {
           'css-loader',
           'sass-loader'
         ]
+      },
+      {
+        test: /(\.jpg$|\.jpeg$|\.webp$|\.JPG$)/,
+        use: 'file-loader'
       }
     ]
   }

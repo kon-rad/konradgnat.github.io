@@ -1,4 +1,7 @@
-'use strict';
+// import activateHamburgerMenu from './modules/hamburgerMenu';
+import './modules/hamburgerMenu';
+
+
 //
 // (function() {
 //   require.config({
@@ -33,4 +36,5 @@
 
 
 console.log('main js');
+// activateHamburgerMenu();
 
