@@ -1,6 +1,6 @@
 'use strict';
 
-define(['async!https://maps.googleapis.com/maps/api/js?key=AIzaSyA8UtfbT1GSWWG1kmpmwZZ_9xtCnw9zXXg&callback=initMap'], function() {
+define(['async!https://maps.googleapis.com/maps/api/js?key=<>g&callback=initMap'], function() {
   function initMap() {
 
     var sanFran = {

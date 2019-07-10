@@ -1,20 +1,16 @@
 'use strict';
 
-define(['jquery'], function($) {
-	return {
-		init: function () {
-			if (document.getElementById('map')) {
-				require(['modules/map']);
-				map.initMap();
-			}
+import $ from './vendors/jquery-3.2.1.min';
 
-			if (document.getElementById('mainSlider')) {
-				require(['swiper', 'swiperJquery', 'swiperUmd']);
-  				require(['modules/quotes', 'modules/lazyLoad']);
-			}
+export default {
+	init: function () {
+
+		if (document.getElementById('mainSlider')) {
+			require(['swiper', 'swiperJquery', 'swiperUmd']);
+				require(['modules/quotes', 'modules/lazyLoad']);
 		}
 	}
-});
+}
 
 
 
