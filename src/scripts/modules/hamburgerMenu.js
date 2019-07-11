@@ -1,13 +1,18 @@
-
-console.log('activateHamburgerMenu js');
 const toggleMenu = () => {
-	const menu = document.getElementsByClassName('collapse');
-	console.log('menu', menu);
-};
+	const menu = document.getElementById('navbar');
+	if (!menu) {
+		return;
+	}
 
+	if (menu.classList.contains('collapse')) {
+		menu.classList.remove('collapse');
+		return;
+	}
+
+	menu.classList.add('collapse');
+};
 
 const button = document.getElementById('menuToggle');
-console.log('btton', button);
 if (button) {
 	button.addEventListener('click', toggleMenu);
-};
+}

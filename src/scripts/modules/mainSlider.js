@@ -1,9 +1,8 @@
 'use strict';
 
-import Swiper from '../vendors/swiper.min.js';
 
   // Main Swiper
-var mainSwiper = new Swiper(
+var mainSlider = new Swiper(
   '#mainSlider',
   {
     spaceBetween: 0,
@@ -15,6 +14,5 @@ var mainSwiper = new Swiper(
     autoplayDisableOnInteraction: true
   }
 );
-mainSwiper.stopAutoplay();
+mainSlider.startAutoplay();
 
-export default mainSwiper;
