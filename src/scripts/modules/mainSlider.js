@@ -1,7 +1,5 @@
 'use strict';
 
-
-  // Main Swiper
 var mainSlider = new Swiper(
   '#mainSlider',
   {
