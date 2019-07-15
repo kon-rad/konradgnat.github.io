@@ -13,6 +13,8 @@ $(document).ready(() => {
           autoplayDisableOnInteraction: true
       }
     );
-
+    if (!document.getElementById('mainSlider')) {
+        return;
+    }
     mainSlider.startAutoplay();
 });

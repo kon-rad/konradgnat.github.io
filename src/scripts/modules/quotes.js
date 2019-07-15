@@ -15,6 +15,9 @@ function newQuote() {
 }
 
 $(document).ready(() => {
+  if (!document.getElementById('newQuote')) {
+    return;
+  }
   newQuote();
 
   document.getElementById('website_wrapper').style.visibility = 'visible';
