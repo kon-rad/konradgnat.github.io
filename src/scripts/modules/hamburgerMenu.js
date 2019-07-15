@@ -13,6 +13,9 @@ const toggleMenu = () => {
 };
 
 const button = document.getElementById('menuToggle');
-if (button) {
-	button.addEventListener('click', toggleMenu);
-}
+
+$(document).ready(() => {
+	if (button) {
+		button.addEventListener('click', toggleMenu);
+	}
+});

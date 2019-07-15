@@ -14,6 +14,9 @@ function newQuote() {
     });
 }
 
-newQuote();
-document.getElementById('website_wrapper').style.visibility = 'visible';
-document.getElementById('newQuote').onclick = newQuote;
+$(document).ready(() => {
+  newQuote();
+
+  document.getElementById('website_wrapper').style.visibility = 'visible';
+  document.getElementById('newQuote').onclick = newQuote;
+});
