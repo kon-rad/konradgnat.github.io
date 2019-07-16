@@ -20,12 +20,13 @@ module.exports = {
         use: [
           'style-loader',
           'css-loader',
+          'resolve-url-loader',
           'sass-loader'
         ]
       },
       {
         test: /(\.jpg$|\.jpeg$|\.webp$|\.JPG$)/,
-        use: 'file-loader'
+        use: 'file-loader',
       }
     ]
   },

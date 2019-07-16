@@ -35,13 +35,13 @@
       <div class="bar3"></div>
     </div>
     <!-- </button> -->
-    <a class="navbar-brand" href="../index.html#home"><i class="fa fa-code" aria-hidden="true"></i></a>
+    <a class="navbar-brand" href="index.html#home"><i class="fa fa-code" aria-hidden="true"></i></a>
   </div>
   <div  id="navbar" class="navbar-collapse collapse">
     <ul class="nav navbar-nav">
-      <li><a  href="../index.html#about">About</a></li>
-      <li><a href="../index.html#projects">Projects</a></li>
-      <li><a href="../index.html#contact">Contact</a></li>
+      <li><a  href="index.html#about">About</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
       <li><a href="./blog.html">Blog</a></li>
       <!--<li><a target="_blank" href="../resume.pdf">Resume</a></li>-->
     </ul>
@@ -52,78 +52,44 @@
   <!-- Content Section -->
 
   <section class="blog">
+    <div class="jumbotron_image__redux-saga">
+      <img class="img-responsive" src="dist/images/redux-saga.png" alt="redux-saga" />
+
+    </div>
     <div class="container-fluid">
       <div class="row">
         <div class="col-xs-12 col-sm-8 col-sm-offset-2">
           <div class="page-header">
-            <div class="horizontal-space-md"></div>  
-            <h1>Merge Sort</h1>
-            <div class="horizontal-space-md"></div>  
+            <h1>What is Redux-Saga?</h1>
           </div>
           <div class="blog_text">
-            <img class="img-responsive center-image" src="../dist/images/blog/mergesort_gif.gif" />
-            <p class="caption-center">A merge sort algorithm</p>
+            <p>Redux saga is a redux middleware library that is designed to simplify, make more efficient and easier to test the handling of side effects and network requests in your redux app.</p>
 
-            <strong>HISTORY</strong>
-            <p>The merge sort algorithm is an efficient divide and conquer sorting algorithm. It was invented by John von Neumann in 1945. John von Neumann (1903 - 1957) was a Hungarian-American mathematician, physicist and computer scientist. He is considered one of the greatest mathematicians of his time. </p>
-            
-            <img class="img-responsive center-image" src="../dist/images/blog/neumann.gif" />
-            <p class="caption-center">John von Neumann</p>
-            <strong>HOW IT WORKS</strong>
-            <p>This algorithm is a divid and conquer type. This means that problem is divided into smaller subproblems for which a solution is very simple. There are two parts, one the divide part and then the merge part. The input array is divided into half and recursively called on each half. The base case is the empty array. Once the sub part is only one item long, the merging starts. Two sub sections are merged with the lower item taking the position  before the higher item. All sub sections are merged until finally the last two halves are merged. </p>
-            
-            <strong>RUN TIME</strong>
-            <p>What is the run time for this algorithm? 
-            The merge part of the algorithm takes O(n) time because the array needs to be traversed once, assigning the lower of the two items to the current array position. Now this merge step is done once for each of the divide steps. This means that the time complexity is O(n log n) because it takes log n for all the merge steps.</p>
-            
-            <strong>EXAMPLE DESCRIPTION</strong>
-            <p>This is a python3 implementation of the merge sort algorithm. The divide step is done in the mergeSort function, while the merge step is done in the merge function. </p>
+            <p>Redux-Saga is a middleware which means that it can be started, paused and cancelled from the main application with normal redux actions. It can dispatch redux actions and has access to the full redux application state.</p>
 
-            <p>Time Complexity:</p>
-            <ul>
-                <li> O(n log n)</li>
-            </ul>
-            <pre>
-              <code>
-  def mergeSort(arr, start, end):
-    if (start < end):
-      middle = start+((end-start)//2)
-      mergeSort(arr, start, middle)
-      mergeSort(arr, middle+1, end)
-      merge(arr, start, middle, end)
-    
-  def merge(arr, start, middle, end):
-    leftHalf = arr[start:middle+1]
-    rightHalf = arr[middle+1:end+1]
-    i=0
-    j=0
-    k=start
-    while (i < len(leftHalf) and j < len(rightHalf)):
-      if (leftHalf[i] <= rightHalf[j]):
-        arr[k] = leftHalf[i]
-        i += 1
-      else:
-        arr[k] = rightHalf[j]
-        j += 1
-      k += 1
-    while (i < len(leftHalf)):
-      arr[k] = leftHalf[i]
-      i += 1
-      k += 1
-    while (j < len(rightHalf)):
-      arr[k] = rightHalf[j]
-      j += 1
-      k += 1
-    
-  arr = [14, 7, 3, 12, 9, 11, 6, 2]
-  n = len(arr)
-  mergeSort(arr,0,n-1)
-  print(arr) # result equals [2, 3, 6, 7, 9, 11, 12, 14]
+            <p>It uses a new ES6 feature called ‘Generators’ that allows us to write asynchronous code that looks synchronous and is easy to test. </p>
 
-              </code>
-            </pre>
-          <div class="horizontal-space-md"></div>    
-            
+            <p>This seems to be the currently preferred library to what was commonly used before: redux-thunk. As it states in the docs; with redux-saga ‘you don’t end up in callback hell, you can test your asynchronous flows easily and your actions stay pure.’</p>
+
+            <p>With react-thunk it was required to return a function and deal with a promise chain. Instead with redux-saga we write a simple try/catch block to catch any errors involved with request and use ‘put’ to dispatch an action to notify our reducers.</p>
+
+            <p>Install:</p>
+            <code>$ yarn add redux-saga</code>
+
+            <section class="blog_links">
+              <h3>Links</h3>
+              <div class="well well-lg">
+              <p>
+              <a href="https://github.com/redux-saga/redux-saga">Github</a>
+              </p>
+              <p>
+              <a href="https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html">Official Documentation and Tutorial</a>
+              </p><p>
+              <a href="https://redux-saga.js.org/docs/ExternalResources.html">Info on Generators</a>
+                </p>
+              </div>
+            </section>
+
         </div>
       </div>
     </div>
@@ -240,7 +206,7 @@
   </footer>
 
 
-  <script type="text/javascript" src="../dist/bundle.js"></script>
+  <script type="text/javascript" src="dist/bundle.js"></script>
 
 </body>
 </html>

@@ -35,13 +35,13 @@
       <div class="bar3"></div>
     </div>
     <!-- </button> -->
-    <a class="navbar-brand" href="../index.html#home"><i class="fa fa-code" aria-hidden="true"></i></a>
+    <a class="navbar-brand" href="index.html#home"><i class="fa fa-code" aria-hidden="true"></i></a>
   </div>
   <div  id="navbar" class="navbar-collapse collapse">
     <ul class="nav navbar-nav">
-      <li><a  href="../index.html#about">About</a></li>
-      <li><a href="../index.html#projects">Projects</a></li>
-      <li><a href="../index.html#contact">Contact</a></li>
+      <li><a  href="index.html#about">About</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
       <li><a href="./blog.html">Blog</a></li>
       <!--<li><a target="_blank" href="../resume.pdf">Resume</a></li>-->
     </ul>
@@ -57,56 +57,71 @@
         <div class="col-xs-12 col-sm-8 col-sm-offset-2">
           <div class="page-header">
             <div class="horizontal-space-md"></div>  
-            <h1>Heap's Algorithm</h1>
+            <h1>Bubble Sort and Quicksort Algorithms in Python3</h1>
             <div class="horizontal-space-md"></div>  
           </div>
           <div class="blog_text">
+            <p>Bubble sort is a not very efficient algorithm and generally not used in real world applications. It is the simplest sorting algorithm It works by iterating over the array of values and swapping them if they are in the wrong order. Hence they ‘bubble up’ to their proper positions.</p>
 
-            <p>Heaps algorithm is a simple and elegant solution to finding permutations. Finding permutations is one of the fundamental problems of computing and provides the basis for backtracking problems. However permutation problems are encountered less frequently in real world applications.</p>
-            <strong>HISTORY</strong>
-            
-            <p>This algorithm was first proposed by B. R. Heap in a paper in <a class="plain_link" href="https://watermark.silverchair.com/6-3-293.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAAakwggGlBgkqhkiG9w0BBwagggGWMIIBkgIBADCCAYsGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMHM9kpR_WdTkT4gLeAgEQgIIBXLDliDABuWsmQDnCCHBY1l5ciKW1ujzkaNDj7IO0GM4CgDOM3bjZgX2LkUlkzZ_AZqCFKLnu0eTk0MQ_6BeMhNzDETv4VyC7V0zLwbJVoj05kIxzs6a7f4DNZHs2LuYBQ7z9rI_-hcxTYYse6Q1UoQEi3ytbCDlXQiuPhD6fRGK7YpXBWnpafrIO8K5hrINsxr9jIQqa976YMHGYl5A50DnzKED7vKa64YsZ47jIH545jEmUk0nvLFvlUI9NPnBUhjllsPAI5F08zDMBiQlh_pn70IRSRmrvDPt680WSQInKmrpZxwRLacflC0K7CjkGjBEGl3VwsDW9zK4O_SgVyWnOeBCOVe_pR53qArvcDP97BzYo0luJQGOzaYur9M5qota9YGIgyNcwcm5-Lb4gEkAGagp-uNo43kgNeiTL8-rqOaOB1lIK4n9vHMCZN9NSXAsNS4QDRG_rRS0yIA">The Computer Journal</a></p>
-            <p>Heaps algorithm finds all permutations of an array. It first iterates through the array and for each item finds the all possible permutations of length - 1 of the array. The recursive function works like so. It accepts the array and the size of it. It calls itself recursively, with the size of it getting shorter by one each time. When the size equals 1 it prints out the array and returns. Inside the for loop, if the size of the array is odd, a swap between the first and the last or size-1 positions occurs.</p>
-            <p> The loop continues and another recursive call is made on the new altered array. Again if the size variable is equal to one, the array is printed and the function returns. The loop continues and again, since the size is the same in this loop, in our case it is even, another swap is made.</p>
-            <p> The reason why this works is intuitively difficult to get. The wikipedia article even had an incorrect version on its page for a long time because it is often memorized and therefore it is easy to make a mistake.</p>
-            <p> <a class="plain_link" href="http://ruslanledesma.com/2016/06/17/why-does-heap-work.html">This article</a> provides a good explanation of why this works. Another excellent article generating permutations is <a class="plain_link" href="https://www.topcoder.com/blog/generating-permutations/">here</a>.</p> 
-
+            <p>The simplest version will always run in O(n^2) time, even if the array is already sorted. An optimized version will stop once the inner loop didn’t swap once.</p>
+            <img class="img-responsive center-image" src="dist/images/blog/bubble_sort.gif" />
+            <p class="caption-center">A bubble sort algorithm</p>
             <p>Time Complexity:</p>
             <ul>
-                <li> O(n!)</li>
-            </ul>
-            <p>Space Complexity:</p>
-            <ul>
-                <li> O(n)</li>
+                <li>Best Case: O(n)</li>
+                <li>Worst Case: O(n^2)</li>
+                <li>Average: O(n^2)</li>
             </ul>
             <pre>
               <code>
-  class Solution:
-  def permute(self, nums):
-      """
-      :type nums: List[int]
-      :rtype: List[List[int]]
-      """
-      result = []
-      size = len(nums)
-      return self.permuteRec(nums, size, size, result)
-      
-  def permuteRec(self, nums, size, n, result):
-      if size == 1:
-        copy = nums[:]
-        result.append(copy)
-        return result
-      for i in range(size):
-        result = self.permuteRec(nums, size-1, n, result)
-        if (size % 2 == 1):
-          nums[0], nums[size-1] = nums[size-1], nums[0]
-        else:
-          nums[i], nums[size-1] = nums[size-1], nums[i]
-      return result
+    n = 7
+    a = [4,3,8,6,1,2,6]
+    
+    swaps = 0
+    for x in range(n):
+        currentSwaps = 0
+        for z in range(0, n-1):
+        if a[z] > a[z+1]:
+            a[z], a[z + 1] = a[z + 1], a[z]
+            swaps += 1
+            currentSwaps += 1
+        if currentSwaps = 0
+        break
               </code>
             </pre>
           <div class="horizontal-space-md"></div>    
-            
+            <h3>Quicksort</h3>
+            <p>This is a very efficient sorting algorithm. It was developed by a British Computer Scientist Tony Hoare in 1959 and published in 1961. </p>
+            <p>It is a “Divide and Congquer” algorithm like Merge Sort. It picks an element as a pivot and partitions the array around it. It puts on one side all elements lower and on the other side all those that are higher.</p>
+            <p>There are different versions of the algorithm that pick the first pivot in different ways. Either as the first, last, random or median element in the array. </p>
+            <p>Time Complexity:</p>
+            <ul>
+                <li>Best Case: O(n log n)</li>
+                <li>Worst Case: O(n^2)</li>
+                <li>Average: O(n log n)</li>
+            </ul>
+            <img class="img-responsive center-image" src="dist/images/blog/quicksort.gif" />
+            <p class="caption-center">A quicksort algorithm</p>
+            <pre>
+                <code>
+    def partition(arr,low,high):
+        i = ( low-1 )         # index of smaller element
+        pivot = arr[high]     # pivot
+
+        for j in range(low , high):
+            if   arr[j] <= pivot:
+                i = i+1
+                arr[i],arr[j] = arr[j],arr[i]
+        arr[i+1],arr[high] = arr[high],arr[i+1]
+        return ( i+1 )
+
+    def quicksort(arr,low,high):
+        if low < high:
+            pi = partition(arr,low,high)
+            quicksort(arr, low, pi-1)
+            quicksort(arr, pi+1, high)
+                </code>
+            </pre>
         </div>
       </div>
     </div>
@@ -223,7 +238,7 @@
   </footer>
 
 
-  <script type="text/javascript" src="../dist/bundle.js"></script>
+  <script type="text/javascript" src="dist/bundle.js"></script>
 
 </body>
 </html>

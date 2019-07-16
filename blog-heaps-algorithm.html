@@ -18,6 +18,8 @@
   <link href="https://fonts.googleapis.com/css?family=Abel|Catamaran|Josefin+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400" rel="stylesheet"> 
 
+
+
 </head>
 
 <body>
@@ -33,13 +35,13 @@
       <div class="bar3"></div>
     </div>
     <!-- </button> -->
-    <a class="navbar-brand" href="../index.html#home"><i class="fa fa-code" aria-hidden="true"></i></a>
+    <a class="navbar-brand" href="index.html#home"><i class="fa fa-code" aria-hidden="true"></i></a>
   </div>
   <div  id="navbar" class="navbar-collapse collapse">
     <ul class="nav navbar-nav">
-      <li><a  href="../index.html#about">About</a></li>
-      <li><a href="../index.html#projects">Projects</a></li>
-      <li><a href="../index.html#contact">Contact</a></li>
+      <li><a  href="index.html#about">About</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
       <li><a href="./blog.html">Blog</a></li>
       <!--<li><a target="_blank" href="../resume.pdf">Resume</a></li>-->
     </ul>
@@ -50,52 +52,65 @@
   <!-- Content Section -->
 
   <section class="blog">
-    <div class="jumbotron_image__blog-header">
-      <!-- <img class="img-responsive" src="dist/images/blog_header.JPEG" alt="blog" /> -->
-    </div>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
           <div class="page-header">
-            <h1>Articles</h1>
+            <div class="horizontal-space-md"></div>  
+            <h1>Heap's Algorithm</h1>
+            <div class="horizontal-space-md"></div>  
           </div>
           <div class="blog_text">
-            <section class="blog_links">
-              <div class="well well-lg">
-                <p>
-                  <a href="./blog-redux-saga.html">What is Redux-Saga <span class="float_right">December 3rd, 2017</span></a>
-                </p>
-                <p>
-                  <a href="./blog-jest.html">How to test a react app with Jest<span class="float_right">December 10th, 2017</span></a>
-                </p>
-                <p>
-                  <a href="./blog-heaps.html">Min and max heaps in Python3<span class="float_right">December 17th, 2017</span></a>
-                </p>
-                <p>
-                  <a href="./blog-trie.html">The Trie Data Structure in Python3<span class="float_right">December 25th, 2017</span></a>
-                </p>
-                <p>
-                  <a href="./blog-bubble-and-quicksort.html">Bubble Sort and Quicksort Algorithms in Python3<span class="float_right">January 2nd, 2018</span></a>
-                </p>
-                <p>
-                  <a href="./blog-longest-common-subsequence.html">Longest Common Subsequence Problem<span class="float_right">January 14th, 2018</span></a>
-                </p>
-                <p>
-                  <a href="./blog-merge-sort.html">Merge Sort Algorithm<span class="float_right">January 28th, 2018</span></a>
-                </p>
-                <p>
-                  <a href="./blog-heaps-algorithm.html">Heap's Algorithm<span class="float_right">February 15th, 2018</span></a>
-                </p>
-                <p>
-                  <a href="./blog-functional-programming.html">What is Functional Programming?<span class="float_right">March 30th, 2019</span></a>
-                </p>
-              </div>
-            </section>
+
+            <p>Heaps algorithm is a simple and elegant solution to finding permutations. Finding permutations is one of the fundamental problems of computing and provides the basis for backtracking problems. However permutation problems are encountered less frequently in real world applications.</p>
+            <strong>HISTORY</strong>
+            
+            <p>This algorithm was first proposed by B. R. Heap in a paper in <a class="plain_link" href="https://watermark.silverchair.com/6-3-293.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAAakwggGlBgkqhkiG9w0BBwagggGWMIIBkgIBADCCAYsGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMHM9kpR_WdTkT4gLeAgEQgIIBXLDliDABuWsmQDnCCHBY1l5ciKW1ujzkaNDj7IO0GM4CgDOM3bjZgX2LkUlkzZ_AZqCFKLnu0eTk0MQ_6BeMhNzDETv4VyC7V0zLwbJVoj05kIxzs6a7f4DNZHs2LuYBQ7z9rI_-hcxTYYse6Q1UoQEi3ytbCDlXQiuPhD6fRGK7YpXBWnpafrIO8K5hrINsxr9jIQqa976YMHGYl5A50DnzKED7vKa64YsZ47jIH545jEmUk0nvLFvlUI9NPnBUhjllsPAI5F08zDMBiQlh_pn70IRSRmrvDPt680WSQInKmrpZxwRLacflC0K7CjkGjBEGl3VwsDW9zK4O_SgVyWnOeBCOVe_pR53qArvcDP97BzYo0luJQGOzaYur9M5qota9YGIgyNcwcm5-Lb4gEkAGagp-uNo43kgNeiTL8-rqOaOB1lIK4n9vHMCZN9NSXAsNS4QDRG_rRS0yIA">The Computer Journal</a></p>
+            <p>Heaps algorithm finds all permutations of an array. It first iterates through the array and for each item finds the all possible permutations of length - 1 of the array. The recursive function works like so. It accepts the array and the size of it. It calls itself recursively, with the size of it getting shorter by one each time. When the size equals 1 it prints out the array and returns. Inside the for loop, if the size of the array is odd, a swap between the first and the last or size-1 positions occurs.</p>
+            <p> The loop continues and another recursive call is made on the new altered array. Again if the size variable is equal to one, the array is printed and the function returns. The loop continues and again, since the size is the same in this loop, in our case it is even, another swap is made.</p>
+            <p> The reason why this works is intuitively difficult to get. The wikipedia article even had an incorrect version on its page for a long time because it is often memorized and therefore it is easy to make a mistake.</p>
+            <p> <a class="plain_link" href="http://ruslanledesma.com/2016/06/17/why-does-heap-work.html">This article</a> provides a good explanation of why this works. Another excellent article generating permutations is <a class="plain_link" href="https://www.topcoder.com/blog/generating-permutations/">here</a>.</p> 
+
+            <p>Time Complexity:</p>
+            <ul>
+                <li> O(n!)</li>
+            </ul>
+            <p>Space Complexity:</p>
+            <ul>
+                <li> O(n)</li>
+            </ul>
+            <pre>
+              <code>
+  class Solution:
+  def permute(self, nums):
+      """
+      :type nums: List[int]
+      :rtype: List[List[int]]
+      """
+      result = []
+      size = len(nums)
+      return self.permuteRec(nums, size, size, result)
+      
+  def permuteRec(self, nums, size, n, result):
+      if size == 1:
+        copy = nums[:]
+        result.append(copy)
+        return result
+      for i in range(size):
+        result = self.permuteRec(nums, size-1, n, result)
+        if (size % 2 == 1):
+          nums[0], nums[size-1] = nums[size-1], nums[0]
+        else:
+          nums[i], nums[size-1] = nums[size-1], nums[i]
+      return result
+              </code>
+            </pre>
+          <div class="horizontal-space-md"></div>    
+            
         </div>
       </div>
     </div>
   </section>
-
   <!-- Contact Section -->
 
   <section>
@@ -155,6 +170,22 @@
     </div>
   </div>
 </section>
+
+<!-- Resume Button -->
+<!--<section>-->
+  <!--<div class="container-fluid">-->
+    <!--<div class="row" id="resume">-->
+      <!--<div class="col-xs-12 titles">-->
+        <!--<h2>Resume</h2>-->
+        <!--<div class="center">-->
+          <!--<a target="_blank" href="../resume.pdf"-->
+          <!--class="resume_button">View Resume</a>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</section>-->
+
 <!-- Social Media -->
 
 <footer id="footer">
@@ -183,7 +214,6 @@
             <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
           </a>
         </li>
-
           </ul>
         </div>
 
@@ -193,7 +223,7 @@
   </footer>
 
 
-  <script type="text/javascript" src="../dist/bundle.js"></script>
+  <script type="text/javascript" src="dist/bundle.js"></script>
 
 </body>
 </html>
