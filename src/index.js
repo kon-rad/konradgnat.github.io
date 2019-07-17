@@ -1,9 +1,5 @@
 import './sass/main.scss';
 
-import $ from 'jquery';
-window.jQuery = $;
-window.$ = $;
-
 import './scripts/vendors/swiper.jquery.min';
 import './scripts/vendors/swiper.min';
 
