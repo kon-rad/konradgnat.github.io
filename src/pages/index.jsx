@@ -39,6 +39,15 @@ const PROJECTS = [
     description: 'Practice coherent breathing techniqueNode React Redux' +
       ' Express PassportJS Deployed to Digital Ocean',
   },
+  {
+    title: 'CryptoPrices.space',
+    image: coherentBreathing,
+    link: 'https://coherentbreathing.xyz',
+    github: 'https://github.com/kon-rad/coherentBreathingApp',
+    description: 'This is an app that shows latest crypto currency prices.' +
+      ' Express PassportJS Deployed to Digital Ocean. This was an interesting ' +
+      'exercise in developing with Django',
+  },
 ];
 
 class Index extends React.Component {
