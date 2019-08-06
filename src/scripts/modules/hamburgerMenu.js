@@ -8,13 +8,12 @@ const toggleMenu = () => {
 		menu.classList.remove('collapse');
 		return;
 	}
-
 	menu.classList.add('collapse');
 };
 
-const button = document.getElementById('menuToggle');
 
 $(document).ready(() => {
+	const button = document.getElementById('menuToggle');
 	if (button) {
 		button.addEventListener('click', toggleMenu);
 	}
