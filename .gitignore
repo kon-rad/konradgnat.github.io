@@ -8,3 +8,5 @@ notes.md
 
 server/config/dev.js
 server/config/prod.js
+server/*/**.csv
+**/**/*.csv
