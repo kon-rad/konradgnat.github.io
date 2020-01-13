@@ -1,7 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import logo from './logo.svg';
 import './App.css';
+import './sass/main.scss';
+import './scripts/index';
+import Header from './components/header';
+import Footer from './components/footer';
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -9,19 +12,7 @@ import About from './pages/About';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-
+      <Header />
       <Router>
         <Switch>
           <Route path="/about">
@@ -32,6 +23,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
+      <Footer />
     </div>
   );
 }
