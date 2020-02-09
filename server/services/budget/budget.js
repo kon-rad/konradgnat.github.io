@@ -1,11 +1,24 @@
 
+
+/** Instructions **/
+
+/**
+ * 1. Set if this is a Credit file or debit - if debit - manually remove top section with text data
+ * 2. Set Month number: 01-12
+ * 3. Set input file name.
+ * 4. Drop file into budgetData directory
+ * 5. Run `node budget.js`
+ * 6. Add items in 'not found' category to appropriate cat.
+ * 7. Repeat 5-6
+ */
+
 /** Configuration **/
 const CREDIT = false;
-const MONTH = '12';
+const MONTH = '01';
 // const INPUT_FILE = '12_2019.csv';
 const DATA_FILEPATH = './budgetData/';
 // const INPUT_FILE = '01_2020.csv';
-const INPUT_FILE = 'input3.csv';
+const INPUT_FILE = 'stmt (9).csv';
 /** End Configuration **/
 
 
@@ -23,12 +36,13 @@ const config = {
     {
       name: 'Bills',
       id: 'bills',
-      regex: 'DIGITALOCEAN|Google Storage|COINMACH|YouTubePremium|LEMONADE\.COM|JetBrains|Spotify|APPLE\.COM\/BILL|WATERTONPROP|COMED DES',
+      regex: 'DIGITALOCEAN|Google Storage|COINMACH|YouTubePremium|LEMONADE\.COM|JetBrains|Spotify|APPLE\.COM\/BILL'
+        + '|WATERTONPROP|COMED DES|OLD ST PATS CHURCH|RCN\*CABLE|BARCLAYCARD US',
     },
     {
       name: 'Groceries',
       id: 'groceries',
-      regex: 'VENDING|CVS\/PHARMACY|7-ELEVEN|WHOLEFDS|CANTEEN',
+      regex: 'VENDING|CVS\/PHARMACY|7-ELEVEN|WHOLEFDS|CANTEEN|WALGREENS|H MART|MARIANOS',
     },
     {
       name: 'Entertainment',
@@ -43,12 +57,14 @@ const config = {
     {
       name: 'Cafe',
       id: 'cafe',
-      regex: 'COFFEE|TOWER HOUSE|STARBUCKS|DEPARTMENT OF C|RITUAL\-DEPA',
+      regex: 'COFFEE|TOWER HOUSE|STARBUCKS|DEPARTMENT OF C|RITUAL\-DEPA|DUNKIN',
     },
     {
       name: 'Dining Out',
       id: 'diningOut',
-      regex: 'PANDA EXPRESS|MCDONALD\'S|GRUBHUB|TACO BELL|QDOBA|PIZZA|5GUYS|SWEETGREEN|Wow Bao|Popeye\'s Chicken|JIMMY JOHNS|CHIPOTLE|RITUAL\-PAND',
+      regex: 'PANDA EXPRESS|MCDONALD\'S|GRUBHUB|TACO BELL|QDOBA|PIZZA|5GUYS|SWEETGREEN|Wow Bao|Popeye\'s Chicken|'
+        + 'JIMMY JOHNS|CHIPOTLE|RITUAL\-PAND|KANELA BREAKFAST|ROTIMODERN|NAF NAF GRILL|FOODA INC|SHAKE SHACK|SUBWAY'
+        + '|TimeOutMarket Chicago|BEYOND RICE',
     },
     {
       name: 'Transportation',
@@ -68,17 +84,22 @@ const config = {
     {
       name: 'Education',
       id: 'education',
-      regex: 'Audible',
+      regex: 'Audible|The New Yor Condenast|ART INSTITUTE-ADMISSIO',
     },
     {
       name: 'Miscellaneous',
       id: 'miscellaneous',
-      regex: 'Wikipedia Gift|NCIF CONCIERGE',
+      regex: 'Wikipedia Gift|NCIF CONCIERGE|FEDEX|GREAT CLIPS',
     },
     {
       name: 'Gear',
       id: 'gear',
-      regex: 'DJI|AMZN|RACEDAYQUADS|GETFPVCOM|JC LICHT',
+      regex: 'DJI|Amazon\.com|RACEDAYQUADS|GETFPVCOM|JC LICHT',
+    },
+    {
+      name: 'Travel',
+      id: 'travel',
+      regex: 'NU CAR|EXPEDIA|UNITED ',
     },
   ]
 };
@@ -103,6 +124,7 @@ let sections = {
   education: 'Education',
   miscellaneous: 'Miscellaneous',
   gear: 'Gear',
+  travel: 'Travel (vacations, pleasure, etc.)',
   notFound: 'Not Found',
 };
 const dataBySection = {
@@ -119,6 +141,7 @@ const dataBySection = {
   education: [],
   miscellaneous: [],
   gear: [],
+  travel: [],
   notFound: [],
 };
 
