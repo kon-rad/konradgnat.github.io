@@ -6,7 +6,7 @@ const newQuote = () => {
     'http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=?',
     (data) => {
       if (!data) {
-        console.log('Something went wrong');
+        console.error('Error: Could not fetch quote from forismatic api.');
         return;
       }
 

@@ -50,7 +50,7 @@ gulp.task('imagemin', function() {
     .pipe(gulp.dest('dist/images/webp/'))
 });
 
-gulp.task('default', ['workflow', 'babel', 'imagemin'], function () {
+gulp.task('default', ['workflow', 'babel', 'imagemin'], function() {
   gulp.watch('src/sass/**/*.scss', ['workflow']);
   gulp.watch('./src/scripts/**/*.js', ['babel']);
 });
