@@ -7,6 +7,10 @@
     font-size: 80px;
     margin-top: 14vh;
     color: black;
+    background-color: white;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 2px;
     @media (max-width: 800px) {
         font-size:30px;
     }
@@ -14,6 +18,10 @@
 
 .mainSlider__inner_wrapper h2 {
     font-family: 'Josefin Sans', sans-serif;
+    background-color: white;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 2px;
     @media (max-width: 800px) {
         font-size: 20px;
     }
