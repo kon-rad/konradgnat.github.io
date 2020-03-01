@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default () => {
   return (
@@ -23,7 +24,7 @@ export default () => {
             <div className="bar2"></div>
             <div className="bar3"></div>
           </div>
-          <a className="navbar-brand" href="#home">
+          <a className="navbar-brand" href="/">
             <i className="fa fa-code" aria-hidden="true"></i>
           </a>
         </div>
@@ -39,7 +40,7 @@ export default () => {
               <a href="#contact">Contact</a>
             </li>
             <li>
-              <a href="./blog">Blog</a>
+              <Link to="/blog">Blog</Link>
             </li>
           </ul>
         </div>

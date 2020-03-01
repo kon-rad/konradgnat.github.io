@@ -12,8 +12,8 @@ import Blog from './pages/Blog';
 function App() {
   return (
     <div className="App">
-      <Header />
       <Router>
+        <Header />
         <Switch>
           <Route path="/blog">
             <Blog />
@@ -22,8 +22,8 @@ function App() {
             <Home />
           </Route>
         </Switch>
+        <Footer />
       </Router>
-      <Footer />
     </div>
   );
 }
