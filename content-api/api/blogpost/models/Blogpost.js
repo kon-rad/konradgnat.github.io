@@ -1,4 +1,5 @@
 'use strict';
+const slugify = require('slugify');
 
 /**
  * Lifecycle callbacks for the `Blogpost` model.
@@ -7,7 +8,12 @@
 module.exports = {
   // Before saving a value.
   // Fired before an `insert` or `update` query.
-  // beforeSave: async (model, attrs, options) => {},
+  beforeSave: async (model, attrs, options) => {
+    console.log('before save', model, attrs, options);
+    if (model.title) {
+      model.slug = slugify(model.title);
+    }
+  },
 
   // After saving a value.
   // Fired after an `insert` or `update` query.
@@ -20,7 +26,7 @@ module.exports = {
   // After fetching a value.
   // Fired after a `fetch` operation.
   // afterFetch: async (model, response, options) => {},
-  
+
   // Before fetching all values.
   // Fired before a `fetchAll` operation.
   // beforeFetchAll: async (model, columns, options) => {},
@@ -43,7 +49,14 @@ module.exports = {
 
   // After updating a value.
   // Fired after an `update` query.
-  // afterUpdate: async (model, attrs, options) => {},
+  afterUpdate: async (model, attrs, options) => {
+    // if (model.getUpdate() && model.getUpdate().title) {
+    //   model.update({
+    //     slug: slugify(model.getUpdate().title),
+    //   });
+    // }
+    console.log('after update', model, attrs, options);
+  }
 
   // Before destroying a value.
   // Fired before a `delete` query.

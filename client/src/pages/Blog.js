@@ -36,6 +36,7 @@ class Blog extends React.Component {
                   {this.state.posts.map(post => (
                     <article>
                       <div>Title: {post.title}</div>
+                      <div>Slug: {post.slug}</div>
                       <div>Content: {post.content}</div>
                     </article>
                   ))}
