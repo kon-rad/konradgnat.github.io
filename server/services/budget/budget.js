@@ -1,5 +1,3 @@
-
-
 /** Instructions **/
 
 /**
@@ -14,13 +12,12 @@
 
 /** Configuration **/
 const CREDIT = false;
-const MONTH = '01';
+const MONTH = '02';
 // const INPUT_FILE = '12_2019.csv';
 const DATA_FILEPATH = './budgetData/';
 // const INPUT_FILE = '01_2020.csv';
-const INPUT_FILE = 'stmt (9).csv';
+const INPUT_FILE = 'stmt (1).csv';
 /** End Configuration **/
-
 
 const config = {
   csvData: DATA_FILEPATH + INPUT_FILE,
@@ -31,76 +28,86 @@ const config = {
     {
       name: 'Income',
       id: 'income',
-      regex: 'BACKSTOP',
+      regex: 'BACKSTOP'
     },
     {
       name: 'Bills',
       id: 'bills',
-      regex: 'DIGITALOCEAN|Google Storage|COINMACH|YouTubePremium|LEMONADE\.COM|JetBrains|Spotify|APPLE\.COM\/BILL'
-        + '|WATERTONPROP|COMED DES|OLD ST PATS CHURCH|RCN\*CABLE|BARCLAYCARD US',
+      regex:
+        'DIGITALOCEAN|Google Storage|COINMACH|YouTubePremium|LEMONADE.COM|JetBrains|Spotify|APPLE.COM/BILL' +
+        '|WATERTONPROP|COMED DES|OLD ST PATS CHURCH|BARCLAYCARD US|CABLE PHONE INTERN|MANGROVE KITCHEN'
     },
     {
       name: 'Groceries',
       id: 'groceries',
-      regex: 'VENDING|CVS\/PHARMACY|7-ELEVEN|WHOLEFDS|CANTEEN|WALGREENS|H MART|MARIANOS',
+      regex:
+        'VENDING|CVS/PHARMACY|7-ELEVEN|WHOLEFDS|CANTEEN|WALGREENS|H MART|MARIANOS|STOCKWELL STORES|' +
+        'GREEN EARTH NATURAL|GENERAL STORE|RIPPLEWOOD RESORT|MACKEREL JACKS TRADING|BAKERY|TRADER JOE' +
+        '|TARGET'
     },
     {
       name: 'Entertainment',
       id: 'entertainment',
-      regex: 'AMC|Steamgames\.com',
+      regex: 'AMC|Steamgames.com|ART INST CHIC|Amazon Prime'
     },
     {
       name: 'Clothes',
       id: 'clothes',
-      regex: 'H&M',
+      regex: 'H&M|CLARKS'
     },
     {
       name: 'Cafe',
       id: 'cafe',
-      regex: 'COFFEE|TOWER HOUSE|STARBUCKS|DEPARTMENT OF C|RITUAL\-DEPA|DUNKIN',
+      regex:
+        'COFFEE|TOWER HOUSE|STARBUCKS|DEPARTMENT OF C|RITUAL-DEPA|DUNKIN|CAFE LUNA|CAFE'
     },
     {
       name: 'Dining Out',
       id: 'diningOut',
-      regex: 'PANDA EXPRESS|MCDONALD\'S|GRUBHUB|TACO BELL|QDOBA|PIZZA|5GUYS|SWEETGREEN|Wow Bao|Popeye\'s Chicken|'
-        + 'JIMMY JOHNS|CHIPOTLE|RITUAL\-PAND|KANELA BREAKFAST|ROTIMODERN|NAF NAF GRILL|FOODA INC|SHAKE SHACK|SUBWAY'
-        + '|TimeOutMarket Chicago|BEYOND RICE',
+      regex:
+        "PANDA EXPRESS|MCDONALD'S|GRUBHUB|TACO BELL|QDOBA|PIZZA|5GUYS|SWEETGREEN|Wow Bao|Popeye's Chicken|" +
+        'JIMMY JOHNS|CHIPOTLE|RITUAL-PAND|KANELA BREAKFAST|ROTIMODERN|NAF NAF GRILL|FOODA INC|SHAKE SHACK|SUBWAY' +
+        "|TimeOutMarket Chicago|BEYOND RICE|SUSHI|WENDYS|FURIOUS SPOON|SANG'S KITCHEN|GONG DONG TOFU|FOOD AND BEVERAGE|" +
+        'CARLS JR|THE BUTTERY|RIVER INN|BISTRO'
     },
     {
       name: 'Transportation',
       id: 'transportation',
-      regex: 'UBER',
+      regex: 'UBER|METER MTA|PARKING'
     },
     {
       name: 'Car Gas',
       id: 'carGas',
-      regex: '',
+      regex: 'SHELL OIL|CHEVRON|EXXONMOBIL'
     },
     {
       name: 'Medical',
       id: 'medical',
-      regex: 'YOGA',
+      regex: 'YOGA'
     },
     {
       name: 'Education',
       id: 'education',
-      regex: 'Audible|The New Yor Condenast|ART INSTITUTE-ADMISSIO',
+      regex: 'Audible|The New Yor Condenast|ART INSTITUTE-ADMISSIO'
     },
     {
       name: 'Miscellaneous',
       id: 'miscellaneous',
-      regex: 'Wikipedia Gift|NCIF CONCIERGE|FEDEX|GREAT CLIPS',
+      regex:
+        'Wikipedia Gift|NCIF CONCIERGE|FEDEX|GREAT CLIPS|BROADWAY VALERO|99 RANCH|THE CENTER SF|LEGION OF HONOR STORE' +
+        '|deYoungLegion|COMPUTER HISTORY MUS'
     },
     {
       name: 'Gear',
       id: 'gear',
-      regex: 'DJI|Amazon\.com|RACEDAYQUADS|GETFPVCOM|JC LICHT',
+      regex:
+        'DJI|Amazon.com|RACEDAYQUADS|GETFPVCOM|JC LICHT|AMZN Mktp|LOVING HUT|APPLE STORE|ART INST'
     },
     {
       name: 'Travel',
       id: 'travel',
-      regex: 'NU CAR|EXPEDIA|UNITED ',
-    },
+      regex: 'NU CAR|EXPEDIA|UNITED|BART SFIA'
+    }
   ]
 };
 let columns = {
@@ -108,7 +115,7 @@ let columns = {
   date: 'Date',
   description: 'Description',
   location: 'Location',
-  amount: 'Amount',
+  amount: 'Amount'
 };
 let sections = {
   income: 'Income',
@@ -125,7 +132,7 @@ let sections = {
   miscellaneous: 'Miscellaneous',
   gear: 'Gear',
   travel: 'Travel (vacations, pleasure, etc.)',
-  notFound: 'Not Found',
+  notFound: 'Not Found'
 };
 const dataBySection = {
   income: [],
@@ -142,16 +149,15 @@ const dataBySection = {
   miscellaneous: [],
   gear: [],
   travel: [],
-  notFound: [],
+  notFound: []
 };
 
-const c =  {
+const c = {
   dataBySection,
   config,
   columns,
-  sections,
+  sections
 };
-
 
 const fs = require('fs');
 const parse = require('csv-parse');
@@ -160,7 +166,7 @@ const stringify = require('csv-stringify');
 
 let data = [];
 
-fs.readFile(c.config.csvData, function (err, fileData) {
+fs.readFile(c.config.csvData, function(err, fileData) {
   parse(fileData, { columns: false, trim: true }, function(err, rows) {
     if (err) {
       return console.error(err);
@@ -185,9 +191,9 @@ fs.readFile(c.config.csvData, function (err, fileData) {
       let isFound = false;
       c.config.categories.forEach(cat => {
         if (
-          cat.regex
-          && newRow[2]
-          && newRow[2].match(new RegExp(cat.regex, 'ig'))
+          cat.regex &&
+          newRow[2] &&
+          newRow[2].match(new RegExp(cat.regex, 'ig'))
         ) {
           isFound = true;
           c.dataBySection[cat.id].unshift(row);
@@ -205,15 +211,15 @@ fs.readFile(c.config.csvData, function (err, fileData) {
     });
     // console.log(c.dataBySection);
     Object.keys(c.dataBySection).forEach(sect => {
-      data = [ ...data, ...c.dataBySection[sect]];
+      data = [...data, ...c.dataBySection[sect]];
     });
 
     stringify(data, { header: true, columns: c.columns }, (err, output) => {
       if (err) throw err;
-      fs.writeFile(c.config.csvDataOutput, output, (err) => {
+      fs.writeFile(c.config.csvDataOutput, output, err => {
         if (err) throw err;
         console.log(c.config.csvDataOutput);
       });
     });
-  })
+  });
 });
