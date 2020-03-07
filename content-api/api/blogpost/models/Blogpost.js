@@ -9,9 +9,8 @@ module.exports = {
   // Before saving a value.
   // Fired before an `insert` or `update` query.
   beforeSave: async (model, attrs, options) => {
-    console.log('before save', model, attrs, options);
-    if (model.title) {
-      model.slug = slugify(model.title);
+    if (attrs.title) {
+      attrs.slug = slugify(model.title);
     }
   },
 
