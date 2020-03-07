@@ -48,14 +48,7 @@ module.exports = {
 
   // After updating a value.
   // Fired after an `update` query.
-  afterUpdate: async (model, attrs, options) => {
-    // if (model.getUpdate() && model.getUpdate().title) {
-    //   model.update({
-    //     slug: slugify(model.getUpdate().title),
-    //   });
-    // }
-    console.log('after update', model, attrs, options);
-  }
+  afterUpdate: async (model, attrs, options) => {}
 
   // Before destroying a value.
   // Fired before a `delete` query.
