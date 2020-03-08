@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Strapi from 'strapi-sdk-javascript/build/main';
+import BlogBlurb from '../components/blogBlurb';
 
 const strapi = new Strapi('http://localhost:1337');
 
@@ -32,17 +33,11 @@ class Blog extends React.Component {
                 <h1>Articles</h1>
               </div>
               <div className="blog_text">
-                <section>
-                  {this.state.posts.map(post => (
-                    <article>
-                      <div>Title: {post.title}</div>
-                      <div>Slug: {post.slug}</div>
-                      <div>Content: {post.content}</div>
-                    </article>
-                  ))}
-                </section>
                 <section className="blog_links">
                   <div className="well well-lg">
+                    {this.state.posts.map(post => (
+                      <BlogBlurb post={post} key={post.slug} />
+                    ))}
                     <p>
                       <a href="blog-redux-saga.html">
                         What is Redux-Saga{' '}

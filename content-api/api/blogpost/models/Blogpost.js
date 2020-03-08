@@ -10,7 +10,7 @@ module.exports = {
   // Fired before an `insert` or `update` query.
   beforeSave: async (model, attrs, options) => {
     if (attrs.title) {
-      attrs.slug = slugify(model.title);
+      attrs.slug = slugify(attrs.title);
     }
   },
 
