@@ -5,3 +5,5 @@ node_modules
 grid_search
 .DS_Store
 notes.md
+*.icloud
+
