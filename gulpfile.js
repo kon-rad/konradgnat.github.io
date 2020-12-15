@@ -10,16 +10,18 @@ var gulp            = require('gulp'),
     mozjpeg         = require('imagemin-mozjpeg'),
     webp            = require('gulp-webp'),
     babel           = require('gulp-babel');
+const { src, dest, series } = require('gulp');
  
-gulp.task('babel', () =>
-    gulp.src('src/scripts/main.js')
-        .pipe(babel({
-            presets: ['env']
-        }))
-        .pipe(gulp.dest('dist/js/'))
-);
+gulp.task('babel', (done) => {
+  gulp.src('src/index.js')
+  .pipe(babel({
+        presets: ['env']
+    }))
+  .pipe(gulp.dest('dist/js/'))
+  done();
+});
 
-gulp.task('workflow', function () {
+gulp.task('css', function (done) {
   gulp.src('./src/sass/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
@@ -30,9 +32,10 @@ gulp.task('workflow', function () {
     .pipe(cssnano())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist/css/'));
+  done();
 });
 
-gulp.task('imagemin', function() {
+gulp.task('imagemin', function(done) {
   gulp.src(['./src/images/**/*'])
     .pipe(imagemin([
       pngquant({
@@ -48,9 +51,11 @@ gulp.task('imagemin', function() {
   gulp.src(['./src/images/*'])
     .pipe(webp())
     .pipe(gulp.dest('dist/images/webp/'))
+  done();
 });
 
-gulp.task('default', ['workflow', 'babel', 'imagemin'], function() {
-  gulp.watch('src/sass/**/*.scss', ['workflow']);
-  gulp.watch('./src/scripts/**/*.js', ['babel']);
-});
+gulp.task('default', series('css', 'babel', function(done) {
+  gulp.watch('src/sass/**/*.scss', series('css'));
+  gulp.watch('./src/scripts/**/*.js', series('babel'));
+  done();
+}));
