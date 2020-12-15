@@ -1,6 +1,6 @@
 'use strict';
 
-var gulp            = require('gulp'),
+const gulp            = require('gulp'),
     sass            = require('gulp-sass'),
     cssnano         = require('gulp-cssnano'),
     sourcemaps      = require('gulp-sourcemaps'),
@@ -26,7 +26,6 @@ gulp.task('css', function (done) {
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
       cascade: false,
     }))
     .pipe(cssnano())
@@ -40,11 +39,14 @@ gulp.task('imagemin', function(done) {
     .pipe(imagemin([
       pngquant({
         speed: 1,
-        quality: 98
+        quality: [0.7, 0.8]
       }),
       mozjpeg({
-        quality: 90
-      }, {verbose: true})
+          quality: 90
+        },
+        {
+          verbose: true
+        })
     ]))
     .pipe(gulp.dest('dist/images/'));
 

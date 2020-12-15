@@ -22,6 +22,7 @@
     "url": "https://github.com/kon-rad/konradgnat.github.io/issues"
   },
   "homepage": "https://github.com/kon-rad/konradgnat.github.io#readme",
+  "browserslist": ["last 2 versions"],
   "devDependencies": {
     "@babel/core": "^7.5.0",
     "@babel/preset-env": "^7.5.4",
