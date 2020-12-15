@@ -1,15 +1,3 @@
-Build_Day/Build_Day_15-27/node_modules
-node_modules
-
-.idea
-grid_search
-.DS_Store
-notes.md
-*.icloud
-
-#Python 
-
-backend/django
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -22,7 +10,9 @@ __pycache__/
 # Distribution / packaging
 .Python
 env/
+build/
 develop-eggs/
+dist/
 downloads/
 eggs/
 .eggs/
@@ -119,4 +109,5 @@ media/
 *.pid
 
 # Ignore Django Migrations in Development if you are working on team
+
 
