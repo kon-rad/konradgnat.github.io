@@ -1,62 +1,75 @@
-
 #website_wrapper {
-    // visibility: hidden;
+  // visibility: hidden;
 }
 
 .modal__content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    @media (max-width: 768px) {
-        min-height: 300px;
-    }   
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  @media (max-width: 768px) {
+    min-height: 300px;
+  }
 }
 
 .modal__close {
-    font-family: arial;
-    color: #aaa;
-    float: right;
-    font-size: 19px;
-    &:hover {
-        cursor: pointer;
-    }
-    @media (max-width: 768px) {
-        font-size: 13px;
-    }
+  font-family: arial;
+  color: #aaa;
+  float: right;
+  font-size: 19px;
+  &:hover {
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    font-size: 13px;
+  }
 }
-.modal__new_quote {
-    color: #000;
-    font-family: arial;
-    font-size: 19px;
-    &:hover {
-        cursor: pointer;
-    }
-    @media (max-width: 768px) {
-        font-size: 13px;
-    }
+.modal__new_quote,
+.modal__copy_quote {
+  font-family: arial;
+  font-size: 12px;
+  background-color: #000;
+  padding: 0px 4px;
+  border-radius: 4px;
+  color: #e5e9eb;
+
+  &:hover {
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    font-size: 13px;
+  }
+}
+.modal__copy_quote {
+  margin-left: 12px;
+}
+.quote__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 12px;
 }
 
 .modal__quote {
-    font-family: Josefin Sans,sans-serif;
-    font-size: 22px;
-    @media (max-width: 768px) {
-        font-size: 17px;
-    }
+  font-family: Josefin Sans, sans-serif;
+  font-size: 22px;
+  @media (max-width: 768px) {
+    font-size: 17px;
+  }
 }
 
 .modal__author {
-    font-family: arial;
-    font-size: 22px;
-    @media (max-width: 768px) {
-        font-size: 14px;
-    }
+  font-family: arial;
+  font-size: 22px;
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 .close:hover,
 .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }

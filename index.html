@@ -22,393 +22,423 @@
     <script type="text/javascript" src="dist/bundle.js"></script>
     <!-- google analytics -->
     <script>
-      (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-          (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-          m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-      ga('create', 'UA-88237019-2', 'auto');
-      ga('send', 'pageview');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-88237019-2', 'auto');
+        ga('send', 'pageview');
     </script>
 </head>
+
 <body>
-<!-- Navigation bar -->
-<div id="website_wrapper">
-    <nav id="home" class="nav navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <div id="menuToggle" class="container-button" type="button"
-                     class="navbar-toggle collapsed" data-toggle="collapse"
-                     data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
+    <!-- Navigation bar -->
+    <div id="website_wrapper">
+        <nav id="home" class="nav navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <div id="menuToggle" class="container-button" type="button" class="navbar-toggle collapsed"
+                        data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                    <a class="navbar-brand" href="#home"><i class="fa fa-code" aria-hidden="true"></i></a>
                 </div>
-                <a class="navbar-brand" href="#home"><i class="fa fa-code" aria-hidden="true"></i></a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="./blog.html">Blog</a></li>
-                    <!--<li><a target="_blank" href="./resume.pdf">Resume</a></li>-->
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- First Screen -->
-    <!-- Main Swiper -->
-    <div class="swiper-container swiper-container--main section-1" id="mainSlider">
-        <div class="swiper-wrapper swiper-wrapper--main">
-            <div class="swiper-slide swiper-slide--main">
-                <div class="mainSlider__inner_wrapper">
-                    <h1>Konrad Gnat</h1>
-                    <h2>Software Engineer</h2>
-                </div>
-            </div>
-            <div class="swiper-slide swiper-slide--main">
-                <div class="mainSlider__inner_wrapper">
-                    <p>"<span id="quote" class="modal__quote"></span>"</p>
-                    <span id="author" class="modal__author"></span>
-                    <br/>
-                    <span id="newQuote" class="modal__new_quote">another quote</span>
-                </div>
-            </div>
-            <div class="swiper-slide swiper-slide--main">
-                <div class="mainSlider__inner_wrapper">
-                    <h2>Tech: JavaScript, React, LAMP, Python, Node</h2>
-                </div>
-            </div>
-        </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination "></div>
-        <!-- Add Arrows -->
-        <div style="display:none;" class="swiper-button-next swiper-button-next--main"></div>
-        <div style="display:none;" class="swiper-button-prev swiper-button-prev--main"></div>
-    </div>
-    <!-- Projects -->
-    <section id="projects">
-        <div class="container-fluid">
-            <div class="row titles">
-                <div class="col-xs-12">
-                    <h2 id="projects-title">Projects</h2>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-wrapper">
-            <!-- Project #1 -->
-            <ul>
-                <li class="portfolio-item" onclick="">
-                    <div class="imgWrap">
-                        <div class="imgDescription">
-                            <h2>Tank Battalion</h2>
-                            <p>A 2D game built from scratch with vanilla JavaScript and the canvas element. It includes
-                                a single player and live multi player modes. Play it at the link below!</br>
-                                Node, Express, Jade, Hosted on Digital Ocean</p> </br>
-                            <p><a target="_blank" href="http://tankbattalion.gnonous.com" class="button">Live Site</a> | <a
-                                    target="_blank" href="https://github.com/kon-rad/tank-battalion" class="button">See the Code</a></p>
-                        </div>
-                    </div>
-                    <img data-webp="dist/images/webp/tank.webp" src="dist/images/tank.png" alt=""
-                         class="img-responsive">
-                </li>
-                <li class="portfolio-item" onclick="">
-                    <div class="imgWrap">
-                        <div class="imgDescription">
-                            <h2>Reads Planet A NodeJS, React, MongoDB App</h2>
-                            <p>Features user sign in, create, edit, delete posts and comments. Follow users and edit profile. Passport library for
-                                authentication and EJS templating engine. Data on books is received from Google Books
-                                API.</br>
-                                Node, Express, React, Flow, Enzyme, MongoDB</p> </br>
-                            <p><a target="_blank" href="http://readsplanet.gnonous.com/" class="button">Visit Page</a> | <a
-                                    target="_blank" href="https://github.com/kon-rad/readbooks" class="button">Github</a></p>
-                        </div>
-                    </div>
-                    <img data-webp="dist/images/webp/read-books.webp" src="dist/images/read-books.png" alt=""
-                         class="img-responsive">
-                </li>
-                <li class="portfolio-item" onclick="">
-                    <div class="imgWrap">
-                        <div class="imgDescription">
-                            <h2>Coherent Breathing App</h2>
-                            <p>Practice coherent breathing technique</p>
-                            <ul>
-                                <li>Node</li>
-                                <li>React</li>
-                                <li>Redux</li>
-                                <li>Express</li>
-                                <li>PassportJS</li>
-                                <li>Deployed to Digital Ocean</li>
-                            </ul>
-                            </br>
-                            <p>
-                                <a target="_blank" href="http://coherentbreathing.gnonous.com/" class="button">Live Site</a> | <a
-                                    target="_blank" href="https://github.com/kon-rad/coherentBreathingApp" class="button">See the Code</a>
-                            </p>
-                        </div>
-                    </div>
-                    <img data-webp="dist/images/webp/coherentBreathing.webp" src="dist/images/coherentBreathing.png" alt=""
-                         class="img-responsive">
-                </li>
-                <li class="portfolio-item" onclick="">
-                    <div class="imgWrap">
-                        <div class="imgDescription">
-                            <h2>YouTube to MP3 Converter</h2>
-                            <p>Download MP3 file of YouTube videos, specify playback rate from 0.5 to 2.0. Built from scratch, no CRA, webpack configured from scratch</p>
-                            <ul>
-                                <li>Node</li>
-                                <li>Express</li>
-                                <li>React</li>
-                                <li>Webpack</li>
-                                <li>Deployed to Digital Ocean</li>
-                            </ul>
-                            </br>
-                            <p><a target="_blank" href="http://addmp3.gnonous.com" class="button"><span>Live Site</span></a> | <a
-                                    target="_blank" href="https://github.com/kon-rad/addMP3.fun" class="button">See the Code</a></p>
-                        </div>
-                    </div>
-                    <img data-webp="dist/images/webp/addmp3.webp" src="dist/images/addmp3.png" alt=""
-                         class="img-responsive">
-                </li>
-                <li class="portfolio-item" onclick="">
-                    <div class="imgWrap">
-                        <div class="imgDescription">
-                            <h2>GifNotes</h2>
-                            <p>A winning submission completed at GIF Hack 2017 in Palo Alto. Creates a gif from a
-                                specified segment of video from a YouTube URL.</br>
-                                Node, Express, jQuery, JavaScript, HTML5, CSS3</p> </br>
-                            <a target="_blank" href="https://secret-tundra-36331.herokuapp.com/"
-                                class="button">Live Site</a>
-                            <a target="_blank" href="https://github.com/kon-rad/GIFHack2017"
-                               class="button">Github</a>
-                        </div>
-                    </div>
-                    <img data-webp="dist/images/webp/gifnotes.webp" src="dist/images/gifnotes.png" alt=""
-                         class="project-img img-responsive">
-                </li>
-                <li class="portfolio-item" onclick="">
-                    <div class="imgWrap">
-                        <div class="imgDescription">
-                            <h2>Crypto Prices</h2>
-                            <p>This is a simple app that shows latest crypto currency prices.
-                                This could have been built with just a front end, but it was an interesting exercise in developing with Django</br>
-                                Django, React, Coinbase API. It is hosted on a digital ocean droplet with an Nginx server.</p> </br>
-                            <a target="_blank" href="http://cryptoprices.gnonous.com/"
-                               class="button" >Live Site</a> |
-                            <a target="_blank" href="https://github.com/kon-rad/cryptoPrices.Space"
-                               class="button">Github</a>
-                        </div>
-                    </div>
-                    <img data-webp="dist/images/webp/cryptoprices.webp" src="dist/images/cryptoprices.png" alt=""
-                         class="project-img img-responsive">
-                </li>
-                <li class="portfolio-item" onclick="">
-                    <div class="imgWrap">
-                        <div class="imgDescription">
-                            <h2>MatchUpGame</h2>
-                            <p>React app. Hosted on Digital ocean with nodejs back end.</br>
-                                React, Node</p> </br>
-                            <a target="_blank" href="http://matchupgame.gnonous.com/"
-                               class="button">Live Site</a> |
-                            <a target="_blank" href="https://github.com/kon-rad/matchupgame"
-                               class="button">Github</a>
-                        </div>
-                    </div>
-                    <img data-webp="dist/images/webp/matchupgame.webp" src="dist/images/matchupgame.png" alt=""
-                         class="project-img img-responsive">
-                </li>
-            </ul>
-        </div>
-        <div class="additional-projects-conatiner">
-            <h3>Client Projects</h3>
-            <p>Corporate Kneads:
-                <a class="link--blue" href="https://corporatekneads.com/">live site</a>
-            </p>
-            <p>Nashville Drum Tracks:
-                <a class="link--blue" href="http://nashvilledrumtracks.com">live site</a>
-            </p>
-        </div>
-        <div class="additional-projects-conatiner">
-            <h3>More Projects</h3>
-            <p> Alexa Skill - 'Martha Gellhorn Quotes'
-                <a class="link--blue"
-                   href="https://www.amazon.com/dp/B07B2Q8ZH7/ref=sr_1_1?s=digital-skills&ie=UTF8&qid=1519877246&sr=1-1&keywords=martha+gellhorn">link to
-                    skill on Amazon</a>
-                |
-                <a class="link--blue" href="https://github.com/kon-rad/MarthaGellhornQuotes-AlexaSkill">github</a>
-            </p>
-            <p>Scripturally Sound: Code for the Kingdom 2017 Hackathon, Nashville
-                <a class="link--blue" href="https://github.com/kon-rad/c4tk">github</a>
-            </p>
-            <p>Spaceship Shootout: Mad Hacks 2017 Hackathon Project, Madison
-                <a class="link--blue" href="https://github.com/kon-rad/spaceships-madhacks-2017">github</a>
-            </p>
-            <p>Live Sports 360 VR App: Developer Week 2017 Hackathon, San Francisco - Winner Best Video Streaming App
-                <a class="link--blue" href="https://github.com/kon-rad/developerWeekHackathon2017">github</a>
-            </p>
-            <p>FireMixtapeMd: Uncommon Hacks 2017 Hackathon, Chicago
-                <a class="link--blue" href="https://github.com/kon-rad/uncommonHackathon">github</a>
-            </p>
-        </div>
-    </section>
-    <!-- About -->
-    <section>
-        <div class="container-fluid">
-            <div class="row cont" id="about">
-                <div class="col-xs-12 titles">
-                    <h2> About </h2>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row cont section-2">
-
-                <div class="col-xs-12 col-md-8 col-md-offset-2 displayBox">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-6">
-                            <div class="about__image_wrapper">
-                                <picture>
-                                    <source srcset="dist/images/webp/pier39.webp" type="image/webp">
-                                    <source srcset="dist/images/pier39.JPG" type="image/jpg">
-                                    <img class="about__image" src="dist/images/pier39.JPG" alt="">
-                                </picture>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 textBox textContent">
-                            <span class="textContent">
-                                My mission is to build apps that push humanity forward.
-                                I made my way to programming through environmental studies, chemistry and then literature. I have been driven by a curiosity
-                                and a passion for learning. Among my greatest intellectual hero's are John Muir, Leonardo Da Vinci, John Steinbeck
-                                and Kahlil Gibran. On any given day I can be found developing applications using JavaScript,
-                                React, Python and Node.
-                            </span>
-                            </br></br>
-                            <div>
-                                <span class="uppercase">Languages</span><br>
-                                <ul style="list-style: none;">
-                                    <li><i>expertise:</i> JavaScript, PHP, SQL</li>
-                                    <li><i>familiar:</i> C, Java, Python</li>
-                                </ul>
-                            </div>
-                            <br>
-                            <span class="uppercase">Frameworks</span><br>
-                            Node, Symfony, React, jQuery, Express
-                            <br>
-                            <br>
-                            <span class="uppercase">Technologies</span><br>
-                            CSS3/HTML5, Git, Vim, MySQL, MongoDB, Linux
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section>
-        <div class="container-fluid">
-            <div class="cont section-3">
-
-                <div class="row" id="contact">
-                    <div class="col-xs-12 titles">
-                        <h2>Contact</h2>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
-                        <form class=" displayBox form-horizontal"
-                              action="https://formspree.io/kgnat77@gmail.com"
-                              method="POST">
-                            <fieldset>
-                                <div class="form-group">
-                                    <label for="message_name" class="col-xs-4 col-md-4 control-label">Name</label>
-                                    <div class="input-group">
-                                        <input name="message_name" placeholder="Name" class="form-control" type="text">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="message_email" class="col-xs-4 col-md-4 control-label">Email</label>
-                                    <div class="input-group">
-                                        <input name="message_email" placeholder="E-Mail Address" class="form-control"
-                                               type="text">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="message_content" class="col-xs-4 col-md-4 control-label">Message</label>
-                                    <div class="input-group">
-                                        <textarea name="message_content" cols="10" rows="6" placeholder="Message"
-                                                  class="form-control" type="text"></textarea>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-4 control-label"></label>
-                                    <div class="col-md-4">
-                                        <input type="submit" value="send" class="submit-button">
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Resume Button -->
-    <!--<section>-->
-    <!--<div class="container-fluid">-->
-    <!--<div class="row" id="resume">-->
-    <!--<div class="col-xs-12 titles">-->
-    <!--<h2>Resume</h2>-->
-    <!--<div class="center">-->
-    <!--<a target="_blank" href="./resume.pdf"-->
-    <!--class="resume_button">View Resume</a>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</section>-->
-
-    <!-- Social Media -->
-    <footer id="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="socialMedia" id="social-media">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/kon-rad">
-                                <i class="fa fa-github fa-2x" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/__kon__rad__/?hl=en">
-                                <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/konrad-gnat">
-                                <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="https://twitter.com/konrad_gnat">
-                                <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
-                            </a>
-                        </li>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <!--<li><a target="_blank" href="./resume.pdf">Resume</a></li>-->
                     </ul>
                 </div>
             </div>
+        </nav>
+        <!-- First Screen -->
+        <!-- Main Swiper -->
+        <div class="hero__container">
+            <div class="swiper-container swiper-container--main section-1" id="mainSlider">
+                <div class="swiper-wrapper swiper-wrapper--main">
+                    <div class="swiper-slide swiper-slide--main">
+                        <div class="mainSlider__inner_wrapper">
+                            <h1>Konrad Gnat</h1>
+                            <h2>Software Engineer</h2>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide--main">
+                        <div class="mainSlider__inner_wrapper">
+                            <p>"<span id="quote" class="modal__quote"></span>"</p>
+                            <span id="author" class="modal__author"></span>
+                            <br />
+                            <div class="quote__buttons">
+                                <span id="newQuote" class="modal__new_quote">another quote</span>
+                                <span id="copyQuoteToClipboard" class="modal__copy_quote">copy to clipboard</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide--main">
+                        <div class="mainSlider__inner_wrapper">
+                            <h2>Tech: JavaScript, React, LAMP, Python, Node</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination "></div>
+                <!-- Add Arrows -->
+                <div style="display:none;" class="swiper-button-next swiper-button-next--main"></div>
+                <div style="display:none;" class="swiper-button-prev swiper-button-prev--main"></div>
+            </div>
+            <!-- Curved line -->
+            <div class="curvedLine__wrapper">
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                    <path d="M0.00,49.98 C173.53,171.20 363.71,-73.52 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                        style="stroke: none; fill: #e5e9eb;">
+                    </path>
+                </svg>
+            </div>
         </div>
-    </footer>
-</div>
+        <!-- Projects -->
+        <section id="projects">
+            <div class="container-fluid">
+                <div class="row titles">
+                    <div class="col-xs-12">
+                        <h2 id="projects-title">Projects</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-wrapper">
+                <!-- Project #1 -->
+                <ul>
+                    <li class="portfolio-item" onclick="">
+                        <div class="imgWrap">
+                            <div class="imgDescription">
+                                <h2>Tank Battalion</h2>
+                                <p>A 2D game built from scratch with vanilla JavaScript and the canvas element. It
+                                    includes
+                                    a single player and live multi player modes. Play it at the link below!</br>
+                                    Node, Express, Jade, Hosted on Digital Ocean</p> </br>
+                                <p><a target="_blank" href="http://tankbattalion.gnonous.com" class="button">Live
+                                        Site</a> | <a target="_blank" href="https://github.com/kon-rad/tank-battalion"
+                                        class="button">See the Code</a></p>
+                            </div>
+                        </div>
+                        <img data-webp="dist/images/webp/tank.webp" src="dist/images/tank.png" alt=""
+                            class="img-responsive">
+                    </li>
+                    <li class="portfolio-item" onclick="">
+                        <div class="imgWrap">
+                            <div class="imgDescription">
+                                <h2>Reads Planet A NodeJS, React, MongoDB App</h2>
+                                <p>Features user sign in, create, edit, delete posts and comments. Follow users and edit
+                                    profile. Passport library for
+                                    authentication and EJS templating engine. Data on books is received from Google
+                                    Books
+                                    API.</br>
+                                    Node, Express, React, Flow, Enzyme, MongoDB</p> </br>
+                                <p><a target="_blank" href="http://readsplanet.gnonous.com/" class="button">Visit
+                                        Page</a> | <a target="_blank" href="https://github.com/kon-rad/readbooks"
+                                        class="button">Github</a></p>
+                            </div>
+                        </div>
+                        <img data-webp="dist/images/webp/read-books.webp" src="dist/images/read-books.png" alt=""
+                            class="img-responsive">
+                    </li>
+                    <li class="portfolio-item" onclick="">
+                        <div class="imgWrap">
+                            <div class="imgDescription">
+                                <h2>Coherent Breathing App</h2>
+                                <p>Practice coherent breathing technique</p>
+                                <ul>
+                                    <li>Node</li>
+                                    <li>React</li>
+                                    <li>Redux</li>
+                                    <li>Express</li>
+                                    <li>PassportJS</li>
+                                    <li>Deployed to Digital Ocean</li>
+                                </ul>
+                                </br>
+                                <p>
+                                    <a target="_blank" href="http://coherentbreathing.gnonous.com/" class="button">Live
+                                        Site</a> | <a target="_blank"
+                                        href="https://github.com/kon-rad/coherentBreathingApp" class="button">See the
+                                        Code</a>
+                                </p>
+                            </div>
+                        </div>
+                        <img data-webp="dist/images/webp/coherentBreathing.webp" src="dist/images/coherentBreathing.png"
+                            alt="" class="img-responsive">
+                    </li>
+                    <li class="portfolio-item" onclick="">
+                        <div class="imgWrap">
+                            <div class="imgDescription">
+                                <h2>YouTube to MP3 Converter</h2>
+                                <p>Download MP3 file of YouTube videos, specify playback rate from 0.5 to 2.0. Built
+                                    from scratch, no CRA, webpack configured from scratch</p>
+                                <ul>
+                                    <li>Node</li>
+                                    <li>Express</li>
+                                    <li>React</li>
+                                    <li>Webpack</li>
+                                    <li>Deployed to Digital Ocean</li>
+                                </ul>
+                                </br>
+                                <p><a target="_blank" href="http://addmp3.gnonous.com" class="button"><span>Live
+                                            Site</span></a> | <a target="_blank"
+                                        href="https://github.com/kon-rad/addMP3.fun" class="button">See the Code</a></p>
+                            </div>
+                        </div>
+                        <img data-webp="dist/images/webp/addmp3.webp" src="dist/images/addmp3.png" alt=""
+                            class="img-responsive">
+                    </li>
+                    <li class="portfolio-item" onclick="">
+                        <div class="imgWrap">
+                            <div class="imgDescription">
+                                <h2>GifNotes</h2>
+                                <p>A winning submission completed at GIF Hack 2017 in Palo Alto. Creates a gif from a
+                                    specified segment of video from a YouTube URL.</br>
+                                    Node, Express, jQuery, JavaScript, HTML5, CSS3</p> </br>
+                                <a target="_blank" href="https://secret-tundra-36331.herokuapp.com/" class="button">Live
+                                    Site</a>
+                                <a target="_blank" href="https://github.com/kon-rad/GIFHack2017"
+                                    class="button">Github</a>
+                            </div>
+                        </div>
+                        <img data-webp="dist/images/webp/gifnotes.webp" src="dist/images/gifnotes.png" alt=""
+                            class="project-img img-responsive">
+                    </li>
+                    <li class="portfolio-item" onclick="">
+                        <div class="imgWrap">
+                            <div class="imgDescription">
+                                <h2>Crypto Prices</h2>
+                                <p>This is a simple app that shows latest crypto currency prices.
+                                    This could have been built with just a front end, but it was an interesting exercise
+                                    in developing with Django</br>
+                                    Django, React, Coinbase API. It is hosted on a digital ocean droplet with an Nginx
+                                    server.</p> </br>
+                                <a target="_blank" href="http://cryptoprices.gnonous.com/" class="button">Live Site</a>
+                                |
+                                <a target="_blank" href="https://github.com/kon-rad/cryptoPrices.Space"
+                                    class="button">Github</a>
+                            </div>
+                        </div>
+                        <img data-webp="dist/images/webp/cryptoprices.webp" src="dist/images/cryptoprices.png" alt=""
+                            class="project-img img-responsive">
+                    </li>
+                    <li class="portfolio-item" onclick="">
+                        <div class="imgWrap">
+                            <div class="imgDescription">
+                                <h2>MatchUpGame</h2>
+                                <p>React app. Hosted on Digital ocean with nodejs back end.</br>
+                                    React, Node</p> </br>
+                                <a target="_blank" href="http://matchupgame.gnonous.com/" class="button">Live Site</a> |
+                                <a target="_blank" href="https://github.com/kon-rad/matchupgame"
+                                    class="button">Github</a>
+                            </div>
+                        </div>
+                        <img data-webp="dist/images/webp/matchupgame.webp" src="dist/images/matchupgame.png" alt=""
+                            class="project-img img-responsive">
+                    </li>
+                </ul>
+            </div>
+            <div class="additional-projects-conatiner">
+                <h3>Client Projects</h3>
+                <p>Corporate Kneads:
+                    <a class="link--blue" href="https://corporatekneads.com/">live site</a>
+                </p>
+                <p>Nashville Drum Tracks:
+                    <a class="link--blue" href="http://nashvilledrumtracks.com">live site</a>
+                </p>
+            </div>
+            <div class="additional-projects-conatiner">
+                <h3>More Projects</h3>
+                <p> Alexa Skill - 'Martha Gellhorn Quotes'
+                    <a class="link--blue"
+                        href="https://www.amazon.com/dp/B07B2Q8ZH7/ref=sr_1_1?s=digital-skills&ie=UTF8&qid=1519877246&sr=1-1&keywords=martha+gellhorn">link
+                        to
+                        skill on Amazon</a>
+                    |
+                    <a class="link--blue" href="https://github.com/kon-rad/MarthaGellhornQuotes-AlexaSkill">github</a>
+                </p>
+                <p>Scripturally Sound: Code for the Kingdom 2017 Hackathon, Nashville
+                    <a class="link--blue" href="https://github.com/kon-rad/c4tk">github</a>
+                </p>
+                <p>Spaceship Shootout: Mad Hacks 2017 Hackathon Project, Madison
+                    <a class="link--blue" href="https://github.com/kon-rad/spaceships-madhacks-2017">github</a>
+                </p>
+                <p>Live Sports 360 VR App: Developer Week 2017 Hackathon, San Francisco - Winner Best Video Streaming
+                    App
+                    <a class="link--blue" href="https://github.com/kon-rad/developerWeekHackathon2017">github</a>
+                </p>
+                <p>FireMixtapeMd: Uncommon Hacks 2017 Hackathon, Chicago
+                    <a class="link--blue" href="https://github.com/kon-rad/uncommonHackathon">github</a>
+                </p>
+            </div>
+        </section>
+        <!-- About -->
+        <section>
+            <div class="container-fluid">
+                <div class="row cont" id="about">
+                    <div class="col-xs-12 titles">
+                        <h2> About </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row cont section-2">
+
+                    <div class="col-xs-12 col-md-8 col-md-offset-2 displayBox">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6">
+                                <div class="about__image_wrapper">
+                                    <picture>
+                                        <source srcset="dist/images/webp/pier39.webp" type="image/webp">
+                                        <source srcset="dist/images/pier39.JPG" type="image/jpg">
+                                        <img class="about__image" src="dist/images/pier39.JPG" alt="">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 textBox textContent">
+                                <span class="textContent">
+                                    My mission is to build apps that push humanity forward.
+                                    I made my way to programming through environmental studies, chemistry and then
+                                    literature. I have been driven by a curiosity
+                                    and a passion for learning. Among my greatest intellectual hero's are John Muir,
+                                    Leonardo Da Vinci, John Steinbeck
+                                    and Kahlil Gibran. On any given day I can be found developing applications using
+                                    JavaScript,
+                                    React, Python and Node.
+                                </span>
+                                </br></br>
+                                <div>
+                                    <span class="uppercase">Languages</span><br>
+                                    <ul style="list-style: none;">
+                                        <li><i>expertise:</i> JavaScript, PHP, SQL</li>
+                                        <li><i>familiar:</i> C, Java, Python</li>
+                                    </ul>
+                                </div>
+                                <br>
+                                <span class="uppercase">Frameworks</span><br>
+                                Node, Symfony, React, jQuery, Express
+                                <br>
+                                <br>
+                                <span class="uppercase">Technologies</span><br>
+                                CSS3/HTML5, Git, Vim, MySQL, MongoDB, Linux
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section>
+            <div class="container-fluid">
+                <div class="cont section-3">
+
+                    <div class="row" id="contact">
+                        <div class="col-xs-12 titles">
+                            <h2>Contact</h2>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+                            <form class=" displayBox form-horizontal" action="https://formspree.io/kgnat77@gmail.com"
+                                method="POST">
+                                <fieldset>
+                                    <div class="form-group">
+                                        <label for="message_name" class="col-xs-4 col-md-4 control-label">Name</label>
+                                        <div class="input-group">
+                                            <input name="message_name" placeholder="Name" class="form-control"
+                                                type="text">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message_email" class="col-xs-4 col-md-4 control-label">Email</label>
+                                        <div class="input-group">
+                                            <input name="message_email" placeholder="E-Mail Address"
+                                                class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message_content"
+                                            class="col-xs-4 col-md-4 control-label">Message</label>
+                                        <div class="input-group">
+                                            <textarea name="message_content" cols="10" rows="6" placeholder="Message"
+                                                class="form-control" type="text"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label"></label>
+                                        <div class="col-md-4">
+                                            <input type="submit" value="send" class="submit-button">
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Button -->
+        <!--<section>-->
+        <!--<div class="container-fluid">-->
+        <!--<div class="row" id="resume">-->
+        <!--<div class="col-xs-12 titles">-->
+        <!--<h2>Resume</h2>-->
+        <!--<div class="center">-->
+        <!--<a target="_blank" href="./resume.pdf"-->
+        <!--class="resume_button">View Resume</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</section>-->
+
+        <!-- Social Media -->
+        <footer id="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="socialMedia" id="social-media">
+                        <ul>
+                            <li>
+                                <a href="https://github.com/kon-rad">
+                                    <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/__kon__rad__/?hl=en">
+                                    <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/konrad-gnat">
+                                    <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://twitter.com/konrad_gnat">
+                                    <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
+
 </html>
