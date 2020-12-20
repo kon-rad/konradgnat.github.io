@@ -34,6 +34,25 @@ const copyQuote = () => {
   );
 };
 
+function copyQuote2() {
+  /* Get the text field */
+  console.log('2 here');
+  var quote = $('#quote').text();
+  var author = $('#author').text();
+  const copy = `"${quote}" - ${author}`;
+  var textArea = document.createElement('textarea');
+  textArea.value = copy;
+  document.body.appendChild(textArea);
+  textArea.select();
+  textArea.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Select the text field */
+
+  /* Copy the text inside the text field */
+  document.execCommand('copy');
+  textArea.remove();
+}
+
 $(document).ready(() => {
   if (!document.getElementById('newQuote')) {
     return;
@@ -43,5 +62,7 @@ $(document).ready(() => {
   document.getElementById('website_wrapper').style.visibility =
     'visible';
   document.getElementById('newQuote').onclick = newQuote;
-  document.getElementById('copyQuoteToClipboard').onclick = copyQuote;
+  document.getElementById(
+    'copyQuoteToClipboard',
+  ).onclick = copyQuote2;
 });
