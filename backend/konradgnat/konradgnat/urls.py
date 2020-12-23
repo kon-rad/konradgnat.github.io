@@ -23,4 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^api/post/$', views.post_list),
     re_path(r'^api/post/([a-z])$', views.post_detail),
+    re_path(r'^api/rooms/$', views.room_list),
+    # re_path(r'^api/rooms/([a-z])$', views.room_detail),
+    # re_path(r'^api/rooms/([a-z])/messages$', views.room_messages)
 ]

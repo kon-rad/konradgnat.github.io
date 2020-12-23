@@ -3,6 +3,9 @@ from rest_framework.decorators import api_view
 from rest_framework import status
 
 from .models import Post
+from .models import Room
+from .models import ChatUser
+from .models import Message
 from .serializers import *
 
 @api_view(['GET', 'POST'])
@@ -39,3 +42,21 @@ def post_detail(request, pk):
     elif request.method == 'DELETE':
         post.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+@api_view(['GET', 'POST'])
+def room_list(request):
+    if request.method == 'GET':
+        data = Room.objects.all()
+
+        serializer = RoomSerializer(data, context={'request': request}, many=True)
+
+        return Response(serializer.data)
+
+    elif request.method == 'POST':
+        serializer = RoomSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(status=status.HTTP_201_CREATED)
+            
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
