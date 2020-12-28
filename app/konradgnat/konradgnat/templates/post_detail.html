@@ -1,16 +1,21 @@
 {% extends 'base.html' %} {% block content %}
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 card mb-4  mt-3 left  top">
-      <div class="card-body">
-        <h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
-        <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
-        <p class="card-text ">{{ object.content | safe }}</p>
+<section class="blog">
+  <div class="jumbotron_image__blog-header">
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+        <div class="page-header">
+          <h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
+        </div>
+        <div class="blog_text">
+          <p class="text-muted">{{ post.created_on|date:'m-d-Y' }}</p>
+          <p class="card-text ">{{ object.content | safe }}</p>
+        </div>
       </div>
     </div>
-    {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
   </div>
-</div>
+</section>
 
 {% endblock content %}

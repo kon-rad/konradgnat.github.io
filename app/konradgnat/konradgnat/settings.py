@@ -126,12 +126,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, '..', '..')
-STATIC_URL = '/client/dist/'
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    '/client/dist/',
-]
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+# the static_root is where all static files are collected in production
+# run 'python manage.py collectstatic' in order to collect them all into this folder
+# don't put any files there, they're put there automatically
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 # since we’re working full localhost, we’ll disable the CORS feature
 CORS_ORIGIN_ALLOW_ALL = True

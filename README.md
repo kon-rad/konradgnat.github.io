@@ -6,4 +6,15 @@ Fullstack Web Developer Portfolio
 
 Start venv with this command:
 `source django/bin/activate`
-make sure you cd into `/backend/konradgnat`
+make sure you cd into `/backend/`
+
+To run the django app on localhost:8080 run:
+`python manage.py runserver`
+
+After changes to models, run the migration
+`python manage.py makemigrations`
+
+`python manage.py migrate`
+
+To collect all your static files from different apps to a single folder for production, run this:
+`python manage.py collectstatic`
