@@ -75,3 +75,10 @@ gulp.task(
         done();
     })
 );
+
+gulp.task(
+    'build',
+    series('css', 'imagemin', function (done) {
+        done();
+    })
+);
