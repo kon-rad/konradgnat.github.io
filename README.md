@@ -1,6 +1,14 @@
-# konradgnat.github.io
+# KonradGnat.com
 
 Fullstack Web Developer Portfolio
+
+Made with
+
+- Django
+- Gulp
+- Webpack
+- SQLite
+- Hosted on Digital Ocean
 
 # Django Backend Notes
 
