@@ -128,9 +128,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+# )
 
 # the static_root is where all static files are collected in production
 # run 'python manage.py collectstatic' in order to collect them all into this folder
