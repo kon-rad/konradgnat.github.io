@@ -1,0 +1,33 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/client/src" />
+        <item url="file://$PROJECT_DIR$/client/src/components/about" />
+        <item url="file://$PROJECT_DIR$/client/src/components/blogBlurb" />
+        <item url="file://$PROJECT_DIR$/client/src/components/contact" />
+        <item url="file://$PROJECT_DIR$/client/src/components/header" />
+        <item url="file://$PROJECT_DIR$/client/src/components/hero" />
+        <item url="file://$PROJECT_DIR$/client/src/components/projects" />
+        <item url="file://$PROJECT_DIR$/client/src/pages" />
+        <item url="file://$PROJECT_DIR$/content-api/api/blogpost/models" />
+        <item url="file://$PROJECT_DIR$/server/services/budget" />
+        <item url="file://$PROJECT_DIR$/src/scripts/modules" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/client/src" />
+      <root url="file://$PROJECT_DIR$/client/src/components/about" />
+      <root url="file://$PROJECT_DIR$/client/src/components/blogBlurb" />
+      <root url="file://$PROJECT_DIR$/client/src/components/contact" />
+      <root url="file://$PROJECT_DIR$/client/src/components/header" />
+      <root url="file://$PROJECT_DIR$/client/src/components/hero" />
+      <root url="file://$PROJECT_DIR$/client/src/components/projects" />
+      <root url="file://$PROJECT_DIR$/client/src/pages" />
+      <root url="file://$PROJECT_DIR$/content-api/api/blogpost/models" />
+      <root url="file://$PROJECT_DIR$/server/services/budget" />
+      <root url="file://$PROJECT_DIR$/src/scripts/modules" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
