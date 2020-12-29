@@ -135,7 +135,7 @@ STATICFILES_DIRS = (
 # the static_root is where all static files are collected in production
 # run 'python manage.py collectstatic' in order to collect them all into this folder
 # don't put any files there, they're put there automatically
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 # since we’re working full localhost, we’ll disable the CORS feature
 CORS_ORIGIN_ALLOW_ALL = True
