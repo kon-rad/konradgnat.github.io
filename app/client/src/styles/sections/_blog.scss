@@ -4,6 +4,14 @@
         text-align: center;
     }
 }
+.blog,
+.blog p {
+    font-family: Open Sans;
+    font-size: 17px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    font-weight: 400;
+}
 
 .blog_links a {
     color: #337ab7 !important;
@@ -13,10 +21,13 @@
     padding: 40px 0;
 }
 .blog_text {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: Open Sans;
+    font-size: 17px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    font-weight: 400;
     max-width: 800px;
     margin: 0 auto;
-    font-size: 18px;
 }
 .jumbotron_image__blog-header {
     background: url(../images/blog_matrix.jpg);
