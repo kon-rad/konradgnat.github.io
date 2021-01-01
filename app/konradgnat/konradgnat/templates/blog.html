@@ -20,7 +20,7 @@
               <div class="card mb-4">
                 <div class="card-body">
                   <h2 class="card-title">{{ post.title }}</h2>
-                  <p class="card-text text-muted h6">{{ post.created_on|date:'m-d-Y' }} </p>
+                  <p class="card-text text-muted h6 blog__date">{{ post.created_on|date:'m-d-Y' }} </p>
                   <p class="card-text">{{ post.preview }}</p>
                   <a href="{% url 'post_detail' post.slug  %}" class="">Read More &rarr;</a>
                 </div>
