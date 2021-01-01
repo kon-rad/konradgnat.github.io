@@ -27,7 +27,7 @@ SECRET_KEY = 'r5#th8)05d-vl@tvf5oz(@)fu6l_$@qaek&1j3^5@b6bm)n=kx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['konradgnat.com', '.konradgnat.com', '167.99.165.201', 'localhost']
+ALLOWED_HOSTS = ['konradgnat.com', '.konradgnat.com', '167.99.165.201', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -129,9 +129,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, 'static'),
-# )
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static_files'),
+)
 
 # the static_root is where all static files are collected in production
 # run 'python manage.py collectstatic' in order to collect them all into this folder

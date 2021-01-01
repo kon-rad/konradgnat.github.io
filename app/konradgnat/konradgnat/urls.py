@@ -21,6 +21,7 @@ from django.conf.urls import url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('quotes-api/', include('quotesApi.urls')),
     path('', include('blog.urls')),
     # re_path(r'^api/post/$', views.post_list),
     # re_path(r'^api/post/([a-z])$', views.post_detail),
