@@ -3,3 +3,6 @@ node_modules
 django
 */django
 app/django
+bin
+static
+static_files

@@ -12,9 +12,11 @@ Made with
 
 # Django Backend Notes
 
-Start venv with this command:
-`source django/bin/activate`
-make sure you cd into `/konradgnat/`
+Start venv with this command, make sure you cd into `/konradgnat/`
+`source bin/activate`
+
+to deactivate virtual environment
+`deactivate`
 
 To run the django app on localhost:8080 run:
 `python manage.py runserver`
