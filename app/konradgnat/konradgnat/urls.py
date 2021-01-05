@@ -19,6 +19,9 @@ from django.urls import path, re_path, include
 from blog import views
 from django.conf.urls import url
 
+# get quotes from here	
+# https://konradgnat.com/quotes-api/quotes/
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('quotes-api/', include('quotesApi.urls')),
