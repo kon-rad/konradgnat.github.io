@@ -3,7 +3,7 @@
 /* Generate New Quote function */
 const newQuote = () => {
     $.getJSON(
-        'http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=?',
+        'https://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=?',
         (data) => {
             if (!data) {
                 console.error(
