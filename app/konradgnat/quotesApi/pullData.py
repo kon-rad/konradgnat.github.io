@@ -9,7 +9,7 @@ URL = "https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json"
 
 uploaded_count = 0
 
-for n in range(0, 100):
+for n in range(0, 10000):
   print("n", n)
   try:
     r = requests.get(url = URL)
