@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'quotesApi',
     'rest_framework',
     'corsheaders',
+    'taggit',
 ]
 
 MIDDLEWARE = [

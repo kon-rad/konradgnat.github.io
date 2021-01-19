@@ -1,16 +1,29 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+from taggit.managers import TaggableManager
 
 STATUS = (
     (0,"Draft"),
     (1,"Publish")
 )
 
+BOOK_STATUS = (
+    (0, "Want to read"),
+    (1, "Reading currently"),
+    (2, "Read"),
+)
+
+BOOK_FORMAT = {
+    (0, "Print"),
+    (1, "Ebook"),
+    (2, "Audiobook"),
+}
+
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='blog_posts')
+    tags = TaggableManager()
     updated_on = models.DateTimeField(auto_now= True)
     content = models.TextField()
     preview = models.CharField(max_length=200)
@@ -52,3 +65,19 @@ class Room(models.Model):
 
     def get_messages(self):
         return "\n".join([m.message for m in self.messages.all()])
+
+class Book(models.Model):
+    title = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    image_url = models.CharField(max_length=200)
+    tags = TaggableManager()
+    author = models.CharField(max_length=200)
+    updated_on = models.DateTimeField(auto_now= True)
+    read_on = models.DateTimeField(auto_now= True)
+    content = models.TextField()
+    preview = models.CharField(max_length=200)
+    created_on = models.DateTimeField(null=True, blank=True)
+    book_status = models.IntegerField(choices=BOOK_STATUS, default=0)
+    book_format = models.IntegerField(choices=BOOK_FORMAT, default=0)
+
+# todo: add tags to books and blog posts
