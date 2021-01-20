@@ -14,6 +14,7 @@ source bin/activate
 
 pip install -r requirements.txt
 python manage.py migrate
+mv static_files static
 
 # restarts gunicorn, resets .sock
 
