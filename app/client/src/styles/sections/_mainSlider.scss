@@ -1,17 +1,18 @@
 .mainSlider__inner_wrapper {
-    color: black;
+    color: white;
 }
 
 .mainSlider__inner_wrapper h1 {
     font-size: 80px;
     margin-top: 14vh;
-    color: black;
+    color: white;
     @media (max-width: 800px) {
         font-size: 30px;
     }
 }
 
 .mainSlider__inner_wrapper h2 {
+    color: white;
     font-family: 'Josefin Sans', sans-serif;
     @media (max-width: 800px) {
         font-size: 20px;
@@ -92,7 +93,8 @@ body {
     }
 }
 .swiper-slide--main:nth-child(1) {
-    background: url(../images/mainSlider1.JPG) center center no-repeat;
+    // background: url(../images/mainSlider1.JPG) center center no-repeat;
+    background: url(../images/coding.gif) center center no-repeat;
     background-size: cover;
     .mainSlider__inner_wrapper {
         text-align: center;
@@ -179,4 +181,10 @@ body {
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
     bottom: 75px;
+}
+
+@media only screen and (max-width: 768px) {
+    .curvedLine__wrapper {
+        display: none;
+    }
 }

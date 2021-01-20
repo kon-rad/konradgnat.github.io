@@ -77,7 +77,15 @@ class Book(models.Model):
     content = models.TextField()
     preview = models.CharField(max_length=200)
     created_on = models.DateTimeField(null=True, blank=True)
+    status = models.IntegerField(choices=STATUS, default=0)
     book_status = models.IntegerField(choices=BOOK_STATUS, default=0)
     book_format = models.IntegerField(choices=BOOK_FORMAT, default=0)
 
-# todo: add tags to books and blog posts
+class Project(models.Model):
+    title = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    image_url = models.CharField(max_length=200)
+    tags = TaggableManager()
+    updated_on = models.DateTimeField(auto_now= True)
+    created_on = models.DateTimeField(null=True, blank=True)
+    content = models.TextField()

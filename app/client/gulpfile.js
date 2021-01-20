@@ -19,7 +19,7 @@ gulp.task('babel', (done) => {
                 presets: ['env']
             })
         )
-        .pipe(gulp.dest('../konradgnat/static/js/'));
+        .pipe(gulp.dest('../konradgnat/static_files/js/'));
     done();
 });
 
@@ -34,36 +34,36 @@ gulp.task('css', function (done) {
         )
         .pipe(cssnano())
         .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest('../konradgnat/static/css/'));
+        .pipe(gulp.dest('../konradgnat/static_files/css/'));
     gulp.src('./src/styles/vendors/*').pipe(
-        gulp.dest('../konradgnat/static/css/')
+        gulp.dest('../konradgnat/static_files/css/')
     );
     done();
 });
 
 gulp.task('imagemin', function (done) {
     gulp.src(['./src/images/**/*'])
-        .pipe(
-            imagemin([
-                pngquant({
-                    speed: 1,
-                    quality: [0.7, 0.8]
-                }),
-                mozjpeg(
-                    {
-                        quality: 90
-                    },
-                    {
-                        verbose: true
-                    }
-                )
-            ])
-        )
-        .pipe(gulp.dest('../konradgnat/static/images/'));
+        // .pipe(
+        //     imagemin([
+        //         pngquant({
+        //             speed: 1,
+        //             quality: [0.7, 0.8]
+        //         }),
+        //         mozjpeg(
+        //             {
+        //                 quality: 90
+        //             },
+        //             {
+        //                 verbose: true
+        //             }
+        //         )
+        //     ])
+        // )
+        .pipe(gulp.dest('../konradgnat/static_files/images/'));
 
-    gulp.src(['./src/images/*'])
-        .pipe(webp())
-        .pipe(gulp.dest('../konradgnat/static/images/webp/'));
+    // gulp.src(['./src/images/*'])
+    //     .pipe(webp())
+    //     .pipe(gulp.dest('../konradgnat/static_files/images/webp/'));
     done();
 });
 
