@@ -3,6 +3,7 @@ from .models import Post
 from .models import Room
 from .models import ChatUser
 from .models import Message
+from .models import Book
 
 class PostAdmin(admin.ModelAdmin):
     list_display = ('title', 'slug', 'status','created_on')
@@ -18,8 +19,15 @@ class ChatUserAdmin(admin.ModelAdmin):
     
 class MessageUserAdmin(admin.ModelAdmin):
     list_display = ['message']
+
+class BookAdmin(admin.ModelAdmin):
+    list_display = ('title', 'slug', 'status','read_on')
+    list_filter = ("status",)
+    search_fields = ['title', 'content']
+    prepopulated_fields = {'slug': ('title',)}
   
 admin.site.register(Post, PostAdmin)
 admin.site.register(Room, RoomAdmin)
 admin.site.register(ChatUser, ChatUserAdmin)
 admin.site.register(Message, MessageUserAdmin)
+admin.site.register(Book, BookAdmin)

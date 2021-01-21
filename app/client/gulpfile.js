@@ -12,6 +12,8 @@ const gulp = require('gulp'),
     babel = require('gulp-babel');
 const { src, dest, series } = require('gulp');
 
+// todo: use static for prod, static_files for dev
+
 gulp.task('babel', (done) => {
     gulp.src('src/index.js')
         .pipe(
@@ -78,7 +80,7 @@ gulp.task(
 
 gulp.task(
     'build',
-    series('css', 'imagemin', function (done) {
+    series('css', 'imagemin', 'babel', function (done) {
         done();
     })
 );

@@ -19,7 +19,7 @@ class RoomSerializer(serializers.ModelSerializer):
 class BookSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Post 
+        model = Book 
         fields = (
             'title',
             'slug',

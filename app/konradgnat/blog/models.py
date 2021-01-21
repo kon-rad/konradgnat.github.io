@@ -81,6 +81,11 @@ class Book(models.Model):
     book_status = models.IntegerField(choices=BOOK_STATUS, default=0)
     book_format = models.IntegerField(choices=BOOK_FORMAT, default=0)
 
+    class Meta:
+        ordering = ['-read_on']
+
+    def __str__(self):
+        return self.title
 class Project(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)

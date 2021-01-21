@@ -25,6 +25,14 @@ class PostDetail(generic.DetailView):
     model = Post
     template_name = 'post_detail.html'
 
+class BooksList(generic.ListView):
+    queryset = Book.objects.filter(status=1).order_by('-read_on')
+    template_name = 'books.html'
+
+class BookDetail(generic.DetailView):
+    model = Book
+    template_name = 'books/book_detail.html'
+
 # TODO: create a React front end for a chat room
 # TODO: consider if this is a good idea, might prefer to scrap this chat room project
 
@@ -81,11 +89,3 @@ class PostDetail(generic.DetailView):
             
 #         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-
-class BookList(generic.ListView):
-    queryset = Book.objects.filter(status=1).order_by('-read_on')
-    template_name = 'books.html'
-
-class BookDetail(generic.DetailView):
-    model = Book
-    template_name = 'book_detail.html'
