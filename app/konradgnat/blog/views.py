@@ -33,6 +33,16 @@ class BookDetail(generic.DetailView):
     model = Book
     template_name = 'books/book_detail.html'
 
+class ProjectsList(generic.ListView):
+    queryset = Project.objects.filter(status=1).order_by('-built_on')
+    template_name = 'projects.html'
+
+class ProjectDetail(generic.DetailView):
+    model = Project
+    template_name = 'projects/project_detail.html'
+
+# TODO: create project templates
+
 # TODO: create a React front end for a chat room
 # TODO: consider if this is a good idea, might prefer to scrap this chat room project
 

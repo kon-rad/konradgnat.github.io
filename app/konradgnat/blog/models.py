@@ -92,5 +92,5 @@ class Project(models.Model):
     image_url = models.CharField(max_length=200)
     tags = TaggableManager()
     updated_on = models.DateTimeField(auto_now= True)
-    created_on = models.DateTimeField(null=True, blank=True)
+    built_on = models.DateTimeField(null=True, blank=True)
     content = models.TextField()
