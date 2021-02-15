@@ -11,8 +11,13 @@
   <title>Konrad Gnat | Portfolio</title>
   <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/png">
 
+  <!-- bootstrap css and js library -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- material ui css and js library -->
+  <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
+  <script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Varela+Round" rel="stylesheet">
@@ -61,6 +66,7 @@
             <li><a href="{% url 'home' %}#projects">Projects</a></li>
             <li><a href="{% url 'home' %}#contact">Contact</a></li>
             <li><a href="{% url 'blog' %}">Blog</a></li>
+            <li><a href="{% url 'books' %}">Bookshelf</a></li>
             <!--<li><a target="_blank" href="./resume.pdf">Resume</a></li>-->
           </ul>
         </div>

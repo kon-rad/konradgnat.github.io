@@ -10,6 +10,7 @@ from .models import Post
 from .models import Room
 from .models import Message
 from .models import Book
+from .models import Project
 from .serializers import *
 
 def home(request):

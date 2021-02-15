@@ -9,22 +9,43 @@
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2">
         <div class="page-header">
-          <h1>Books</h1>
+          <h1>Bookshelf</h1>
+        </div>
+        <div class="books__description">
+          <p>A special place for some of the books I have read and loved.</p>
         </div>
         <div class="books_text">
           <section class="books_links">
             <div class="well well-lg">
 
-              <!-- books Entries Column -->
-              {% for book in book_list %}
-              <div class="card mb-4">
-                <div class="card-body">
-                  <h2 class="card-title">{{ book.title }}</h2>
-                  <p class="card-text text-muted h6 books__date">{{ book.read_on|date:'m-d-Y' }} </p>
-                  <p class="card-text">{{ book.preview }}</p>
+              <div class="container">
+                <div class="row">
+
+                  <!-- books Entries Column -->
+                  {% for book in book_list %}
+                  <div class="card col-sm-4">
+                    <div class="card-body">
+                      <div class="book__heading">
+                        <img src="/static/images/books/{{ book.image_url }}" alt="" class="books__img">
+                        <h2 class="card-title">{{ book.title }} title here</h2>
+                      </div>
+                      <div class="book__body">
+                        <p class="card-text text-muted h6 books__date">{{ book.read_on|date:'m-d-Y' }} </p>
+                        <p class="card-text">{{ book.preview }}</p>
+                        <!-- TODO: implement tags -->
+                        <!-- <div class="book__tags">
+                          tags:
+                          {{ book.tags }}
+                        </div> -->
+                        <!-- TODO: Implement detail page -->
+                        <!-- <a class="mui-btn mui-btn--raised" href="/books/{{ book.slug }}">read more</a> -->
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
+
                 </div>
               </div>
-              {% endfor %}
 
             </div>
           </section>

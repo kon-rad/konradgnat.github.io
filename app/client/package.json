@@ -6,7 +6,9 @@
     "scripts": {
         "gulp:build": "gulp build",
         "build": "npm run gulp:build && webpack",
-        "build:watch": "webpack --watch"
+        "build:watch": "webpack --watch",
+        "gulp:imagemin": "gulp imagemin",
+        "gulp:watch": "gulp"
     },
     "repository": {
         "type": "git",
